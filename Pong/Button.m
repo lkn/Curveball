@@ -119,12 +119,11 @@
 
 
 
--(void)draw
-{
-	
-	if((gameType == -1 || gameType == PongViewController.gameType) && (multiPlayer == -1 || multiPlayer == PongViewController.multiPlayerStatus))
-	{
-		1==1;
+- (void)draw {
+	if ((gameType == -1 ||
+       gameType == PongViewController.gameType) &&
+      (multiPlayer == -1 ||
+       multiPlayer == PongViewController.multiPlayerStatus)) {
 		TextureCoord ** button = PongViewController.button;
 		if(PongViewController.hoveredButton == self)
 			button = PongViewController.button2;

@@ -20,16 +20,15 @@
 #import "PongAppDelegate.h"
 #import <AudioToolbox/AudioServices.h>
 
-@interface PongViewController : UIViewController
-{
-	
+@interface PongViewController : UIViewController {
 	EAGLContext *context;
-    GLuint program;
-    
-    BOOL animating;
-    NSInteger animationFrameInterval;
-    CADisplayLink *displayLink;
+  GLuint program;
+  
+  BOOL animating;
+  NSInteger animationFrameInterval;
+  CADisplayLink *displayLink;
 	PongAppDelegate *delegate;
+
 }
 
 void playSound(SystemSoundID sound);
@@ -37,11 +36,7 @@ void playSound(SystemSoundID sound);
 enum States {
 	HOME,PLAYING,OPTIONS,PAUSED,MULTIPLAYER,JOINIP,ERROR,START,RESULTS,TARGET,OPTIONS2,NONE
 };
-NSMutableDictionary *prefs;
-TextureCoord * txPaddle;
-TextureCoord * button[3];// = new TextureCoord[3];
-TextureCoord * button2[3];// = new TextureCoord[3];
-TextureCoord * button3[3];// = new TextureCoord[3];
+
 - (void)resize:(int)w h:(int)h;
 + (void)switchToState:(enum States)toState;
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
@@ -223,6 +218,8 @@ int stateToInt(enum States st);
 + (void)loadSaved;
 + (NSString *)stringFromPrefs:(NSString *)key def:(NSString*)def;
 
++ (void)writeData;
+
 @end
 
 NSString * databaseName;
@@ -230,6 +227,12 @@ NSString * databasePath;
 Button * stateButtons[20][40];
 
 
+
+NSMutableDictionary *prefs;
+TextureCoord * txPaddle;
+TextureCoord * button[3];// = new TextureCoord[3];
+TextureCoord * button2[3];// = new TextureCoord[3];
+TextureCoord * button3[3];// = new TextureCoord[3];
 
 SystemSoundID mpPing;
 SystemSoundID mpPong;

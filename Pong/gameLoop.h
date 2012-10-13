@@ -26,8 +26,6 @@ int compareScoreLines (const void * a, const void * b)
 	//NSAutoReleasePool * pool = [[NSAutoReleasePool alloc] init];
 	NSDate *date = [NSDate date];
 	
-	int count = 0;
-	
 	//NSLog(@"yooooosef");
 	long long delta;
 	long long time = [date timeIntervalSince1970] * 1000.0;
