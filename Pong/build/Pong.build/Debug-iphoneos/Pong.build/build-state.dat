@@ -1,1727 +1,0 @@
-TPong
-v7
-r0
-t330288966.895192
-cCheck dependencies
-cCpResource build/Debug-iphoneos/Pong.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-cProcessInfoPlistFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Info.plist Pong-Info.plist
-cCpResource build/Debug-iphoneos/Pong.app/Shader.fsh Shaders/Shader.fsh
-cCpResource build/Debug-iphoneos/Pong.app/Shader.vsh Shaders/Shader.vsh
-cCompileXIB /Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
-cCompileXIB /Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplash.png ../dotdroidsplash.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1.png ../tileset1.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/smallfont.png ../smallfont.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/medfont.png ../medfont.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bigfont.png ../bigfont.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon4.png ../Icon4.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon.png ../Icon.png
-cCpResource build/Debug-iphoneos/Pong.app/pongStore.sql ../../Documents/SQLite/pongStore.sql
-cCpResource build/Debug-iphoneos/Pong.app/bullseye.caf ../bullseye.caf
-cCpResource build/Debug-iphoneos/Pong.app/lostshort.caf ../lostshort.caf
-cCpResource build/Debug-iphoneos/Pong.app/ping.caf ../ping.caf
-cCpResource build/Debug-iphoneos/Pong.app/target.caf ../target.caf
-cCpResource build/Debug-iphoneos/Pong.app/wall1.caf ../wall1.caf
-cCpResource build/Debug-iphoneos/Pong.app/wall3.caf ../wall3.caf
-cCpResource build/Debug-iphoneos/Pong.app/lost.caf ../lost.caf
-cCpResource build/Debug-iphoneos/Pong.app/menu.caf ../menu.caf
-cCpResource build/Debug-iphoneos/Pong.app/pong.caf ../pong.caf
-cCpResource build/Debug-iphoneos/Pong.app/targetbounce.caf ../targetbounce.caf
-cCpResource build/Debug-iphoneos/Pong.app/wall2.caf ../wall2.caf
-cCpResource build/Debug-iphoneos/Pong.app/won.caf ../won.caf
-cCpResource build/Debug-iphoneos/Pong.app/tileset1PVR.pvr ../tileset1PVR.pvr
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Default~ipad.png ../Default~ipad.png
-cCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon~ipad.png ../Icon~ipad.png
-cProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-cProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/main.o /Users/lbarrettanderson/Desktop/Pong/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/EAGLView.o /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongViewController.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/main.o /Users/lbarrettanderson/Desktop/Pong/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/EAGLView.o /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongViewController.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong normal armv6
-cLd /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong normal armv7
-cCreateUniversalBinary /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong normal "armv6 armv7"
-cGenerateDSYMFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app.dSYM /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong
-cProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-cTouch /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent
-cCodeSign /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk
-c000000004CC7DC9E0000000000000110
-t1288166558
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
-c000000004CB3DFCF00000000000001A7
-t1286856655
-s423
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-c000000004CB3DFCF00000000000001E5
-t1286856655
-s485
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c000000004CC10EF400000000003B8CB0
-t1287720692
-s3902640
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioServices.h
-c000000004CC10EB60000000000010AAC
-t1287720630
-s68268
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
-c000000004CC10DCA00000000000004FE
-t1287720394
-s1278
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC10F4700000000003E1F20
-t1287720775
-s4071200
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC10F1C0000000000001466
-t1287720732
-s5222
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGL.h
-c000000004CC110BE000000000000094F
-t1287721150
-s2383
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h
-c000000004CC110BE0000000000009369
-t1287721150
-s37737
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/glext.h
-c000000004CC110BE0000000000003C4A
-t1287721150
-s15434
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/gl.h
-c000000004CC110BE00000000000092AA
-t1287721150
-s37546
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/glext.h
-c000000004CC110BE00000000000026AA
-t1287721150
-s9898
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
-c000000004CC110CB000000000002C650
-t1287721163
-s181840
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004CC1111C00000000000000C4
-t1287721244
-s196
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
-c000000004CC1127D0000000000267530
-t1287721597
-s2520368
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC11AE60000000000000AA1
-t1287723750
-s2721
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC11B750000000000C769F0
-t1287723893
-s13068784
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/Availability.h
-c000000004CB3FBB80000000000001ADD
-t1286863800
-s6877
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/include/sqlite3.h
-c000000004CC10A9E0000000000042B54
-t1287719582
-s273236
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/lib/libsqlite3.0.dylib
-c000000004CC10AB400000000000CE100
-t1287719604
-s844032
-
-N/Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql
-c000000004D4E74250000000000002000
-t1296987173
-s8192
-
-N/Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png
-c000000004D93CEA700000000000D9550
-t1301532327
-s890192
-
-N/Users/lbarrettanderson/Desktop/Pong/../Icon.png
-c000000004D4A1FB10000000000001202
-t1296703409
-s4610
-
-N/Users/lbarrettanderson/Desktop/Pong/../Icon4.png
-c000000004D4A1C3F0000000000001B9A
-t1296702527
-s7066
-
-N/Users/lbarrettanderson/Desktop/Pong/../Iconios.png
-c000000004D3F4973000000000000153A
-t1295993203
-s5434
-
-N/Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png
-c000000004D93DF710000000000001417
-t1301536625
-s5143
-
-N/Users/lbarrettanderson/Desktop/Pong/../bigfont.png
-c000000004D22194C0000000000039B0A
-t1294080332
-s236298
-
-N/Users/lbarrettanderson/Desktop/Pong/../bullseye.caf
-c000000004D54D8DD0000000000013DDE
-t1297406173
-s81374
-
-N/Users/lbarrettanderson/Desktop/Pong/../bullseye.mp3
-c000000004CEC419B00000000000046E0
-t1290551707
-s18144
-
-N/Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png
-c000000004D3F4FCA00000000000783ED
-t1295994826
-s492525
-
-N/Users/lbarrettanderson/Desktop/Pong/../dotdroidsplashipad.png
-c000000004D93CEA700000000000D9550
-t1301532327
-s890192
-
-N/Users/lbarrettanderson/Desktop/Pong/../icon.png
-c000000004CC1176900000000000017FA
-t1287722857
-s6138
-
-N/Users/lbarrettanderson/Desktop/Pong/../icon4.png
-c000000004D4A1C3F0000000000001B9A
-t1296702527
-s7066
-
-N/Users/lbarrettanderson/Desktop/Pong/../iconios.png
-c000000004D3F4973000000000000153A
-t1295993203
-s5434
-
-N/Users/lbarrettanderson/Desktop/Pong/../lost.caf
-c000000004D54D95200000000000158DE
-t1297406290
-s88286
-
-N/Users/lbarrettanderson/Desktop/Pong/../lost.mp3
-c000000004CEC41590000000000004BC3
-t1290551641
-s19395
-
-N/Users/lbarrettanderson/Desktop/Pong/../lostshort.caf
-c000000004D54D9A300000000000092DE
-t1297406371
-s37598
-
-N/Users/lbarrettanderson/Desktop/Pong/../lostshort.mp3
-c000000004CEC417200000000000027ED
-t1290551666
-s10221
-
-N/Users/lbarrettanderson/Desktop/Pong/../medfont.png
-c000000004D221A16000000000001601E
-t1294080534
-s90142
-
-N/Users/lbarrettanderson/Desktop/Pong/../menu.caf
-c000000004D54D9AB00000000000077DE
-t1297406379
-s30686
-
-N/Users/lbarrettanderson/Desktop/Pong/../menu.mp3
-c000000004CEC41D3000000000000230A
-t1290551763
-s8970
-
-N/Users/lbarrettanderson/Desktop/Pong/../ping.caf
-c000000004D54D95D000000000000BFDE
-t1297406301
-s49118
-
-N/Users/lbarrettanderson/Desktop/Pong/../ping.mp3
-c000000004CEC41ED0000000000003012
-t1290551789
-s12306
-
-N/Users/lbarrettanderson/Desktop/Pong/../pong.caf
-c000000004D54D9B3000000000000ECDE
-t1297406387
-s60638
-
-N/Users/lbarrettanderson/Desktop/Pong/../pong.mp3
-c000000004CEC41FB0000000000003837
-t1290551803
-s14391
-
-N/Users/lbarrettanderson/Desktop/Pong/../smallfont.png
-c000000004D212E6F0000000000003DC6
-t1294020207
-s15814
-
-N/Users/lbarrettanderson/Desktop/Pong/../target.caf
-c000000004D54D96E000000000000FEDE
-t1297406318
-s65246
-
-N/Users/lbarrettanderson/Desktop/Pong/../target.mp3
-c000000004CEB566F0000000000002E91
-t1290491503
-s11921
-
-N/Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf
-c000000004D54D9BD00000000000119DE
-t1297406397
-s72158
-
-N/Users/lbarrettanderson/Desktop/Pong/../targetbounce.mp3
-c000000004CEC41B3000000000000405C
-t1290551731
-s16476
-
-N/Users/lbarrettanderson/Desktop/Pong/../tileset1.png
-c000000004D22563C000000000000DCD8
-t1294095932
-s56536
-
-N/Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr
-c000000004D93C1590000000000008034
-t1301528921
-s32820
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall1.caf
-c000000004D54D97C00000000000077DE
-t1297406332
-s30686
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall1.mp3
-c000000004CEC2106000000000000230A
-t1290543366
-s8970
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall2.caf
-c000000004D54D98100000000000053DE
-t1297406337
-s21470
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall2.mp3
-c000000004CEC20C40000000000001C7A
-t1290543300
-s7290
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall3.caf
-c000000004D54D98600000000000065DE
-t1297406342
-s26078
-
-N/Users/lbarrettanderson/Desktop/Pong/../wall3.mp3
-c000000004CEC20F20000000000001FC8
-t1290543346
-s8136
-
-N/Users/lbarrettanderson/Desktop/Pong/../won.caf
-c000000004D54D9C4000000000001D6DE
-t1297406404
-s120542
-
-N/Users/lbarrettanderson/Desktop/Pong/../won.mp3
-c000000004CEC41840000000000006291
-t1290551684
-s25233
-
-N/Users/lbarrettanderson/Desktop/Pong/Button.h
-c000000004D4CF3A4000000000000037F
-t1296888740
-s895
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Button.m
-c000000004D48CBA000000000000000B0
-t1296616352
-s176
-i"Button.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.h
-c000000004D4CF3A4000000000000037F
-t1296888740
-s895
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m
-c000000004D4F03850000000000000E96
-t1297023877
-s3734
-i"Button.h"
-i"PongViewController.h"
-i"TextureCoord.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.h
-c000000004D47C3F80000000000000138
-t1296548856
-s312
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m
-c000000004D47C3F20000000000000769
-t1296548850
-s1897
-i"FontTexture.h"
-i"PongViewController.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.h
-c000000004D45130F0000000000000199
-t1296372495
-s409
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m
-c000000004D49079100000000000002D9
-t1296631697
-s729
-i"TextureCoord.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../buttonHandlers.h
-c000000004D93D58C0000000000001375
-t1301534092
-s4981
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../drawers.h
-c000000004DFF97C1000000000000301F
-t1308596161
-s12319
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../gameLoop.h
-c000000004D54DCEF0000000000002EAE
-t1297407215
-s11950
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/../gettersSetters.h
-c000000004D93CCB70000000000004699
-t1301531831
-s18073
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.h
-c000000004D4784EA0000000000000603
-t1296532714
-s1539
-i<UIKit/UIKit.h>
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<OpenGLES/ES2/gl.h>
-i<OpenGLES/ES2/glext.h>
-i"TextureCoord.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m
-c000000004D5766B10000000000003F31
-t1297573553
-s16177
-i<QuartzCore/QuartzCore.h>
-i"EAGLView.h"
-i"PongViewController.h"
-i"PongAppDelegate.h"
-i"Button.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.h
-c000000004D4E59A7000000000000020E
-t1296980391
-s526
-i<UIKit/UIKit.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m
-c000000004D4F99D30000000000000E9C
-t1297062355
-s3740
-i"PongAppDelegate.h"
-i"PongViewController.h"
-i<sqlite3.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.h
-c000000004D54DBF900000000000017AD
-t1297406969
-s6061
-i<UIKit/UIKit.h>
-i<OpenGLES/EAGL.h>
-i<OpenGLES/ES1/gl.h>
-i<OpenGLES/ES1/glext.h>
-i<OpenGLES/ES2/gl.h>
-i<OpenGLES/ES2/glext.h>
-i"TextureCoord.h"
-i"Button.h"
-i"FontTexture.h"
-i"PongAppDelegate.h"
-i<AudioToolbox/AudioServices.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m
-c000000004D93CD4D0000000000009327
-t1301531981
-s37671
-i<QuartzCore/QuartzCore.h>
-i<UIKit/UIKit.h>
-i<CoreGraphics/CoreGraphics.h>
-i<sqlite3.h>
-i<AudioToolbox/AudioServices.h>
-i"PongViewController.h"
-i"EAGLView.h"
-i"PongAppDelegate.h"
-i"FontTexture.h"
-i"Button.h"
-i"drawers.h"
-i"buttonHandlers.h"
-i"gameLoop.h"
-i"gettersSetters.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/FontTexture.h
-c000000004D47C3F80000000000000138
-t1296548856
-s312
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/FontTexture.m
-c000000004D47B7E500000000000000BF
-t1296545765
-s191
-i"FontTexture.h"
-
-N/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
-c000000004D3E4A3500000000000054F6
-t1295927861
-s21750
-
-N/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
-c000000004D472EB30000000000004E7A
-t1296510643
-s20090
-
-N/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch
-c000000004D3E4A350000000000000132
-t1295927861
-s306
-i<Availability.h>
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh
-c000000004D3E4A3500000000000000D3
-t1295927861
-s211
-
-N/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh
-c000000004D4122A400000000000001B7
-t1296114340
-s439
-
-N/Users/lbarrettanderson/Desktop/Pong/TextureCoord.h
-c000000004D45130F0000000000000199
-t1296372495
-s409
-i<Foundation/Foundation.h>
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-t1308596166
-s1666
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app.dSYM
-t1308596166
-s102
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Default~ipad.png
-t1301532472
-s764654
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon.png
-t1296706307
-s4619
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon4.png
-t1296702934
-s7112
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Iconios.png
-t1296173484
-s5533
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon~ipad.png
-t1308596085
-s5231
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Info.plist
-t1308596085
-s1074
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/MainWindow.nib
-t1296506986
-s1744
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/PkgInfo
-t1308596085
-s8
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong
-t1308596166
-s350428
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/PongViewController.nib
-t1296510647
-s1342
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/ResourceRules.plist
-t1296173484
-s485
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Shader.fsh
-t1296173484
-s211
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Shader.vsh
-t1296173484
-s439
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bigfont.png
-t1296544667
-s192038
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bullseye.caf
-t1297406220
-s81374
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bullseye.mp3
-t1297403920
-s18144
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplash.png
-t1296173487
-s453921
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplashipad.png
-t2
-s0
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-t1308596087
-s7293
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon.png
-t1296173484
-s6192
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon4.png
-t2
-s0
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/iconios.png
-t1296173484
-s5533
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/lost.caf
-t1297406601
-s88286
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/lost.mp3
-t1297403920
-s19395
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/lostshort.caf
-t1297406601
-s37598
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/lostshort.mp3
-t1297403920
-s10221
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/medfont.png
-t1296544666
-s72140
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/menu.caf
-t1297406601
-s30686
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/menu.mp3
-t1297403920
-s8970
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/ping.caf
-t1297406601
-s49118
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/ping.mp3
-t1297403920
-s12306
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/pong.caf
-t1297406601
-s60638
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/pong.mp3
-t1297403920
-s14391
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/pongStore.sql
-t1296987196
-s8192
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/smallfont.png
-t1296544666
-s15828
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/target.caf
-t1297406601
-s65246
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/target.mp3
-t1297403920
-s11921
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/targetbounce.caf
-t1297406601
-s72158
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/targetbounce.mp3
-t1297403920
-s16476
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1.png
-t1296350704
-s60481
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1PVR.pvr
-t1301529030
-s32820
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall1.caf
-t1297406601
-s30686
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall1.mp3
-t1297403920
-s8970
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall2.caf
-t1297406601
-s21470
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall2.mp3
-t1297403920
-s7290
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall3.caf
-t1297406601
-s26078
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/wall3.mp3
-t1297403920
-s8136
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/won.caf
-t1297406601
-s120542
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/won.mp3
-t1297403920
-s25233
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o
-t1308596086
-s56376
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/EAGLView.o
-t1308596086
-s88028
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o
-t1308596086
-s46232
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong
-t1308596166
-s190684
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong.LinkFileList
-c000000004D48CC710000000000000322
-t1296616561
-s802
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongAppDelegate.o
-t1308596086
-s59048
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongViewController.o
-t1308596166
-s263852
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/TextureCoord.o
-t1308596086
-s8876
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/main.o
-t1308596086
-s6500
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o
-t1308596086
-s53900
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/EAGLView.o
-t1308596086
-s82180
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o
-t1308596086
-s45404
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong
-t1308596166
-s153820
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong.LinkFileList
-c000000004D48CC710000000000000322
-t1296616561
-s802
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongAppDelegate.o
-t1308596086
-s58104
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongViewController.o
-t1308596166
-s238632
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/TextureCoord.o
-t1308596086
-s8428
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/main.o
-t1308596086
-s6428
-
-N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent
-t1308596087
-s396
-
-N/Users/lbarrettanderson/Desktop/Pong/gettersSetters.h
-c000000004D47B4C900000000000029A1
-t1296544969
-s10657
-
-N/Users/lbarrettanderson/Desktop/Pong/main.m
-c000000004D54D74A0000000000000169
-t1297405770
-s361
-i<UIKit/UIKit.h>
-
-N/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision
-c000000004DFF97520000000000001C7D
-t1308596050
-s7293
-
-N/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/B1FF2A70-BC46-4402-92EC-901270AEF695.mobileprovision
-c000000004D50C33F0000000000001C4A
-t1297138495
-s7242
-
-N/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/D214BF2F-FC4B-4282-9846-4CC348617A6A.mobileprovision
-c000000004D51E7170000000000001C86
-t1297213207
-s7302
-
-N/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/E036920B-3E83-44C2-8245-C943F460B2D0.mobileprovision
-c000000004D50C3F10000000000001C4A
-t1297138673
-s7242
-
-N/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/F717A5E4-6B45-415F-84F6-0B4F3E9D6DBE.mobileprovision
-c000000004D3F2FF10000000000001C0E
-t1295986673
-s7182
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch.gch
-t1308596086
-s10462936
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-arkevyvfhniqskglcnjomhlxtbgv/Pong_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-caeufhavrvaszadlzkkdkoeqkjfg/Pong_Prefix.pch.gch
-t1296506986
-s10462936
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-cwepnkotszagfhgpuauxhfsxegpr/Pong_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch.gch
-t1308596086
-s9991896
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehqljdefsgkejydnujsdahuhazmb/Pong_Prefix.pch.gch
-t1296173487
-s9979608
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ektdnyoohtwydbchhunabzbyuckz/Pong_Prefix.pch.gch
-t1296173487
-s10442456
-
-N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gwrsowxhwisriacybzjjxuaujpcg/Pong_Prefix.pch.gch
-t1296506986
-s9991896
-
-NPong-Info.plist
-c000000004D93E03100000000000004F6
-t1301536817
-s1270
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies330288966#330288966#0(0"0(0#1#0"8605163808#0"0#
-
-CCodeSign /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-s330288966.710357
-e330288966.895156
-r1
-xCodeSign
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-lSLF07#2@38"CodeSign build/Debug-iphoneos/Pong.app330288966#330288966#0(0"0(0#0#66"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app8614762816#629"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Barrett Anderson (5LF53246F5)" --resource-rules=/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/ResourceRules.plist --entitlements /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o /Users/lbarrettanderson/Desktop/Pong/Button.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.467862
-e330288886.599399
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@64"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m8612992128#1674"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Button.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/EAGLView.o /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.169122
-e330288886.469178
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/EAGLView.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@63"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m8613230528#1675"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/EAGLView.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.407209
-e330288886.503078
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@69"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#61"/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m8613476864#1684"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/FontTexture.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.168260
-e330288886.406936
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongAppDelegate.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'
-lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m330288886#330288886#0(930"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring./Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'4(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(22@52"'PongViewController' may not respond to '+writeData'330288886#201#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)330288886#331#123#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#0"0(22@52"'PongViewController' may not respond to '+writeData'330288886#800#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#113#0#113#0#26"'*' may not respond to '*'0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m8613566976#1689"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongAppDelegate.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongViewController.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288966.185377
-e330288966.611182
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongViewController.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-oIn file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:
-o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':
-o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'
-lSLF07#2@73"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m330288966#330288966#0(351"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'2(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288966#0#77#0(6@10"<built-in>330288966#0#0#0#0#0"0(22@23"Unused variable 'count'330288966#266#85#2(7@87"In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m330288966#18446744073709551615#0#0(6@65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m323224781#904#0#904#0#0"0(13@74"Unused variable 'count' in /Users/lbarrettanderson/Desktop/Pong/gameLoop.h330288966#18446744073709551615#0#0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#0"0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#19"unused variable '*'0(0#0#65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m8614563392#1695"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/PongViewController.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.392817
-e330288886.467689
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/TextureCoord.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m8614007200#1686"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/TextureCoord.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/main.o /Users/lbarrettanderson/Desktop/Pong/main.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288886.167445
-e330288886.392690
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/main.o
-x/Users/lbarrettanderson/Desktop/Pong/main.m
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@51"Compile /Users/lbarrettanderson/Desktop/Pong/main.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#43"/Users/lbarrettanderson/Desktop/Pong/main.m8533602630669983744#1659"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/main.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/main.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o /Users/lbarrettanderson/Desktop/Pong/Button.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.761592
-e330288886.865873
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@64"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m8614045600#1682"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Button.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/EAGLView.o /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.527035
-e330288886.761462
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/EAGLView.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@63"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m8611823168#1683"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/EAGLView.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.689866
-e330288886.795580
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@69"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#61"/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m8612222496#1692"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/FontTexture.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.503215
-e330288886.626170
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongAppDelegate.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':
-o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'
-lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m330288886#330288886#0(930"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring./Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'4(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(22@52"'PongViewController' may not respond to '+writeData'330288886#201#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)330288886#331#123#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#0"0(22@52"'PongViewController' may not respond to '+writeData'330288886#800#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#113#0#113#0#26"'*' may not respond to '*'0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m8612005792#1697"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongAppDelegate.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongViewController.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288966.187218
-e330288966.624072
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongViewController.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-oIn file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:
-o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':
-o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'
-lSLF07#2@73"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m330288966#330288966#0(351"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'2(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288966#0#77#0(6@10"<built-in>330288966#0#0#0#0#0"0(22@23"Unused variable 'count'330288966#266#85#2(7@87"In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m330288966#18446744073709551615#0#0(6@65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m323224781#904#0#904#0#0"0(13@74"Unused variable 'count' in /Users/lbarrettanderson/Desktop/Pong/gameLoop.h330288966#18446744073709551615#0#0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#0"0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#19"unused variable '*'0(0#0#65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m8596719648#1703"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/PongViewController.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.626298
-e330288886.689728
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/TextureCoord.o
-x/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m8613171072#1694"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/TextureCoord.o0#
-
-CCompileC build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/main.o /Users/lbarrettanderson/Desktop/Pong/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288886.469300
-e330288886.526896
-r1
-xCompileC
-xbuild/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/main.o
-x/Users/lbarrettanderson/Desktop/Pong/main.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@51"Compile /Users/lbarrettanderson/Desktop/Pong/main.m330288886#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288886#0#77#0(6@10"<built-in>330288886#0#0#0#0#0"0(0#0#43"/Users/lbarrettanderson/Desktop/Pong/main.m8612351168#1667"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -include /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/main.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/main.o0#
-
-CCompileXIB /Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
-s318199785.716006
-e318199786.058605
-r1
-xCompileXIB
-x/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib318199785#318199786#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib8628705280#535"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/MainWindow.nib /Users/lbarrettanderson/Desktop/Pong/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCompileXIB /Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
-s318203447.268415
-e318203447.592681
-r1
-xCompileXIB
-x/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
-lSLF07#2@33"CompileXIB PongViewController.xib318203447#318203447#0(0"0(0#0#59"/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib8596494944#551"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/PongViewController.nib /Users/lbarrettanderson/Desktop/Pong/PongViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Default~ipad.png ../Default~ipad.png
-s323225268.079999
-e323225272.377703
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Default~ipad.png
-x../Default~ipad.png
-lSLF07#2@78"CopyPNGFile build/Debug-iphoneos/Pong.app/Default~ipad.png ../Default~ipad.png323225268#323225272#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png8628895616#566"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Default~ipad.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon.png ../Icon.png
-s318399106.994864
-e318399107.050983
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon.png
-x../Icon.png
-lSLF07#2@62"CopyPNGFile build/Debug-iphoneos/Pong.app/Icon.png ../Icon.png318399106#318399107#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../Icon.png8643688864#550"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../Icon.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon4.png ../Icon4.png
-s318395734.850127
-e318395734.942983
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon4.png
-x../Icon4.png
-lSLF07#2@64"CopyPNGFile build/Debug-iphoneos/Pong.app/Icon4.png ../Icon4.png318395734#318395734#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../Icon4.png27303270316179568#552"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../Icon4.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon4.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Iconios.png ../Iconios.png
-r0
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon~ipad.png ../Icon~ipad.png
-s330288885.393515
-e330288885.447016
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon~ipad.png
-x../Icon~ipad.png
-lSLF07#2@72"CopyPNGFile build/Debug-iphoneos/Pong.app/Icon~ipad.png ../Icon~ipad.png330288885#330288885#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png8611544096#560"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Icon~ipad.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bigfont.png ../bigfont.png
-s318237466.594078
-e318237467.069811
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bigfont.png
-x../bigfont.png
-lSLF07#2@68"CopyPNGFile build/Debug-iphoneos/Pong.app/bigfont.png ../bigfont.png318237466#318237467#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../bigfont.png8639401312#556"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../bigfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/bigfont.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplash.png ../dotdroidsplash.png
-s317866284.584725
-e317866287.139887
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplash.png
-x../dotdroidsplash.png
-lSLF07#2@82"CopyPNGFile build/Debug-iphoneos/Pong.app/dotdroidsplash.png ../dotdroidsplash.png317866284#317866287#0(0"0(0#0#58"/Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png8604265728#570"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplash.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/dotdroidsplashipad.png ../dotdroidsplashipad.png
-r0
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon.png ../icon.png
-s317866284.358718
-e317866284.589314
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon.png
-x../icon.png
-lSLF07#2@62"CopyPNGFile build/Debug-iphoneos/Pong.app/icon.png ../icon.png317866284#317866284#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../icon.png8620966912#550"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../icon.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/icon4.png ../icon4.png
-r0
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/iconios.png ../iconios.png
-s317866284.359765
-e317866284.584617
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/iconios.png
-x../iconios.png
-lSLF07#2@68"CopyPNGFile build/Debug-iphoneos/Pong.app/iconios.png ../iconios.png317866284#317866284#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../iconios.png8620443456#556"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../iconios.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/iconios.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/medfont.png ../medfont.png
-s318237466.593262
-e318237466.861325
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/medfont.png
-x../medfont.png
-lSLF07#2@68"CopyPNGFile build/Debug-iphoneos/Pong.app/medfont.png ../medfont.png318237466#318237466#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../medfont.png8639558688#556"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../medfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/medfont.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/smallfont.png ../smallfont.png
-s318237466.592168
-e318237466.776018
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/smallfont.png
-x../smallfont.png
-lSLF07#2@72"CopyPNGFile build/Debug-iphoneos/Pong.app/smallfont.png ../smallfont.png318237466#318237466#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../smallfont.png8639656640#560"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../smallfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/smallfont.png0#
-
-CCopyPNGFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1.png ../tileset1.png
-s318043504.018286
-e318043504.239253
-r1
-xCopyPNGFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1.png
-x../tileset1.png
-lSLF07#2@70"CopyPNGFile build/Debug-iphoneos/Pong.app/tileset1.png ../tileset1.png318043504#318043504#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/../tileset1.png8643578208#558"    cd /Users/lbarrettanderson/Desktop/Pong    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/lbarrettanderson/Desktop/Pong/../tileset1.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/tileset1.png0#
-
-CCpResource build/Debug-iphoneos/Pong.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-s317866284.328438
-e317866284.353886
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/ResourceRules.plist
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist
-lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist317866284#317866284#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist8619703392#487"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/ResourceRules.plist /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/Shader.fsh Shaders/Shader.fsh
-s317866284.353962
-e317866284.358576
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/Shader.fsh
-xShaders/Shader.fsh
-lSLF07#2@23"Copy Shaders/Shader.fsh317866284#317866284#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh8621734720#453"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/Shader.vsh Shaders/Shader.vsh
-s317866284.354547
-e317866284.359678
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/Shader.vsh
-xShaders/Shader.vsh
-lSLF07#2@23"Copy Shaders/Shader.vsh317866284#317866284#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh8621574176#453"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/bullseye.caf ../bullseye.caf
-s319099020.486701
-e319099020.501402
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/bullseye.caf
-x../bullseye.caf
-lSLF07#2@20"Copy ../bullseye.caf319099020#319099020#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/../bullseye.caf8626171232#450"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../bullseye.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/bullseye.mp3 ../bullseye.mp3
-s319096720.155114
-e319096720.161033
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/bullseye.mp3
-x../bullseye.mp3
-lSLF07#2@20"Copy ../bullseye.mp3319096720#319096720#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/../bullseye.mp38617828960#450"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../bullseye.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/lost.caf ../lost.caf
-s319099401.039433
-e319099401.050591
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/lost.caf
-x../lost.caf
-lSLF07#2@16"Copy ../lost.caf319099401#319099401#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../lost.caf8627834816#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lost.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/lost.mp3 ../lost.mp3
-s319096720.157190
-e319096720.161608
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/lost.mp3
-x../lost.mp3
-lSLF07#2@16"Copy ../lost.mp3319096720#319096720#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../lost.mp38617709376#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lost.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/lostshort.caf ../lostshort.caf
-s319099401.033592
-e319099401.043104
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/lostshort.caf
-x../lostshort.caf
-lSLF07#2@21"Copy ../lostshort.caf319099401#319099401#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../lostshort.caf8620003552#451"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lostshort.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/lostshort.mp3 ../lostshort.mp3
-s319096720.146588
-e319096720.158375
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/lostshort.mp3
-x../lostshort.mp3
-lSLF07#2@21"Copy ../lostshort.mp3319096720#319096720#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../lostshort.mp38618060000#451"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lostshort.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/menu.caf ../menu.caf
-s319099401.040165
-e319099401.048468
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/menu.caf
-x../menu.caf
-lSLF07#2@16"Copy ../menu.caf319099401#319099401#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../menu.caf8626166208#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../menu.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/menu.mp3 ../menu.mp3
-s319096720.147092
-e319096720.157005
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/menu.mp3
-x../menu.mp3
-lSLF07#2@16"Copy ../menu.mp3319096720#319096720#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../menu.mp38617896448#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../menu.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/ping.caf ../ping.caf
-s319099401.034615
-e319099401.043265
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/ping.caf
-x../ping.caf
-lSLF07#2@16"Copy ../ping.caf319099401#319099401#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../ping.caf8598684000#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../ping.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/ping.mp3 ../ping.mp3
-s319096720.140327
-e319096720.156352
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/ping.mp3
-x../ping.mp3
-lSLF07#2@16"Copy ../ping.mp3319096720#319096720#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../ping.mp38618366144#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../ping.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/pong.caf ../pong.caf
-s319099401.040879
-e319099401.050775
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/pong.caf
-x../pong.caf
-lSLF07#2@16"Copy ../pong.caf319099401#319099401#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../pong.caf8623553312#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../pong.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/pong.mp3 ../pong.mp3
-s319096720.141024
-e319096720.158117
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/pong.mp3
-x../pong.mp3
-lSLF07#2@16"Copy ../pong.mp3319096720#319096720#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../pong.mp38618380256#446"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../pong.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/pongStore.sql ../../Documents/SQLite/pongStore.sql
-s318679996.264579
-e318679996.268888
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/pongStore.sql
-x../../Documents/SQLite/pongStore.sql
-lSLF07#2@41"Copy ../../Documents/SQLite/pongStore.sql318679996#318679996#0(0"0(0#0#73"/Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql8625674560#471"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/target.caf ../target.caf
-s319099401.035319
-e319099401.044309
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/target.caf
-x../target.caf
-lSLF07#2@18"Copy ../target.caf319099401#319099401#0(0"0(0#0#50"/Users/lbarrettanderson/Desktop/Pong/../target.caf8625244064#448"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../target.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/target.mp3 ../target.mp3
-s319096720.139685
-e319096720.158685
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/target.mp3
-x../target.mp3
-lSLF07#2@18"Copy ../target.mp3319096720#319096720#0(0"0(0#0#50"/Users/lbarrettanderson/Desktop/Pong/../target.mp38618352672#448"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../target.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/targetbounce.caf ../targetbounce.caf
-s319099401.041574
-e319099401.052509
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/targetbounce.caf
-x../targetbounce.caf
-lSLF07#2@24"Copy ../targetbounce.caf319099401#319099401#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf8627554304#454"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/targetbounce.mp3 ../targetbounce.mp3
-s319096720.138954
-e319096720.154564
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/targetbounce.mp3
-x../targetbounce.mp3
-lSLF07#2@24"Copy ../targetbounce.mp3319096720#319096720#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/../targetbounce.mp38618339520#454"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../targetbounce.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/tileset1PVR.pvr ../tileset1PVR.pvr
-s323221830.175805
-e323221830.195817
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/tileset1PVR.pvr
-x../tileset1PVR.pvr
-lSLF07#2@23"Copy ../tileset1PVR.pvr323221830#323221830#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr8621914624#453"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall1.caf ../wall1.caf
-s319099401.037917
-e319099401.044455
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall1.caf
-x../wall1.caf
-lSLF07#2@17"Copy ../wall1.caf319099401#319099401#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall1.caf8628178240#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall1.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall1.mp3 ../wall1.mp3
-s319096720.141690
-e319096720.156706
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall1.mp3
-x../wall1.mp3
-lSLF07#2@17"Copy ../wall1.mp3319096720#319096720#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall1.mp38618395488#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall1.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall2.caf ../wall2.caf
-s319099401.042283
-e319099401.050949
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall2.caf
-x../wall2.caf
-lSLF07#2@17"Copy ../wall2.caf319099401#319099401#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall2.caf8628335904#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall2.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall2.mp3 ../wall2.mp3
-s319096720.138312
-e319096720.156202
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall2.mp3
-x../wall2.mp3
-lSLF07#2@17"Copy ../wall2.mp3319096720#319096720#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall2.mp38618326208#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall2.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall3.caf ../wall3.caf
-s319099401.038710
-e319099401.047383
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall3.caf
-x../wall3.caf
-lSLF07#2@17"Copy ../wall3.caf319099401#319099401#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall3.caf8628005536#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall3.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/wall3.mp3 ../wall3.mp3
-s319096720.145523
-e319096720.156857
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/wall3.mp3
-x../wall3.mp3
-lSLF07#2@17"Copy ../wall3.mp3319096720#319096720#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall3.mp38618407712#447"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall3.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/won.caf ../won.caf
-s319099401.043354
-e319099401.050327
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/won.caf
-x../won.caf
-lSLF07#2@15"Copy ../won.caf319099401#319099401#0(0"0(0#0#47"/Users/lbarrettanderson/Desktop/Pong/../won.caf8628110880#445"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../won.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCpResource build/Debug-iphoneos/Pong.app/won.mp3 ../won.mp3
-s319096720.137455
-e319096720.156053
-r1
-xCpResource
-xbuild/Debug-iphoneos/Pong.app/won.mp3
-x../won.mp3
-lSLF07#2@15"Copy ../won.mp3319096720#319096720#0(0"0(0#0#47"/Users/lbarrettanderson/Desktop/Pong/../won.mp38618313216#445"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../won.mp3 /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
-CCreateUniversalBinary /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong normal "armv6 armv7"
-s330288966.663007
-e330288966.666202
-r1
-xCreateUniversalBinary
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong
-xnormal
-xarmv6 armv7
-lSLF07#2@77"CreateUniversalBinary build/Debug-iphoneos/Pong.app/Pong normal "armv6 armv7"330288966#330288966#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/armv6 armv78611409664#486"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/lipo -create /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong -output /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong0#
-
-CGenerateDSYMFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app.dSYM /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong
-s330288966.666309
-e330288966.707584
-r1
-xGenerateDSYMFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app.dSYM
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong
-lSLF07#2@86"GenerateDSYMFile build/Debug-iphoneos/Pong.app.dSYM build/Debug-iphoneos/Pong.app/Pong330288966#330288966#0(0"0(0#0#71"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong8614600160#347"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Pong -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app.dSYM0#
-
-CLd /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong normal armv6
-s330288966.611293
-e330288966.650770
-r1
-xLd
-x/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong
-xnormal
-xarmv6
-lSLF07#2@110"Link /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong330288966#330288966#0(0"0(0#0#0"8612949984#913"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -filelist /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong.LinkFileList -dead_strip -framework CoreGraphics -miphoneos-version-min=3.1.3 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -lsqlite3.0 -framework AudioToolbox -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv6/Pong0#
-
-CLd /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong normal armv7
-s330288966.624181
-e330288966.662900
-r1
-xLd
-x/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong
-xnormal
-xarmv7
-lSLF07#2@110"Link /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong330288966#330288966#0(0"0(0#0#0"8612659552#913"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -L/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -filelist /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong.LinkFileList -dead_strip -framework CoreGraphics -miphoneos-version-min=3.1.3 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -lsqlite3.0 -framework AudioToolbox -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Objects-normal/armv7/Pong0#
-
-CProcessInfoPlistFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Info.plist Pong-Info.plist
-s330288885.348960
-e330288885.392415
-r1
-xProcessInfoPlistFile
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Info.plist
-xPong-Info.plist
-lSLF07#2@23"Process Pong-Info.plist330288885#330288885#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong-Info.plist12948291317530736#542"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Pong-Info.plist -genpkginfo /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/ResourceRules.plist -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/Info.plist0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s330288885.447906
-e330288886.167356
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@26"Precompile Pong_Prefix.pch330288885#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288885#0#77#0(6@10"<built-in>330288885#0#0#0#0#0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8611305376#1570"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-acrrltolyfumtfdevqklzhfiqoho/Pong_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-arkevyvfhniqskglcnjomhlxtbgv/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-caeufhavrvaszadlzkkdkoeqkjfg/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s318199786.059517
-e318199786.656176
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-caeufhavrvaszadlzkkdkoeqkjfg/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile Pong_Prefix.pch318199786#318199786#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8630074784#1555"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-caeufhavrvaszadlzkkdkoeqkjfg/Pong_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-cwepnkotszagfhgpuauxhfsxegpr/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-s330288885.447165
-e330288886.129289
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.
-lSLF07#2@26"Precompile Pong_Prefix.pch330288885#330288886#0(77"<built-in>:0: warning: -fobjc-gc-only not supported for iPhone OS; ignoring.1(22@53"-fobjc-gc-only not supported for iPhone OS; ignoring.330288885#0#77#0(6@10"<built-in>330288885#0#0#0#0#0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8611423424#1562"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fobjc-gc-only -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehghwrcovvffwgbmycevdtqjgajs/Pong_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehqljdefsgkejydnujsdahuhazmb/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-s317866287.140079
-e317866287.731483
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehqljdefsgkejydnujsdahuhazmb/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile Pong_Prefix.pch317866287#317866287#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8618195584#1545"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=4.2 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ehqljdefsgkejydnujsdahuhazmb/Pong_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ektdnyoohtwydbchhunabzbyuckz/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s317866287.140910
-e317866287.760075
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ektdnyoohtwydbchhunabzbyuckz/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile Pong_Prefix.pch317866287#317866287#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8617984000#1553"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.2 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv7 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-ektdnyoohtwydbchhunabzbyuckz/Pong_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gwrsowxhwisriacybzjjxuaujpcg/Pong_Prefix.pch.gch Pong_Prefix.pch normal armv6 objective-c com.apple.compilers.gcc.4_2
-s318199786.058715
-e318199786.817802
-r1
-xProcessPCH
-x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gwrsowxhwisriacybzjjxuaujpcg/Pong_Prefix.pch.gch
-xPong_Prefix.pch
-xnormal
-xarmv6
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@26"Precompile Pong_Prefix.pch318199786#318199786#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8630565952#1547"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk -fvisibility=hidden -gdwarf-2 -miphoneos-version-min=3.1.3 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources/armv6 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gwrsowxhwisriacybzjjxuaujpcg/Pong_Prefix.pch.gch0#
-
-CProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-s330288887.525983
-e330288887.527132
-r1
-xProcessProductPackaging
-x/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-lSLF07#2@200"ProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision" build/Debug-iphoneos/Pong.app/embedded.mobileprovision330288887#330288887#0(0"0(0#0#91"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision8612862464#427"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/96104E7A-2E46-4986-8586-9F4389B85176.mobileprovision" -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision0#
-
-CProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/B1FF2A70-BC46-4402-92EC-901270AEF695.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-s318831524.233348
-e318831524.234854
-r1
-xProcessProductPackaging
-x/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/B1FF2A70-BC46-4402-92EC-901270AEF695.mobileprovision
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-lSLF07#2@200"ProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/B1FF2A70-BC46-4402-92EC-901270AEF695.mobileprovision" build/Debug-iphoneos/Pong.app/embedded.mobileprovision318831524#318831524#0(0"0(0#0#91"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision8622985952#427"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/B1FF2A70-BC46-4402-92EC-901270AEF695.mobileprovision" -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision0#
-
-CProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/D214BF2F-FC4B-4282-9846-4CC348617A6A.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-s318906015.312323
-e318906015.313490
-r1
-xProcessProductPackaging
-x/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/D214BF2F-FC4B-4282-9846-4CC348617A6A.mobileprovision
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-lSLF07#2@200"ProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/D214BF2F-FC4B-4282-9846-4CC348617A6A.mobileprovision" build/Debug-iphoneos/Pong.app/embedded.mobileprovision318906015#318906015#0(0"0(0#0#91"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision8620568704#427"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/D214BF2F-FC4B-4282-9846-4CC348617A6A.mobileprovision" -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision0#
-
-CProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/E036920B-3E83-44C2-8245-C943F460B2D0.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-s318832317.635439
-e318832317.636884
-r1
-xProcessProductPackaging
-x/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/E036920B-3E83-44C2-8245-C943F460B2D0.mobileprovision
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-lSLF07#2@200"ProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/E036920B-3E83-44C2-8245-C943F460B2D0.mobileprovision" build/Debug-iphoneos/Pong.app/embedded.mobileprovision318832317#318832317#0(0"0(0#0#91"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision8624468960#427"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/E036920B-3E83-44C2-8245-C943F460B2D0.mobileprovision" -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision0#
-
-CProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/F717A5E4-6B45-415F-84F6-0B4F3E9D6DBE.mobileprovision" /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-s317866288.082726
-e317866288.083793
-r1
-xProcessProductPackaging
-x/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/F717A5E4-6B45-415F-84F6-0B4F3E9D6DBE.mobileprovision
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision
-lSLF07#2@200"ProcessProductPackaging "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/F717A5E4-6B45-415F-84F6-0B4F3E9D6DBE.mobileprovision" build/Debug-iphoneos/Pong.app/embedded.mobileprovision317866288#317866288#0(0"0(0#0#91"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision8621711904#427"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/lbarrettanderson/Library/MobileDevice/Provisioning Profiles/F717A5E4-6B45-415F-84F6-0B4F3E9D6DBE.mobileprovision" -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app/embedded.mobileprovision0#
-
-CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent
-s330288887.605367
-e330288887.617177
-r1
-xProcessProductPackaging
-x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist
-x/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent
-lSLF07#2@166"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent330288887#330288887#0(0"0(0#0#90"/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent8594993600#419"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphoneos/Pong.build/Pong.xcent0#
-
-CTouch /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-s330288966.707826
-e330288966.710141
-r1
-xTouch
-x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app
-lSLF07#2@72"Touch /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app330288966#330288966#0(0"0(0#0#0"8614326400#257"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphoneos/Pong.app0#
-
