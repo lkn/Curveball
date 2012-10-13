@@ -1,0 +1,1699 @@
+TPong
+v7
+r0
+t371840169.004894
+cCheck dependencies
+cProcessInfoPlistFile /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist Pong-Info.plist
+cCpResource build/Debug-iphonesimulator/Pong.app/Shader.fsh Shaders/Shader.fsh
+cCpResource build/Debug-iphonesimulator/Pong.app/Shader.vsh Shaders/Shader.vsh
+cCompileXIB /Users/lbarrettanderson/Desktop/Curveball/Pong/MainWindow.xib
+cCompileXIB /Users/lbarrettanderson/Desktop/Curveball/Pong/PongViewController.xib
+cCpResource build/Debug-iphonesimulator/Pong.app/dotdroidsplash.png ../dotdroidsplash.png
+cCpResource build/Debug-iphonesimulator/Pong.app/tileset1.png ../tileset1.png
+cCpResource build/Debug-iphonesimulator/Pong.app/smallfont.png ../smallfont.png
+cCpResource build/Debug-iphonesimulator/Pong.app/medfont.png ../medfont.png
+cCpResource build/Debug-iphonesimulator/Pong.app/bigfont.png ../bigfont.png
+cCpResource build/Debug-iphonesimulator/Pong.app/Icon4.png ../Icon4.png
+cCpResource build/Debug-iphonesimulator/Pong.app/Icon.png ../Icon.png
+cCpResource build/Debug-iphonesimulator/Pong.app/pongStore.sql ../SQLite/pongStore.sql
+cCpResource build/Debug-iphonesimulator/Pong.app/bullseye.caf ../bullseye.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/lostshort.caf ../lostshort.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/ping.caf ../ping.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/target.caf ../target.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/wall1.caf ../wall1.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/wall3.caf ../wall3.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/lost.caf ../lost.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/menu.caf ../menu.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/pong.caf ../pong.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/targetbounce.caf ../targetbounce.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/wall2.caf ../wall2.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/won.caf ../won.caf
+cCpResource build/Debug-iphonesimulator/Pong.app/tileset1PVR.pvr ../tileset1PVR.pvr
+cCpResource build/Debug-iphonesimulator/Pong.app/Default~ipad.png ../Default~ipad.png
+cCpResource build/Debug-iphonesimulator/Pong.app/Icon~ipad.png ../Icon~ipad.png
+cProcessPCH /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch.gch Pong_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o /Users/lbarrettanderson/Desktop/Curveball/Pong/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong normal i386
+cGenerateDSYMFile /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app.dSYM /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+cTouch /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004CC1224600000000001EA9C0
+t1287725638
+s2009536
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioServices.h
+c000000004CC1222F0000000000010AAC
+t1287725615
+s68268
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h
+c000000004CC121DB00000000000004FE
+t1287725531
+s1278
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/EAGL.h
+c000000004CC12308000000000000094F
+t1287725832
+s2383
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/gl.h
+c000000004CC123080000000000009369
+t1287725832
+s37737
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES1/glext.h
+c000000004CC123080000000000003C4A
+t1287725832
+s15434
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/gl.h
+c000000004CC1230800000000000092AA
+t1287725832
+s37546
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/ES2/glext.h
+c000000004CC1230800000000000026AA
+t1287725832
+s9898
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c000000004CC1230E0000000000019D40
+t1287725838
+s105792
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC12431000000000015CDB0
+t1287726129
+s1428912
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/sqlite3.h
+c000000004CC109C90000000000042B54
+t1287719369
+s273236
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/lib/libsqlite3.0.dylib
+c000000004CC109D90000000000092C20
+t1287719385
+s601120
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../../Documents/SQLite/pongStore.sql
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../Default~ipad.png
+c000000004D93CEA700000000000D9550
+t1301532327
+s890192
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../Icon.png
+c000000004D4A1FB10000000000001202
+t1296703409
+s4610
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../Icon4.png
+c000000004D4A1C3F0000000000001B9A
+t1296702527
+s7066
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../Icon~ipad.png
+c000000004D93DF710000000000001417
+t1301536625
+s5143
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../SQLite/pongStore.sql
+c000000004D4E74250000000000002000
+t1296987173
+s8192
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../bigfont.png
+c000000004D22194C0000000000039B0A
+t1294080332
+s236298
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../bullseye.caf
+c000000004D54D8DD0000000000013DDE
+t1297406173
+s81374
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../dotdroidsplash.png
+c000000004D3F4FCA00000000000783ED
+t1295994826
+s492525
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../lost.caf
+c000000004D54D95200000000000158DE
+t1297406290
+s88286
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../lostshort.caf
+c000000004D54D9A300000000000092DE
+t1297406371
+s37598
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../medfont.png
+c000000004D221A16000000000001601E
+t1294080534
+s90142
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../menu.caf
+c000000004D54D9AB00000000000077DE
+t1297406379
+s30686
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../ping.caf
+c000000004D54D95D000000000000BFDE
+t1297406301
+s49118
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../pong.caf
+c000000004D54D9B3000000000000ECDE
+t1297406387
+s60638
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../smallfont.png
+c000000004D212E6F0000000000003DC6
+t1294020207
+s15814
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../target.caf
+c000000004D54D96E000000000000FEDE
+t1297406318
+s65246
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../targetbounce.caf
+c000000004D54D9BD00000000000119DE
+t1297406397
+s72158
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../tileset1.png
+c000000004D22563C000000000000DCD8
+t1294095932
+s56536
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../tileset1PVR.pvr
+c000000004D93C1590000000000008034
+t1301528921
+s32820
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../wall1.caf
+c000000004D54D97C00000000000077DE
+t1297406332
+s30686
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../wall2.caf
+c000000004D54D98100000000000053DE
+t1297406337
+s21470
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../wall3.caf
+c000000004D54D98600000000000065DE
+t1297406342
+s26078
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/../won.caf
+c000000004D54D9C4000000000001D6DE
+t1297406404
+s120542
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Button.h
+c000000004D4CF3A4000000000000037F
+t1296888740
+s895
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.h
+c000000004D4CF3A4000000000000037F
+t1296888740
+s895
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m
+c000000004D4F03850000000000000E96
+t1297023877
+s3734
+i"Button.h"
+i"PongViewController.h"
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.h
+c000000004D47C3F80000000000000138
+t1296548856
+s312
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m
+c000000004D47C3F20000000000000769
+t1296548850
+s1897
+i"FontTexture.h"
+i"PongViewController.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.h
+c000000004D45130F0000000000000199
+t1296372495
+s409
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m
+c000000004D49079100000000000002D9
+t1296631697
+s729
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../buttonHandlers.h
+c000000004D93D58C0000000000001375
+t1301534092
+s4981
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../drawers.h
+c000000004DFF97C1000000000000301F
+t1308596161
+s12319
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../gameLoop.h
+c000000004D54DCEF0000000000002EAE
+t1297407215
+s11950
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../gettersSetters.h
+c000000004D93CCB70000000000004699
+t1301531831
+s18073
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.h
+c000000004D4784EA0000000000000603
+t1296532714
+s1539
+i<UIKit/UIKit.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<OpenGLES/ES2/gl.h>
+i<OpenGLES/ES2/glext.h>
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m
+c000000004D5766B10000000000003F31
+t1297573553
+s16177
+i<QuartzCore/QuartzCore.h>
+i"EAGLView.h"
+i"PongViewController.h"
+i"PongAppDelegate.h"
+i"Button.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.h
+c000000004D4E59A7000000000000020E
+t1296980391
+s526
+i<UIKit/UIKit.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m
+c000000004D4F99D30000000000000E9C
+t1297062355
+s3740
+i"PongAppDelegate.h"
+i"PongViewController.h"
+i<sqlite3.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.h
+c000000004D54DBF900000000000017AD
+t1297406969
+s6061
+i<UIKit/UIKit.h>
+i<OpenGLES/EAGL.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<OpenGLES/ES2/gl.h>
+i<OpenGLES/ES2/glext.h>
+i"TextureCoord.h"
+i"Button.h"
+i"FontTexture.h"
+i"PongAppDelegate.h"
+i<AudioToolbox/AudioServices.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m
+c000000004E97B93F0000000000009326
+t1318566207
+s37670
+i<QuartzCore/QuartzCore.h>
+i<UIKit/UIKit.h>
+i<CoreGraphics/CoreGraphics.h>
+i<sqlite3.h>
+i<AudioToolbox/AudioServices.h>
+i"PongViewController.h"
+i"EAGLView.h"
+i"PongAppDelegate.h"
+i"FontTexture.h"
+i"Button.h"
+i"drawers.h"
+i"buttonHandlers.h"
+i"gameLoop.h"
+i"gettersSetters.h"
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/FontTexture.h
+c000000004D47C3F80000000000000138
+t1296548856
+s312
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/MainWindow.xib
+c000000004D3E4A3500000000000054F6
+t1295927861
+s21750
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/PongViewController.xib
+c000000004D472EB30000000000004E7A
+t1296510643
+s20090
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Pong_Prefix.pch
+c000000004D3E4A350000000000000132
+t1295927861
+s306
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Shaders/Shader.fsh
+c000000004D3E4A3500000000000000D3
+t1295927861
+s211
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/Shaders/Shader.vsh
+c000000004D4122A400000000000001B7
+t1296114340
+s439
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/TextureCoord.h
+c000000004D45130F0000000000000199
+t1296372495
+s409
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app
+t1350147369
+s1122
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app.dSYM
+t1350147368
+s102
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Default~ipad.png
+t1348509847
+s890192
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Icon.png
+t1296703472
+s4610
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Icon4.png
+t1296703021
+s7066
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Icon~ipad.png
+t1348509847
+s5143
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist
+t1348509847
+s882
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/MainWindow.nib
+t1296509518
+s1744
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/PkgInfo
+t1348509847
+s8
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+t1350147368
+s158232
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/PongViewController.nib
+t1296526876
+s1342
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Shader.fsh
+t1295927932
+s211
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Shader.vsh
+t1296277976
+s439
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/bigfont.png
+t1296549252
+s236298
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/bullseye.caf
+t1348509847
+s81374
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/dotdroidsplash.png
+t1296277976
+s492525
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/lost.caf
+t1348509847
+s88286
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/lostshort.caf
+t1348509847
+s37598
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/medfont.png
+t1296549252
+s90142
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/menu.caf
+t1348509847
+s30686
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/ping.caf
+t1348509847
+s49118
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/pong.caf
+t1348509847
+s60638
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/pongStore.sql
+t1348509847
+s8192
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/smallfont.png
+t1296549252
+s15814
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/target.caf
+t1348509847
+s65246
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/targetbounce.caf
+t1348509847
+s72158
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/tileset1.png
+t1296361696
+s56536
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/tileset1PVR.pvr
+t1348509847
+s32820
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/wall1.caf
+t1348509847
+s30686
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/wall2.caf
+t1348509847
+s21470
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/wall3.caf
+t1348509847
+s26078
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/won.caf
+t1348509847
+s120542
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o
+t1350147368
+s54372
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o
+t1350147368
+s84536
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o
+t1350147368
+s45020
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Pong.LinkFileList
+c0000000050799D270000000000000392
+t1350147367
+s914
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o
+t1350147368
+s58964
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o
+t1350147368
+s250496
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o
+t1350147368
+s8012
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o
+t1350147368
+s6320
+
+N/Users/lbarrettanderson/Desktop/Curveball/Pong/main.m
+c000000004D54D74A0000000000000169
+t1297405770
+s361
+i<UIKit/UIKit.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql
+c000000004D4E74250000000000002000
+t1296987173
+s8192
+
+N/Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png
+c000000004D93CEA700000000000D9550
+t1301532327
+s890192
+
+N/Users/lbarrettanderson/Desktop/Pong/../Icon.png
+c000000004D4A1FB10000000000001202
+t1296703409
+s4610
+
+N/Users/lbarrettanderson/Desktop/Pong/../Icon4.png
+c000000004D4A1C3F0000000000001B9A
+t1296702527
+s7066
+
+N/Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png
+c000000004D93DF710000000000001417
+t1301536625
+s5143
+
+N/Users/lbarrettanderson/Desktop/Pong/../bigfont.png
+c000000004D22194C0000000000039B0A
+t1294080332
+s236298
+
+N/Users/lbarrettanderson/Desktop/Pong/../bullseye.caf
+c000000004D54D8DD0000000000013DDE
+t1297406173
+s81374
+
+N/Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png
+c000000004D3F4FCA00000000000783ED
+t1295994826
+s492525
+
+N/Users/lbarrettanderson/Desktop/Pong/../icon.png
+c000000004CC1176900000000000017FA
+t1287722857
+s6138
+
+N/Users/lbarrettanderson/Desktop/Pong/../iconios.png
+c000000004D3F4973000000000000153A
+t1295993203
+s5434
+
+N/Users/lbarrettanderson/Desktop/Pong/../lost.caf
+c000000004D54D95200000000000158DE
+t1297406290
+s88286
+
+N/Users/lbarrettanderson/Desktop/Pong/../lostshort.caf
+c000000004D54D9A300000000000092DE
+t1297406371
+s37598
+
+N/Users/lbarrettanderson/Desktop/Pong/../medfont.png
+c000000004D221A16000000000001601E
+t1294080534
+s90142
+
+N/Users/lbarrettanderson/Desktop/Pong/../menu.caf
+c000000004D54D9AB00000000000077DE
+t1297406379
+s30686
+
+N/Users/lbarrettanderson/Desktop/Pong/../ping.caf
+c000000004D54D95D000000000000BFDE
+t1297406301
+s49118
+
+N/Users/lbarrettanderson/Desktop/Pong/../pong.caf
+c000000004D54D9B3000000000000ECDE
+t1297406387
+s60638
+
+N/Users/lbarrettanderson/Desktop/Pong/../smallfont.png
+c000000004D212E6F0000000000003DC6
+t1294020207
+s15814
+
+N/Users/lbarrettanderson/Desktop/Pong/../target.caf
+c000000004D54D96E000000000000FEDE
+t1297406318
+s65246
+
+N/Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf
+c000000004D54D9BD00000000000119DE
+t1297406397
+s72158
+
+N/Users/lbarrettanderson/Desktop/Pong/../tileset1.png
+c000000004D22563C000000000000DCD8
+t1294095932
+s56536
+
+N/Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr
+c000000004D93C1590000000000008034
+t1301528921
+s32820
+
+N/Users/lbarrettanderson/Desktop/Pong/../wall1.caf
+c000000004D54D97C00000000000077DE
+t1297406332
+s30686
+
+N/Users/lbarrettanderson/Desktop/Pong/../wall2.caf
+c000000004D54D98100000000000053DE
+t1297406337
+s21470
+
+N/Users/lbarrettanderson/Desktop/Pong/../wall3.caf
+c000000004D54D98600000000000065DE
+t1297406342
+s26078
+
+N/Users/lbarrettanderson/Desktop/Pong/../won.caf
+c000000004D54D9C4000000000001D6DE
+t1297406404
+s120542
+
+N/Users/lbarrettanderson/Desktop/Pong/Button.h
+c000000004D4CF3A4000000000000037F
+t1296888740
+s895
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.h
+c000000004D4CF3A4000000000000037F
+t1296888740
+s895
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m
+c000000004D4F03850000000000000E96
+t1297023877
+s3734
+i"Button.h"
+i"PongViewController.h"
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.h
+c000000004D47C3F80000000000000138
+t1296548856
+s312
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m
+c000000004D47C3F20000000000000769
+t1296548850
+s1897
+i"FontTexture.h"
+i"PongViewController.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.h
+c000000004D45130F0000000000000199
+t1296372495
+s409
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m
+c000000004D49079100000000000002D9
+t1296631697
+s729
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../buttonHandlers.h
+c000000004D93D58C0000000000001375
+t1301534092
+s4981
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../drawers.h
+c000000004DFF97C1000000000000301F
+t1308596161
+s12319
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../gameLoop.h
+c000000004D54DCEF0000000000002EAE
+t1297407215
+s11950
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/../gettersSetters.h
+c000000004D93CCB70000000000004699
+t1301531831
+s18073
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.h
+c000000004D4784EA0000000000000603
+t1296532714
+s1539
+i<UIKit/UIKit.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<OpenGLES/ES2/gl.h>
+i<OpenGLES/ES2/glext.h>
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m
+c000000004D5766B10000000000003F31
+t1297573553
+s16177
+i<QuartzCore/QuartzCore.h>
+i"EAGLView.h"
+i"PongViewController.h"
+i"PongAppDelegate.h"
+i"Button.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.h
+c000000004D4E59A7000000000000020E
+t1296980391
+s526
+i<UIKit/UIKit.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m
+c000000004D4F99D30000000000000E9C
+t1297062355
+s3740
+i"PongAppDelegate.h"
+i"PongViewController.h"
+i<sqlite3.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.h
+c000000004D54DBF900000000000017AD
+t1297406969
+s6061
+i<UIKit/UIKit.h>
+i<OpenGLES/EAGL.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<OpenGLES/ES2/gl.h>
+i<OpenGLES/ES2/glext.h>
+i"TextureCoord.h"
+i"Button.h"
+i"FontTexture.h"
+i"PongAppDelegate.h"
+i<AudioToolbox/AudioServices.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m
+c000000004E97B93F0000000000009326
+t1318566207
+s37670
+i<QuartzCore/QuartzCore.h>
+i<UIKit/UIKit.h>
+i<CoreGraphics/CoreGraphics.h>
+i<sqlite3.h>
+i<AudioToolbox/AudioServices.h>
+i"PongViewController.h"
+i"EAGLView.h"
+i"PongAppDelegate.h"
+i"FontTexture.h"
+i"Button.h"
+i"drawers.h"
+i"buttonHandlers.h"
+i"gameLoop.h"
+i"gettersSetters.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/FontTexture.h
+c000000004D47C3F80000000000000138
+t1296548856
+s312
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
+c000000004D3E4A3500000000000054F6
+t1295927861
+s21750
+
+N/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
+c000000004D472EB30000000000004E7A
+t1296510643
+s20090
+
+N/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch
+c000000004D3E4A350000000000000132
+t1295927861
+s306
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh
+c000000004D3E4A3500000000000000D3
+t1295927861
+s211
+
+N/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh
+c000000004D4122A400000000000001B7
+t1296114340
+s439
+
+N/Users/lbarrettanderson/Desktop/Pong/TextureCoord.h
+c000000004D45130F0000000000000199
+t1296372495
+s409
+i<Foundation/Foundation.h>
+
+N/Users/lbarrettanderson/Desktop/Pong/TextureCoord.m
+c000000004D44F10400000000000000C3
+t1296363780
+s195
+i"TextureCoord.h"
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app
+t1348509848
+s1122
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app.dSYM
+t1348509848
+s102
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Default~ipad.png
+t1348509847
+s890192
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Icon.png
+t1296703472
+s4610
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Icon4.png
+t1296703021
+s7066
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Icon~ipad.png
+t1348509847
+s5143
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist
+t1348509847
+s882
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/MainWindow.nib
+t1296509518
+s1744
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/PkgInfo
+t1348509847
+s8
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+t1348509848
+s158052
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/PongViewController.nib
+t1296526876
+s1342
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Shader.fsh
+t1295927932
+s211
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Shader.vsh
+t1296277976
+s439
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/bigfont.png
+t1296549252
+s236298
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/bullseye.caf
+t1348509847
+s81374
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/dotdroidsplash.png
+t1296277976
+s492525
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/icon.png
+t1296277976
+s6138
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/iconios.png
+t1296277976
+s5434
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/lost.caf
+t1348509847
+s88286
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/lostshort.caf
+t1348509847
+s37598
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/medfont.png
+t1296549252
+s90142
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/menu.caf
+t1348509847
+s30686
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/ping.caf
+t1348509847
+s49118
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/pong.caf
+t1348509847
+s60638
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/pongStore.sql
+t1348509847
+s8192
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/smallfont.png
+t1296549252
+s15814
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/target.caf
+t1348509847
+s65246
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/targetbounce.caf
+t1348509847
+s72158
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/tileset1.png
+t1296361696
+s56536
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/tileset1PVR.pvr
+t1348509847
+s32820
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/wall1.caf
+t1348509847
+s30686
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/wall2.caf
+t1348509847
+s21470
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/wall3.caf
+t1348509847
+s26078
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/won.caf
+t1348509847
+s120542
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o
+t1348509848
+s54340
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o
+t1348509848
+s84504
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o
+t1348509848
+s44988
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Pong.LinkFileList
+c000000004D4A1E2D000000000000034C
+t1296703021
+s844
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o
+t1348509848
+s58936
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o
+t1348509848
+s250464
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o
+t1348509848
+s7992
+
+N/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o
+t1348509848
+s6300
+
+N/Users/lbarrettanderson/Desktop/Pong/main.m
+c000000004D54D74A0000000000000169
+t1297405770
+s361
+i<UIKit/UIKit.h>
+
+N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-elmbtobgovdawgfvhgbfbrddebru/Pong_Prefix.pch.gch
+t1296509519
+s15465680
+
+N/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-flazaogbkilollaypjmibtpllhsu/Pong_Prefix.pch.gch
+t1295927933
+s15441104
+
+N/var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch.gch
+t1348509847
+s15465680
+
+N/var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch.gch
+t1350147368
+s15465680
+
+NPong-Info.plist
+c000000004E97BBAF00000000000004FC
+t1318566831
+s1276
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies371840167#371840167#0(0"0(0#1#0"17211424768#0"0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.294260
+e371840168.405544
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m371840168#371840168#0(0"0(0#0#66"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m4320133120#1976"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../Button.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202648.179782
+e370202648.278444
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m370202648#370202648#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m4320133120#1866"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../Button.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Button.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.085290
+e371840168.338580
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m371840168#371840168#0(0"0(0#0#65"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m4320133120#1977"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/EAGLView.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202647.922365
+e370202648.179663
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m370202647#370202648#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m4320133120#1867"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/EAGLView.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/EAGLView.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.262813
+e371840168.357244
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m371840168#371840168#0(0"0(0#0#71"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m4320133120#1986"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../FontTexture.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202648.138107
+e370202648.235553
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m370202648#370202648#0(0"0(0#0#61"/Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m4320133120#1876"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../FontTexture.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/FontTexture.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.084374
+e371840168.262707
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'
+lSLF07#2@80"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m371840168#371840168#0(923"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'3(22@52"'PongViewController' may not respond to '+writeData'371840168#134#140#0(6@72"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)371840168#274#133#0(6@72"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#0"0(22@52"'PongViewController' may not respond to '+writeData'371840168#783#140#0(6@72"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m318755155#113#0#113#0#26"'*' may not respond to '*'0(0#0#72"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m4320133120#1991"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongAppDelegate.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202647.921679
+e370202648.137987
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':
+o/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'
+lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m370202647#370202648#0(853"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationWillTerminate:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: 'PongViewController' may not respond to '+writeData'/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: (Messages without a matching method signature/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: will be assumed to return 'id' and accept/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:100: warning: '...' as arguments.)/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m: In function '-[PongAppDelegate applicationDidEnterBackground:]':/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m:113: warning: 'PongViewController' may not respond to '+writeData'3(22@52"'PongViewController' may not respond to '+writeData'370202648#124#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)370202648#254#123#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#100#0#100#0#0"0(22@52"'PongViewController' may not respond to '+writeData'370202648#723#130#0(6@62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m318755155#113#0#113#0#26"'*' may not respond to '*'0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m4320133120#1881"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongAppDelegate.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongAppDelegate.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.085968
+e371840168.562610
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m:904:
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':
+o/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h:29: warning: unused variable 'count'
+lSLF07#2@83"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m371840168#371840168#0(304"In file included from /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m:904:/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h:29: warning: unused variable 'count'1(22@23"Unused variable 'count'371840168#209#95#2(7@97"In file included from /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m371840168#18446744073709551615#0#0(6@75"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m340259007#904#0#904#0#0"0(13@84"Unused variable 'count' in /Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h371840168#18446744073709551615#0#0(6@57"/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h319100015#29#0#29#0#0"0(6@57"/Users/lbarrettanderson/Desktop/Curveball/Pong/gameLoop.h319100015#29#0#29#0#19"unused variable '*'0(0#0#75"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m4320133120#1997"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/PongViewController.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202647.923057
+e370202648.410618
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:
+o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':
+o/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'
+lSLF07#2@73"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m370202647#370202648#0(274"In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m:904:/Users/lbarrettanderson/Desktop/Pong/gameLoop.h: In function '-[PongViewController gameLoop:]':/Users/lbarrettanderson/Desktop/Pong/gameLoop.h:29: warning: unused variable 'count'1(22@23"Unused variable 'count'370202648#189#85#2(7@87"In file included from /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m370202648#18446744073709551615#0#0(6@65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m340259007#904#0#904#0#0"0(13@74"Unused variable 'count' in /Users/lbarrettanderson/Desktop/Pong/gameLoop.h370202648#18446744073709551615#0#0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#0"0(6@47"/Users/lbarrettanderson/Desktop/Pong/gameLoop.h319100015#29#0#29#0#19"unused variable '*'0(0#0#65"/Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m4320133120#1887"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/PongViewController.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/PongViewController.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.212387
+e371840168.294149
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m371840168#371840168#0(0"0(0#0#72"/Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m17201951488#1988"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Classes/../TextureCoord.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202648.119561
+e370202648.205380
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o
+x/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m370202648#370202648#0(0"0(0#0#62"/Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m17206243840#1878"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/Classes/../TextureCoord.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/TextureCoord.o /Users/lbarrettanderson/Desktop/Pong/TextureCoord.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o /Users/lbarrettanderson/Desktop/Curveball/Pong/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840168.083451
+e371840168.212272
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@61"Compile /Users/lbarrettanderson/Desktop/Curveball/Pong/main.m371840168#371840168#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Curveball/Pong/main.m4320133120#1961"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/main.m -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o0#
+
+CCompileC build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o /Users/lbarrettanderson/Desktop/Pong/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202647.920859
+e370202648.119444
+r1
+xCompileC
+xbuild/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o
+x/Users/lbarrettanderson/Desktop/Pong/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/lbarrettanderson/Desktop/Pong/main.m370202647#370202648#0(0"0(0#0#43"/Users/lbarrettanderson/Desktop/Pong/main.m4320133120#1851"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -include /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch -c /Users/lbarrettanderson/Desktop/Pong/main.m -o /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/lbarrettanderson/Desktop/Curveball/Pong/MainWindow.xib
+r0
+
+CCompileXIB /Users/lbarrettanderson/Desktop/Curveball/Pong/PongViewController.xib
+r0
+
+CCompileXIB /Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
+s318202317.688993
+e318202318.367835
+r1
+xCompileXIB
+x/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib318202317#318202318#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/MainWindow.xib8630000704#563"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/MainWindow.nib /Users/lbarrettanderson/Desktop/Pong/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
+s318219675.862447
+e318219676.197964
+r1
+xCompileXIB
+x/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib
+lSLF07#2@33"CompileXIB PongViewController.xib318219675#318219676#0(0"0(0#0#59"/Users/lbarrettanderson/Desktop/Pong/PongViewController.xib8630602528#579"    cd /Users/lbarrettanderson/Desktop/Pong    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/PongViewController.nib /Users/lbarrettanderson/Desktop/Pong/PongViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Default~ipad.png ../Default~ipad.png
+s370202647.131703
+e370202647.241181
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Default~ipad.png
+x../Default~ipad.png
+lSLF07#2@24"Copy ../Default~ipad.png370202647#370202647#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png4320133120#468"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../Default~ipad.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Icon.png ../Icon.png
+s318396272.482601
+e318396272.488345
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Icon.png
+x../Icon.png
+lSLF07#2@16"Copy ../Icon.png318396272#318396272#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../Icon.png8634273984#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../Icon.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Icon4.png ../Icon4.png
+s318395821.141808
+e318395821.159253
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Icon4.png
+x../Icon4.png
+lSLF07#2@17"Copy ../Icon4.png318395821#318395821#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../Icon4.png8649772128#461"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../Icon4.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Icon~ipad.png ../Icon~ipad.png
+s370202647.132542
+e370202647.178807
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Icon~ipad.png
+x../Icon~ipad.png
+lSLF07#2@21"Copy ../Icon~ipad.png370202647#370202647#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png4320133120#465"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../Icon~ipad.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Shader.fsh Shaders/Shader.fsh
+s317620732.170735
+e317620732.202821
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Shader.fsh
+xShaders/Shader.fsh
+lSLF07#2@23"Copy Shaders/Shader.fsh317620732#317620732#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh8611208960#467"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.fsh /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/Shader.vsh Shaders/Shader.vsh
+s317970776.617728
+e317970776.623131
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/Shader.vsh
+xShaders/Shader.vsh
+lSLF07#2@23"Copy Shaders/Shader.vsh317970776#317970776#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh8635838880#467"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/Shaders/Shader.vsh /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/bigfont.png ../bigfont.png
+s318242052.217701
+e318242052.247729
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/bigfont.png
+x../bigfont.png
+lSLF07#2@19"Copy ../bigfont.png318242052#318242052#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../bigfont.png8651163488#463"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../bigfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/bullseye.caf ../bullseye.caf
+s370202647.048993
+e370202647.198310
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/bullseye.caf
+x../bullseye.caf
+lSLF07#2@20"Copy ../bullseye.caf370202647#370202647#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/../bullseye.caf4320133120#464"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../bullseye.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/dotdroidsplash.png ../dotdroidsplash.png
+s317970776.620075
+e317970776.629827
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/dotdroidsplash.png
+x../dotdroidsplash.png
+lSLF07#2@26"Copy ../dotdroidsplash.png317970776#317970776#0(0"0(0#0#58"/Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png8635539392#470"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../dotdroidsplash.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/icon.png ../icon.png
+s317970776.618539
+e317970776.625609
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/icon.png
+x../icon.png
+lSLF07#2@16"Copy ../icon.png317970776#317970776#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../icon.png8635758656#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../icon.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/iconios.png ../iconios.png
+s317970776.619301
+e317970776.626197
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/iconios.png
+x../iconios.png
+lSLF07#2@19"Copy ../iconios.png317970776#317970776#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../iconios.png8635647744#463"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../iconios.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/lost.caf ../lost.caf
+s370202647.052906
+e370202647.188051
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/lost.caf
+x../lost.caf
+lSLF07#2@16"Copy ../lost.caf370202647#370202647#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../lost.caf4320133120#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lost.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/lostshort.caf ../lostshort.caf
+s370202647.049486
+e370202647.132343
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/lostshort.caf
+x../lostshort.caf
+lSLF07#2@21"Copy ../lostshort.caf370202647#370202647#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../lostshort.caf4320133120#465"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../lostshort.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/medfont.png ../medfont.png
+s318242052.217067
+e318242052.246129
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/medfont.png
+x../medfont.png
+lSLF07#2@19"Copy ../medfont.png318242052#318242052#0(0"0(0#0#51"/Users/lbarrettanderson/Desktop/Pong/../medfont.png8652549120#463"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../medfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/menu.caf ../menu.caf
+s370202647.053559
+e370202647.108275
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/menu.caf
+x../menu.caf
+lSLF07#2@16"Copy ../menu.caf370202647#370202647#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../menu.caf4320133120#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../menu.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/ping.caf ../ping.caf
+s370202647.050047
+e370202647.109525
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/ping.caf
+x../ping.caf
+lSLF07#2@16"Copy ../ping.caf370202647#370202647#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../ping.caf4320133120#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../ping.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/pong.caf ../pong.caf
+s370202647.054180
+e370202647.160336
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/pong.caf
+x../pong.caf
+lSLF07#2@16"Copy ../pong.caf370202647#370202647#0(0"0(0#0#48"/Users/lbarrettanderson/Desktop/Pong/../pong.caf4320133120#460"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../pong.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/pongStore.sql ../../Documents/SQLite/pongStore.sql
+s370202647.040846
+e370202647.121392
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/pongStore.sql
+x../../Documents/SQLite/pongStore.sql
+lSLF07#2@41"Copy ../../Documents/SQLite/pongStore.sql370202647#370202647#0(0"0(0#0#73"/Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql4320133120#485"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../../Documents/SQLite/pongStore.sql /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/pongStore.sql ../SQLite/pongStore.sql
+r0
+
+CCpResource build/Debug-iphonesimulator/Pong.app/smallfont.png ../smallfont.png
+s318242052.216262
+e318242052.245535
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/smallfont.png
+x../smallfont.png
+lSLF07#2@21"Copy ../smallfont.png318242052#318242052#0(0"0(0#0#53"/Users/lbarrettanderson/Desktop/Pong/../smallfont.png8653372768#465"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../smallfont.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/target.caf ../target.caf
+s370202647.051006
+e370202647.136073
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/target.caf
+x../target.caf
+lSLF07#2@18"Copy ../target.caf370202647#370202647#0(0"0(0#0#50"/Users/lbarrettanderson/Desktop/Pong/../target.caf4320133120#462"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../target.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/targetbounce.caf ../targetbounce.caf
+s370202647.108359
+e370202647.160926
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/targetbounce.caf
+x../targetbounce.caf
+lSLF07#2@24"Copy ../targetbounce.caf370202647#370202647#0(0"0(0#0#56"/Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf4320133120#468"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../targetbounce.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/tileset1.png ../tileset1.png
+s318054496.489302
+e318054496.508925
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/tileset1.png
+x../tileset1.png
+lSLF07#2@20"Copy ../tileset1.png318054496#318054496#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/../tileset1.png8632643840#464"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../tileset1.png /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/tileset1PVR.pvr ../tileset1PVR.pvr
+s370202647.121467
+e370202647.160764
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/tileset1PVR.pvr
+x../tileset1PVR.pvr
+lSLF07#2@23"Copy ../tileset1PVR.pvr370202647#370202647#0(0"0(0#0#55"/Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr4320133120#467"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../tileset1PVR.pvr /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/wall1.caf ../wall1.caf
+s370202647.051665
+e370202647.131610
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/wall1.caf
+x../wall1.caf
+lSLF07#2@17"Copy ../wall1.caf370202647#370202647#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall1.caf4320133120#461"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall1.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/wall2.caf ../wall2.caf
+s370202647.108958
+e370202647.132477
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/wall2.caf
+x../wall2.caf
+lSLF07#2@17"Copy ../wall2.caf370202647#370202647#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall2.caf4320133120#461"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall2.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/wall3.caf ../wall3.caf
+s370202647.052309
+e370202647.108154
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/wall3.caf
+x../wall3.caf
+lSLF07#2@17"Copy ../wall3.caf370202647#370202647#0(0"0(0#0#49"/Users/lbarrettanderson/Desktop/Pong/../wall3.caf4320133120#461"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../wall3.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CCpResource build/Debug-iphonesimulator/Pong.app/won.caf ../won.caf
+s370202647.109590
+e370202647.169803
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Pong.app/won.caf
+x../won.caf
+lSLF07#2@15"Copy ../won.caf370202647#370202647#0(0"0(0#0#47"/Users/lbarrettanderson/Desktop/Pong/../won.caf4320133120#459"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/lbarrettanderson/Desktop/Pong/../won.caf /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CGenerateDSYMFile /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app.dSYM /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+s371840168.914503
+e371840168.975525
+r1
+xGenerateDSYMFile
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app.dSYM
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/Pong.app.dSYM build/Debug-iphonesimulator/Pong.app/Pong371840168#371840168#0(0"0(0#0#88"/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong4320133120#398"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app.dSYM0#
+
+CGenerateDSYMFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app.dSYM /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+s370202648.652864
+e370202648.714258
+r1
+xGenerateDSYMFile
+x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app.dSYM
+x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+lSLF07#2@100"GenerateDSYMFile build/Debug-iphonesimulator/Pong.app.dSYM build/Debug-iphonesimulator/Pong.app/Pong370202648#370202648#0(0"0(0#0#78"/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong4320133120#368"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app.dSYM0#
+
+CLd /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong normal i386
+s371840168.562687
+e371840168.914430
+r1
+xLd
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+xnormal
+xi386
+lSLF07#2@93"Link /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong371840168#371840168#0(0"0(0#0#0"4320133120#1003"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -filelist /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Pong.LinkFileList -mmacosx-version-min=10.6 -framework CoreGraphics -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -lsqlite3.0 -framework AudioToolbox -o /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Pong0#
+
+CLd /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong normal i386
+s370202648.410695
+e370202648.652756
+r1
+xLd
+x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong
+xnormal
+xi386
+lSLF07#2@83"Link /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong370202648#370202648#0(0"0(0#0#0"4320133120#953"    cd /Users/lbarrettanderson/Desktop/Pong    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -filelist /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Objects-normal/i386/Pong.LinkFileList -mmacosx-version-min=10.6 -framework CoreGraphics -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework OpenGLES -framework QuartzCore -lsqlite3.0 -framework AudioToolbox -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Pong0#
+
+CProcessInfoPlistFile /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist Pong-Info.plist
+r0
+
+CProcessInfoPlistFile /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist Pong-Info.plist
+s370202647.004727
+e370202647.040405
+r1
+xProcessInfoPlistFile
+x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist
+xPong-Info.plist
+lSLF07#2@23"Process Pong-Info.plist370202647#370202647#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong-Info.plist17246728704#464"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Pong-Info.plist -genpkginfo /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app/Info.plist0#
+
+CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-elmbtobgovdawgfvhgbfbrddebru/Pong_Prefix.pch.gch Pong_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s318202318.367942
+e318202319.176862
+r1
+xProcessPCH
+x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-elmbtobgovdawgfvhgbfbrddebru/Pong_Prefix.pch.gch
+xPong_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile Pong_Prefix.pch318202318#318202319#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8632011584#1737"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-elmbtobgovdawgfvhgbfbrddebru/Pong_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-flazaogbkilollaypjmibtpllhsu/Pong_Prefix.pch.gch Pong_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s317620732.598048
+e317620733.233292
+r1
+xProcessPCH
+x/var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-flazaogbkilollaypjmibtpllhsu/Pong_Prefix.pch.gch
+xPong_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile Pong_Prefix.pch317620732#317620733#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch8611684544#1737"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/Ob/ObFlv90gFEGAmlS2xdJT+k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-flazaogbkilollaypjmibtpllhsu/Pong_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch.gch Pong_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s370202647.241357
+e370202647.920782
+r1
+xProcessPCH
+x/var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch.gch
+xPong_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile Pong_Prefix.pch370202647#370202647#0(0"0(0#0#52"/Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch4320133120#1748"    cd /Users/lbarrettanderson/Desktop/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Pong/Pong_Prefix.pch -o /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-duhpcozlvkwqjfcsdigeepbugept/Pong_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch.gch Pong_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s371840167.442317
+e371840168.083366
+r1
+xProcessPCH
+x/var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch.gch
+xPong_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@26"Precompile Pong_Prefix.pch371840167#371840168#0(0"0(0#0#62"/Users/lbarrettanderson/Desktop/Curveball/Pong/Pong_Prefix.pch17212134144#1848"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fobjc-gc-only -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30103 -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-generated-files.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-own-target-headers.hmap -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-all-target-headers.hmap -iquote /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/Pong-project-headers.hmap -F/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/include -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources/i386 -I/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Pong.build/Debug-iphonesimulator/Pong.build/DerivedSources -c /Users/lbarrettanderson/Desktop/Curveball/Pong/Pong_Prefix.pch -o /var/folders/d9/t73v5hnj2h936b2y2gd5_z0c0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Pong_Prefix-gvokcnbyfkwspnddyhvrbmdobqpc/Pong_Prefix.pch.gch0#
+
+CTouch /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app
+s371840168.975627
+e371840169.004832
+r1
+xTouch
+x/Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app
+lSLF07#2@89"Touch /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app371840168#371840169#0(0"0(0#0#0"4320133120#291"    cd /Users/lbarrettanderson/Desktop/Curveball/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lbarrettanderson/Desktop/Curveball/Pong/build/Debug-iphonesimulator/Pong.app0#
+
+CTouch /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app
+s370202648.714333
+e370202648.766488
+r1
+xTouch
+x/Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app
+lSLF07#2@79"Touch /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app370202648#370202648#0(0"0(0#0#0"4320133120#271"    cd /Users/lbarrettanderson/Desktop/Pong    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/lbarrettanderson/Desktop/Pong/build/Debug-iphonesimulator/Pong.app0#
+

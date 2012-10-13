@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>3D Curve Ball</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon.png</string>
+		<string>Icon4.png</string>
+		<string>Icon~ipad.png</string>
+	</array>
+	<key>UILaunchImageFile</key>
+	<string>dotdroidsplash.png</string>
+	<key>UILaunchImageFile~ipad</key>
+	<string>Default~ipad.png</string>
+	<key>CFBundleIdentifier</key>
+	<string>Pong.Chavez</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>UIInterfaceOrientation</key>
+	<string>UIInterfaceOrientationLandscapeRight</string>
+	<key>CFBundleVersion</key>
+	<string>1.1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<false/>
+	<key>NSMainNibFile</key>
+	<string>MainWindow</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<true/>
+</dict>
+</plist>
