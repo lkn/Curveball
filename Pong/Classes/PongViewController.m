@@ -497,7 +497,7 @@ static void gameReset()
 }
 
 
-#import "drawers.h";
+#import "drawers.h"
 
 int count = 0;
 - (void)drawFrame
@@ -899,9 +899,9 @@ void playSound(SystemSoundID insound)
 
 static GLfloat* wallVertices;
 
-#import "buttonHandlers.h";
+#import "buttonHandlers.h"
 
-#import "gameLoop.h";
+#import "gameLoop.h"
 
 - (void)resize:(int)w h:(int)h
 {
@@ -1317,6 +1317,8 @@ void drawWorld()
 			//	Pong.instance.tgt.start();
 			//}
 			//break;
+        default:
+            break;
 	}
 	
 	state = toState;
@@ -1508,7 +1510,7 @@ void drawWorld()
 
 
 
-#import "gettersSetters.h";
+#import "gettersSetters.h"
 
 
 

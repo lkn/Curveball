@@ -54,6 +54,9 @@ int compareScoreLines (const void * a, const void * b)
 			case OPTIONS:
 				fps = 5;
 				break;
+			case OPTIONS2:
+				fps = 5;
+				break;
 			case PAUSED:
 				fps = 5;
 				break;
