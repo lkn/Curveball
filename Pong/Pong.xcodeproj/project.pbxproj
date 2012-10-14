@@ -23,6 +23,12 @@
 		974D132A12F7EABA00002BDB /* medfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132712F7EABA00002BDB /* medfont.png */; };
 		974D132B12F7EABA00002BDB /* bigfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132812F7EABA00002BDB /* bigfont.png */; };
 		974D135112F7EF6500002BDB /* FontTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 974D135012F7EF6500002BDB /* FontTexture.m */; };
+		977CFE4E162A447E00AF476E /* dotdroidsplash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE4D162A447E00AF476E /* dotdroidsplash-568h@2x.png */; };
+		977CFE50162A463900AF476E /* dotdroidsplash.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE4F162A463900AF476E /* dotdroidsplash.png */; };
+		977CFE52162A468200AF476E /* dotdroidsplash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE51162A468200AF476E /* dotdroidsplash@2x.png */; };
+		977CFE54162A46EE00AF476E /* Default~ipad-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE53162A46EE00AF476E /* Default~ipad-Portrait@2x~ipad.png */; };
+		977CFE56162A472E00AF476E /* Default~ipad-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE55162A472E00AF476E /* Default~ipad-Landscape~ipad.png */; };
+		977CFE58162A476300AF476E /* Default~ipad-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 977CFE57162A476300AF476E /* Default~ipad-Landscape@2x~ipad.png */; };
 		978908C712F4F502003041F6 /* tileset1.png in Resources */ = {isa = PBXBuildFile; fileRef = 978908C612F4F502003041F6 /* tileset1.png */; };
 		9789092112F52884003041F6 /* TextureCoord.m in Sources */ = {isa = PBXBuildFile; fileRef = 9789092012F52884003041F6 /* TextureCoord.m */; };
 		9792AFE812EF8747003C40B5 /* dotdroidsplash.png in Resources */ = {isa = PBXBuildFile; fileRef = 9792AFE712EF8747003C40B5 /* dotdroidsplash.png */; };
@@ -74,6 +80,12 @@
 		974D132812F7EABA00002BDB /* bigfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigfont.png; path = ../bigfont.png; sourceTree = SOURCE_ROOT; };
 		974D134F12F7EF6500002BDB /* FontTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FontTexture.h; path = ../FontTexture.h; sourceTree = "<group>"; };
 		974D135012F7EF6500002BDB /* FontTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FontTexture.m; path = ../FontTexture.m; sourceTree = "<group>"; };
+		977CFE4D162A447E00AF476E /* dotdroidsplash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotdroidsplash-568h@2x.png"; sourceTree = "<group>"; };
+		977CFE4F162A463900AF476E /* dotdroidsplash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotdroidsplash.png; sourceTree = "<group>"; };
+		977CFE51162A468200AF476E /* dotdroidsplash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotdroidsplash@2x.png"; sourceTree = "<group>"; };
+		977CFE53162A46EE00AF476E /* Default~ipad-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		977CFE55162A472E00AF476E /* Default~ipad-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad-Landscape~ipad.png"; sourceTree = "<group>"; };
+		977CFE57162A476300AF476E /* Default~ipad-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		978908C612F4F502003041F6 /* tileset1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tileset1.png; path = ../tileset1.png; sourceTree = SOURCE_ROOT; };
 		9789091F12F52884003041F6 /* TextureCoord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureCoord.h; path = ../TextureCoord.h; sourceTree = "<group>"; };
 		9789092012F52884003041F6 /* TextureCoord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextureCoord.m; path = ../TextureCoord.m; sourceTree = "<group>"; };
@@ -161,6 +173,12 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				977CFE57162A476300AF476E /* Default~ipad-Landscape@2x~ipad.png */,
+				977CFE55162A472E00AF476E /* Default~ipad-Landscape~ipad.png */,
+				977CFE53162A46EE00AF476E /* Default~ipad-Portrait@2x~ipad.png */,
+				977CFE51162A468200AF476E /* dotdroidsplash@2x.png */,
+				977CFE4F162A463900AF476E /* dotdroidsplash.png */,
+				977CFE4D162A447E00AF476E /* dotdroidsplash-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				2514C27610084DB600A42282 /* Shaders */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -309,6 +327,12 @@
 				97C004491343F90A00E3A9AD /* tileset1PVR.pvr in Resources */,
 				97C0047B1344063800E3A9AD /* Default~ipad.png in Resources */,
 				97C004C71344171900E3A9AD /* Icon~ipad.png in Resources */,
+				977CFE4E162A447E00AF476E /* dotdroidsplash-568h@2x.png in Resources */,
+				977CFE50162A463900AF476E /* dotdroidsplash.png in Resources */,
+				977CFE52162A468200AF476E /* dotdroidsplash@2x.png in Resources */,
+				977CFE54162A46EE00AF476E /* Default~ipad-Portrait@2x~ipad.png in Resources */,
+				977CFE56162A472E00AF476E /* Default~ipad-Landscape~ipad.png in Resources */,
+				977CFE58162A476300AF476E /* Default~ipad-Landscape@2x~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +368,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
 				PRODUCT_NAME = Pong;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,6 +382,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
 				PRODUCT_NAME = Pong;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -393,6 +419,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
 				PRODUCT_NAME = Pong;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Distribution;
