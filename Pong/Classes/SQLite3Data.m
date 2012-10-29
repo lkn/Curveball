@@ -41,16 +41,18 @@
 		}
 		sqlite3_finalize(compiledStatement);
 	}
+  NSLog(@"%s: %@", __PRETTY_FUNCTION__, prefs);
 	sqlite3_close(database);
 }
 
 + (void)writeData
 {
+  NSLog(@"%s: %@", __PRETTY_FUNCTION__, prefs);
 	sqlite3 *database;
 
 	if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
   {
-		NSEnumerator *enumerator = [ prefs keyEnumerator];
+		NSEnumerator *enumerator = [prefs keyEnumerator];
 		NSString *key;
 		while (key = [enumerator nextObject])
     {
