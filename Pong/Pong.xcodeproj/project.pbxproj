@@ -14,15 +14,15 @@
 		2514C27B10084DCA00A42282 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27910084DCA00A42282 /* Shader.fsh */; };
 		2514C27C10084DCA00A42282 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27A10084DCA00A42282 /* Shader.vsh */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		28EC4C5911D54ECE0027AA9F /* PongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EC4C5711D54ECE0027AA9F /* PongViewController.m */; };
 		28EC4C5A11D54ECE0027AA9F /* PongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28EC4C5811D54ECE0027AA9F /* PongViewController.xib */; };
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		7EFF085F163E09B50041B3E4 /* SoundMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF085E163E09B50041B3E4 /* SoundMan.m */; };
 		7EFF0866163E0B7C0041B3E4 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF0865163E0B7C0041B3E4 /* Preferences.m */; };
 		7EFF086C163E106D0041B3E4 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF086B163E106D0041B3E4 /* GameState.m */; };
 		7EFF086F163E18080041B3E4 /* SQLite3Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF086E163E18080041B3E4 /* SQLite3Data.m */; };
+		7EFF0870163E398F0041B3E4 /* PongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EC4C5711D54ECE0027AA9F /* PongViewController.m */; };
+		7EFF0871163E40100041B3E4 /* SoundMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF085E163E09B50041B3E4 /* SoundMan.m */; };
 		974D132912F7EABA00002BDB /* smallfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132612F7EABA00002BDB /* smallfont.png */; };
 		974D132A12F7EABA00002BDB /* medfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132712F7EABA00002BDB /* medfont.png */; };
 		974D132B12F7EABA00002BDB /* bigfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132812F7EABA00002BDB /* bigfont.png */; };
@@ -366,14 +366,14 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* PongAppDelegate.m in Sources */,
 				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
-				28EC4C5911D54ECE0027AA9F /* PongViewController.m in Sources */,
 				9789092112F52884003041F6 /* TextureCoord.m in Sources */,
 				974D135112F7EF6500002BDB /* FontTexture.m in Sources */,
 				97BBE0F312F9032000D071F3 /* Button.m in Sources */,
-				7EFF085F163E09B50041B3E4 /* SoundMan.m in Sources */,
 				7EFF0866163E0B7C0041B3E4 /* Preferences.m in Sources */,
 				7EFF086C163E106D0041B3E4 /* GameState.m in Sources */,
 				7EFF086F163E18080041B3E4 /* SQLite3Data.m in Sources */,
+				7EFF0870163E398F0041B3E4 /* PongViewController.m in Sources */,
+				7EFF0871163E40100041B3E4 /* SoundMan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -458,7 +458,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
@@ -478,7 +478,7 @@
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-framework",

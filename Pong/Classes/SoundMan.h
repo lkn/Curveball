@@ -23,8 +23,6 @@ SystemSoundID mpWall2;
 SystemSoundID mpWall3;
 SystemSoundID mpWon;
 
-
-
 @interface SoundMan : NSObject
 
 + (void)playSound:(SystemSoundID)sound;

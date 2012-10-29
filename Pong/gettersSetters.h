@@ -1,4 +1,4 @@
-#import "GameState.h"
+
 
 
 int stateToInt(enum States st)
@@ -33,6 +33,7 @@ int stateToInt(enum States st)
 			return -1;
 	}
 }
+
 enum States intToState(int st)
 {
 	switch(st)
@@ -176,9 +177,6 @@ void perspective(double fovy, double aspect, float zNear, float zFar)
 	
 	//glDepthMask(GL_TRUE);
 }
-
-
-
 
 
 -(GLuint)LoadTexture:(NSString*)filename
@@ -461,6 +459,16 @@ void setUpFonts()
 	fontBoxInt[2] = 0;
 	
 	
+}
+
+
++(void)setPX:(int) inX
+{
+  pX = inX;
+}
++(void)setPY:(int) inY
+{
+	pY = inY;
 }
 
 //static int width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
@@ -950,6 +958,20 @@ void setUpFonts()
 	realHeight = inp;
 }
 
++(void)setGameType:(int) inp
+{
+	gameType = inp;
+}
+
++(void)setXAccel:(int) inp
+{
+	xAccel = inp;
+}
+
++(void)setYAccel:(int) inp
+{
+	yAccel = inp;
+}
 
 +(void)setPreviewX:(int) inp
 {
@@ -1039,6 +1061,26 @@ void setUpFonts()
 	ballRadius = inp;
 }
 
++(void)setBX:(int) inp
+{
+	bX = inp;
+}
+
++(void)setBY:(int) inp
+{
+	bY = inp;
+}
+
++(void)setBZ:(int) inp
+{
+	bZ = inp;
+}
+
++(void)setMyScore:(int) inp
+{
+	myScore = inp;
+}
+
 +(void)setEnScore:(int) inp
 {
 	enScore = inp;
@@ -1047,6 +1089,21 @@ void setUpFonts()
 +(void)setBXSpeed:(int) inp
 {
 	bXSpeed = inp;
+}
+
++(void)setBYSpeed:(int) inp
+{
+	bYSpeed = inp;
+}
+
++(void)setBZSpeed:(int) inp
+{
+	bZSpeed = inp;
+}
+
++(void)setLastOutcome:(int) inp
+{
+	lastOutcome = inp;
 }
 
 +(void)setPaddleHeight:(int) inp
@@ -1072,6 +1129,16 @@ void setUpFonts()
 +(void)setILost:(BOOL) inp
 {
 	iLost = inp;
+}
+
++(void)setEX:(int) inp
+{
+	eX = inp;
+}
+
++(void)setEY:(int) inp
+{
+	eY = inp;
 }
 
 +(void)setMultiplier:(int) inp

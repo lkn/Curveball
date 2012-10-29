@@ -1,5 +1,4 @@
-#import "SoundMan.h"
-
+//#import "SoundMan.h"
 
 void s0b0dh()
 {
@@ -21,7 +20,7 @@ void s0b0dh()
 		e.printStackTrace();
 	} catch (IOException e) {
 	}*/
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 }
 
 
@@ -48,7 +47,7 @@ void s0b1dh()
 			//	e.printStackTrace();
 			//} catch (IOException e) {
 			//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 
 }
 
@@ -62,7 +61,7 @@ void s0b2dh()
 			//	e.printStackTrace();
 			//} catch (IOException e) {
 			//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 
 }
 
@@ -128,7 +127,7 @@ void s0b3dh()
 			//	e.printStackTrace();
 			//} catch (IOException e) {
 			//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 
 }
 
@@ -154,7 +153,7 @@ void s1b0dh()
 	//	e.printStackTrace();
 	//} catch (IOException e) {
 	//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 	
 }
 
@@ -171,7 +170,7 @@ void homeButton()
 	//	e.printStackTrace();
 	//} catch (IOException e) {
 	//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 }
 
 
@@ -199,7 +198,7 @@ void s2b0dh()
 	//	savePrefs(editor);
 		[PongViewController switchToState:HOME];
 		gameType = 0;
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 	}
 }
 
@@ -210,8 +209,8 @@ void s2b1dh()
 	if(lastDownState == OPTIONS)
 	{
 		sound = sound?false:true;
-		[prefs setObject:sound?@"TRUE":@"FALSE" forKey:@"sound"];
-		playSound(mpWall3);
+    [Preferences global].shouldPlaySound = sound;
+		[SoundMan playSound:mpWall3];
 	}
 }
 
@@ -221,8 +220,8 @@ void s2b2dh()
 	if(lastDownState == OPTIONS)
 	{
 		vibrate = vibrate?false:true;
-		[prefs setObject:vibrate?@"TRUE":@"FALSE" forKey:@"vibrate"];
-		playSound(mpWall3);
+    [Preferences global].shouldVibrate = vibrate;
+		[SoundMan playSound:mpWall3];
 	}
 }
 
@@ -234,9 +233,9 @@ void s2b3dh()
 		difficulty++;
 		if(difficulty == 3)
 			difficulty = 0;
-		[prefs setObject:[NSString stringWithFormat:@"%d",difficulty] forKey:@"difficulty"];
+    [Preferences global].difficulty = difficulty;
 		gameReset();
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 	}
 }
 
@@ -247,8 +246,8 @@ void s2b4dh()
 	if(lastDownState == OPTIONS)
 	{
 		fog = fog?false:true;
-		[prefs setObject:fog?@"TRUE":@"FALSE" forKey:@"fog"];
-		playSound(mpWall3);
+    [Preferences global].shouldShowFog = fog;
+		[SoundMan playSound:mpWall3];
 	}
 }
 
@@ -261,8 +260,9 @@ void s2b5dh()
 		inputMethod++;
 		if(inputMethod > 1)
 			inputMethod = 0;
-		[prefs setObject:[NSString stringWithFormat:@"%d",inputMethod] forKey:@"inputMethod"];
-		playSound(mpWall3);
+    [Preferences global].inputMethod = inputMethod;
+
+		[SoundMan playSound:mpWall3];
 	}
 }
 

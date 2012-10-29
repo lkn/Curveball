@@ -42,12 +42,24 @@ static Preferences *gPreferences;
   return [SQLite3Data boolFromPrefs:@"sound" def:TRUE];
 }
 
+- (void)setShouldPlaySound:(BOOL)shouldPlaySound {
+  [prefs setObject:shouldPlaySound ? @"TRUE" : @"FALSE" forKey:@"sound"];
+}
+
 - (BOOL)shouldVibrate {
   return [SQLite3Data boolFromPrefs:@"vibrate" def:TRUE];
 }
 
+- (void)setShouldVibrate:(BOOL)shouldVibrate {
+  [prefs setObject:shouldVibrate ? @"TRUE" : @"FALSE" forKey:@"vibrate"];
+}
+
 - (BOOL)shouldShowFog {
   return [SQLite3Data boolFromPrefs:@"fog" def:TRUE];
+}
+
+- (void)setShouldShowFog:(BOOL)shouldShowFog {
+  [prefs setObject:shouldShowFog ? @"TRUE" : @"FALSE" forKey:@"fog"];
 }
 
 - (int)paddlePositionX {
@@ -72,8 +84,18 @@ static Preferences *gPreferences;
   return [SQLite3Data intFromPrefs:@"difficulty" def:0];
 }
 
+- (void)setDifficulty:(int)difficulty {
+  [prefs setObject:[NSString stringWithFormat:@"%d", difficulty]
+            forKey:@"difficulty"];
+}
+
 - (int)inputMethod {
   return [SQLite3Data intFromPrefs:@"inputMethod" def:0];
+}
+
+- (void)setInputMethod:(int)inputMethod {
+  [prefs setObject:[NSString stringWithFormat:@"%d", inputMethod]
+            forKey:@"inputMethod"];
 }
 
 @end

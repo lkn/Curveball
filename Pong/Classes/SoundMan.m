@@ -13,7 +13,7 @@
 
 @implementation SoundMan
 
-void playSound(SystemSoundID insound)
++ (void)playSound:(SystemSoundID)insound
 {
 	if([Preferences global].shouldPlaySound) {
 		AudioServicesPlaySystemSound(insound);

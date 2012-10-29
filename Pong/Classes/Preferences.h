@@ -21,7 +21,7 @@
 @property (nonatomic) int paddlePositionX;
 @property (nonatomic) int paddlePositionY;
 
-@property (nonatomic) int difficulty;
+@property (nonatomic) int difficulty;  // should this be in GameState?
 @property (nonatomic) int inputMethod;
 
 @end

@@ -370,7 +370,7 @@ void onTouchEventState3(NSString * type,int clickedX,int clickedY)
 
 		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
 		
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 		
 		//SharedPreferences.Editor editor = getPrefs().edit();
 		//editor.putBoolean("sound", sound);
@@ -390,7 +390,7 @@ void onTouchEventState3(NSString * type,int clickedX,int clickedY)
 			//if(vibrator != null)
 			//	vibrator.vibrate(50);
 		}
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 		//SharedPreferences.Editor editor = getPrefs().edit();
 		//editor.putBoolean("vibrate", Pong.vibrate);
 		//savePrefs(editor);
@@ -406,7 +406,7 @@ void onTouchEventState3(NSString * type,int clickedX,int clickedY)
 			clickedY >= PongViewController.pY-PongViewController.hPaddleHeight && clickedY <= PongViewController.pY+PongViewController.hPaddleHeight)
 	{
 		[PongViewController switchToState:PLAYING];
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 		//try {
 		//	playSound(mpWall3);
 		//} catch (IllegalStateException e) {
@@ -440,7 +440,7 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 	{
 		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
 //		changedPref = TRUE;
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 	}
 	
 	
@@ -448,7 +448,7 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 	{
 		PongViewController.vibrate = PongViewController.vibrate?FALSE:TRUE;
 //		changedPref = TRUE;
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 	}
 	
 	
@@ -555,7 +555,7 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 			PongViewController.pX = clickedX - PongViewController.holdPaddleX;
 			PongViewController.pY = clickedY - PongViewController.holdPaddleY;
 			[PongViewController switchToState:PLAYING];
-			playSound(mpPing);
+			[SoundMan playSound:mpPing];
 			//try {
 			//	playSound(mpPing);
 			//} catch (IllegalStateException e) {
