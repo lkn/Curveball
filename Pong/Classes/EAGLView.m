@@ -430,12 +430,12 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 		}
 	}
 	
-	BOOL changedPref = FALSE;
+//	BOOL changedPref = FALSE;
 	
 	if([type isEqualToString:@"down"] && clickedX <= -PongViewController.hFloatWidth + 9*PongViewController.fontSize/2 && clickedY >= PongViewController.hFloatHeight - PongViewController.fontSize*4)
 	{
 		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
-		changedPref = TRUE;
+//		changedPref = TRUE;
 		playSound(mpWall3);
 	}
 	
@@ -443,7 +443,7 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 	if([type isEqualToString:@"down"] && clickedX >= PongViewController.hFloatWidth - 9*PongViewController.fontSize/2 && clickedY >= PongViewController.hFloatHeight - PongViewController.fontSize*4)
 	{
 		PongViewController.vibrate = PongViewController.vibrate?FALSE:TRUE;
-		changedPref = TRUE;
+//		changedPref = TRUE;
 		playSound(mpWall3);
 	}
 	

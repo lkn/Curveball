@@ -28,7 +28,6 @@
   NSInteger animationFrameInterval;
   CADisplayLink *displayLink;
 	PongAppDelegate *delegate;
-
 }
 
 void playSound(SystemSoundID sound);

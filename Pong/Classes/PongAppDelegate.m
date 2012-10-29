@@ -15,65 +15,65 @@
 @synthesize window;
 @synthesize viewController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	
-	NSLog(@"application");
-    [self.window addSubview:self.viewController.view];
-	
+	NSLog(@"%s", __PRETTY_FUNCTION__);
+  self.window.rootViewController = self.viewController;
+
 	//PongViewController.delegate = self;
-	
+
 	//[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
-	
+
 	//NSLog(@"HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 	databaseName = @"pongStore.sql";
-	
-	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+
+	NSArray *documentPaths =
+      NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
+                                          NSUserDomainMask,
+                                          YES);
 	NSString *documentsDir = [documentPaths objectAtIndex:0];
-	NSString * tDatabasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+	NSString *tDatabasePath =
+      [documentsDir stringByAppendingPathComponent:databaseName];
 	databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
-	
+
 	[databasePath retain];
 	[databaseName retain];
-	
+
 	//NSLog(@"%s",[databaseName UTF8String]);
 	//NSLog(@"%s",[databasePath UTF8String]);
-	
+
 	//NSLog(@"HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 
-	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
-	
+
 	// Check if the database has already been created in the users filesystem
-	if(![fileManager fileExistsAtPath:tDatabasePath])
+	if (![fileManager fileExistsAtPath:tDatabasePath])
 	{
 		//NSLog(@"file doesn't exist");
 		// Get the path to the database in the application package
-		NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
-		
+		NSString *databasePathFromApp =
+        [[[NSBundle mainBundle] resourcePath]
+            stringByAppendingPathComponent:databaseName];
+
 		// Copy the database from the package to the users filesystem
-		[fileManager copyItemAtPath:databasePathFromApp toPath:tDatabasePath error:nil];
-		
-		[fileManager release];
+		[fileManager copyItemAtPath:databasePathFromApp
+                         toPath:tDatabasePath
+                          error:nil];
 	}
-	
-	
-	
-	
-	
-    return YES;
+
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	NSLog(@"WillResignActive");
-    [self.viewController stopAnimation];
+  [self.viewController stopAnimation];
 	NSLog(@"WillResignActive2");
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-	
 	NSLog(@"DidBecomeActive");
     [self.viewController startAnimation];
 	NSLog(@"DidBecomeActive2");
@@ -81,7 +81,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-	
 	NSLog(@"WillTerminate");
 	NSLog(@"WillTerminate");
 	NSLog(@"WillTerminate");
@@ -107,7 +106,6 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-	
 	NSLog(@"DidEnterBackground");
 	//NSLog(@"background..............................");
 	[PongViewController writeData];
@@ -119,20 +117,17 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-	
-	NSLog(@"WillEnterForeground");
-    // Handle any foreground procedures not related to animation here.
+	NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (void)dealloc
 {
-	
-	NSLog(@"dealloc");
-    [viewController release];
-	NSLog(@"dealloc2");
-    [window release];
-    NSLog(@"dealloc3");
-    [super dealloc];
+  NSLog(@"dealloc");
+  [viewController release];
+  NSLog(@"dealloc2");
+  [window release];
+  NSLog(@"dealloc3");
+  [super dealloc];
 	NSLog(@"dealloc4");
 }
 

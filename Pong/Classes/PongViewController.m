@@ -988,7 +988,7 @@ static GLfloat* wallVertices;
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_SMOOTH);
 	glDisable( GL_DEPTH_TEST );
-	wallVertices = (GLfloat*)malloc(3*4*8*4*(sizeof(int)));
+	wallVertices = (GLfloat *)malloc(3*4*8*4*(sizeof(CGFloat)));
 	
 	
 	width = w;
