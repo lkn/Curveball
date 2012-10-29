@@ -8,22 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
 @class PongViewController;
 
-@interface PongAppDelegate : NSObject <UIApplicationDelegate> {
-
-
-    UIWindow *window;
-    PongViewController *viewController;
-
-}
+@interface PongAppDelegate : NSObject <UIApplicationDelegate>
 //@property (readwrite) int pX;
 //@property (readwrite) int pY;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet PongViewController *viewController;
-
-
-
 
 @end
 

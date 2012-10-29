@@ -7,13 +7,16 @@
 //
 
 #import "PongAppDelegate.h"
-#import "PongViewController.h"
+
 #import <sqlite3.h>
+
+#import "PongViewController.h"
+
 
 @implementation PongAppDelegate
 
-@synthesize window;
-@synthesize viewController;
+@synthesize window = window_;
+@synthesize viewController = viewController_;
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -23,9 +26,6 @@
 
 	//PongViewController.delegate = self;
 
-	//[[UIDevice currentDevice] setOrientation:UIInterfaceOrientationLandscapeRight];
-
-	//NSLog(@"HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 	databaseName = @"pongStore.sql";
 
 	NSArray *documentPaths =
@@ -42,8 +42,6 @@
 
 	//NSLog(@"%s",[databaseName UTF8String]);
 	//NSLog(@"%s",[databasePath UTF8String]);
-
-	//NSLog(@"HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII");
 
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 
@@ -75,31 +73,18 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
 	NSLog(@"DidBecomeActive");
-    [self.viewController startAnimation];
+  [self.viewController startAnimation];
 	NSLog(@"DidBecomeActive2");
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
 	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
-	NSLog(@"WillTerminate");
 	//NSLog(@"terminating..............................");
 	[PongViewController writeData];
 	NSLog(@"WillTerminate2");
 	//NSLog(@"terminated..............................");
-    [self.viewController stopAnimation];
+  [self.viewController stopAnimation];
 	PongViewController.running = FALSE;
 	NSLog(@"WillTerminate3");
 }
@@ -112,7 +97,6 @@
 	NSLog(@"DidEnterBackground2");
 	//exit(0);
 	//NSLog(@"backgrounded..............................");
-    // Handle any background procedures not related to animation here.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -123,9 +107,9 @@
 - (void)dealloc
 {
   NSLog(@"dealloc");
-  [viewController release];
+  [viewController_ release];
   NSLog(@"dealloc2");
-  [window release];
+  [window_ release];
   NSLog(@"dealloc3");
   [super dealloc];
 	NSLog(@"dealloc4");
