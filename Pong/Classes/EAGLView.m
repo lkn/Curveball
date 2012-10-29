@@ -367,7 +367,7 @@ void onTouchEventState3(NSString * type,int clickedX,int clickedY)
 	{
 
 
-		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
+		[Preferences global].shouldPlaySound = ![Preferences global].shouldPlaySound;
 		
 		[SoundMan playSound:mpWall3];
 		
@@ -383,8 +383,8 @@ void onTouchEventState3(NSString * type,int clickedX,int clickedY)
 	}
 	else if([type isEqualToString:@"down"] && clickedX >= PongViewController.hFloatWidth - 9*PongViewController.fontSize/2 && clickedY >= PongViewController.hFloatHeight - PongViewController.fontSize*4)
 	{
-		PongViewController.vibrate = PongViewController.vibrate?FALSE:TRUE;
-		if(PongViewController.vibrate)
+		[Preferences global].shouldVibrate = ![Preferences global].shouldVibrate;
+		if ([Preferences global].shouldVibrate)
 		{
 			//if(vibrator != null)
 			//	vibrator.vibrate(50);
@@ -437,7 +437,8 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 	
 	if([type isEqualToString:@"down"] && clickedX <= -PongViewController.hFloatWidth + 9*PongViewController.fontSize/2 && clickedY >= PongViewController.hFloatHeight - PongViewController.fontSize*4)
 	{
-		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
+//		PongViewController.sound = PongViewController.sound?FALSE:TRUE;
+    [Preferences global].shouldPlaySound = ![Preferences global].shouldPlaySound;
 //		changedPref = TRUE;
 		[SoundMan playSound:mpWall3];
 	}
@@ -445,7 +446,8 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 	
 	if([type isEqualToString:@"down"] && clickedX >= PongViewController.hFloatWidth - 9*PongViewController.fontSize/2 && clickedY >= PongViewController.hFloatHeight - PongViewController.fontSize*4)
 	{
-		PongViewController.vibrate = PongViewController.vibrate?FALSE:TRUE;
+    [Preferences global].shouldVibrate = ![Preferences global].shouldVibrate;
+//		PongViewController.vibrate = PongViewController.vibrate?FALSE:TRUE;
 //		changedPref = TRUE;
 		[SoundMan playSound:mpWall3];
 	}
@@ -539,8 +541,8 @@ void onTouchEventState7(NSString * type,int clickedX,int clickedY)
 		{
 			PongViewController.previewX = 0;
 			PongViewController.previewY = 0;
-			
-			PongViewController.bZSpeed = (int)(-PongViewController.bZSpeeds[PongViewController.difficulty] * (pow(1.05,PongViewController.level)));
+			int difficulty = [Preferences global].difficulty;
+			PongViewController.bZSpeed = (int)(-PongViewController.bZSpeeds[difficulty] * (pow(1.05,PongViewController.level)));
 			
 			//if(GetAd.allAds != null && GetAd.success && GetAd.allAds.size() > 1 && gameType == 0)
 			{

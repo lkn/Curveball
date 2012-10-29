@@ -74,10 +74,7 @@ void setUpFonts();
 +(int)floatWidth;
 +(int)floatHeight;
 +(BOOL)running;
-+(BOOL)sound;
-+(BOOL)fog;
-+(int)inputMethod;
-+(BOOL)vibrate;
+
 +(int)level;
 +(int)lives;
 +(int)hFloatWidth;
@@ -135,7 +132,7 @@ void setUpFonts();
 +(int)eSpeed;
 +(int)randEnemy;
 +(BOOL)didSounds;
-+(int)difficulty;
+
 +(enum States)state;
 +(enum States)lastDownState;
 +(int*)eSpeeds;
@@ -201,11 +198,10 @@ void setUpFonts();
 +(void)setESpeed:(int) inp;
 +(void)setRandEnemy:(int) inp;
 +(void)setDidSounds:(BOOL) inp;
-+(void)setDifficulty:(int) inp;
+
 +(void)setLastTouchEvent:(long) inp;
 +(void)setIpValid:(BOOL) inp;
-+(void)setSound:(BOOL) inp;
-+(void)setVibrate:(BOOL) inp;
+
 +(void)setWidth:(int) inp;
 +(void)setHeight:(int) inp;
 +(void)setGwidth:(int) inp;
@@ -218,8 +214,7 @@ void setUpFonts();
 +(void)setLastDownState:(enum States) inp;
 +(void)setHoveredButton:(Button *) inp;
 +(void)setButtonInfo:(id *) inp;
-+(void)setSound:(BOOL) inp;
-+(void)setVibrate:(BOOL) inp;
+
 
 int textLength(NSString * text);
 + (void)drawStringCentered:(NSString *)str y:(int)y size:(int)size;

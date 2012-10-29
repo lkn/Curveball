@@ -635,15 +635,6 @@ void setUpFonts()
 	return lives;
 }
 
-+(BOOL)fog
-{
-	return fog;
-}
-+(int)inputMethod
-{
-	return inputMethod;
-}
-
 +(int)pX
 {
 	return pX;
@@ -822,11 +813,6 @@ void setUpFonts()
 	return didSounds;
 }
 
-+(int)difficulty
-{
-	return difficulty;
-}
-
 +(long)lastTouchEvent
 {
 	return lastTouchEvent;
@@ -916,16 +902,6 @@ void setUpFonts()
 +(int*)texCoordsInt
 {
 	return texCoordsInt;
-}
-
-
-+(BOOL)sound
-{
-	return sound;
-}
-+(BOOL)vibrate
-{
-	return vibrate;
 }
 
 +(void)setRunning:(BOOL) inp
@@ -1171,11 +1147,6 @@ void setUpFonts()
 	didSounds = inp;
 }
 
-+(void)setDifficulty:(int) inp
-{
-	difficulty = inp;
-}
-
 
 +(void)setLastTouchEvent:(long) inp
 {
@@ -1185,22 +1156,6 @@ void setUpFonts()
 +(void)setIpValid:(BOOL) inp
 {
 	ipValid = inp;
-}
-
-
-
-
-
-+(void)setSound:(BOOL) inp
-{
-	sound = inp;
-}
-
-
-
-+(void)setVibrate:(BOOL) inp
-{
-	vibrate = inp;
 }
 
 
