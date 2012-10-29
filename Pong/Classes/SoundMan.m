@@ -15,7 +15,7 @@
 
 + (void)playSound:(SystemSoundID)insound
 {
-	if([Preferences global].shouldPlaySound) {
+	if ([Preferences global].shouldPlaySound) {
 		AudioServicesPlaySystemSound(insound);
   }
 }

@@ -5,6 +5,7 @@ void s0b0dh()
 
 	//NSLog(@"got hit!!!!");
 	hoveredButton = NULL;
+  int difficulty = [Preferences global].difficulty;
 	bZSpeed = -bZSpeeds[difficulty];
 	
 	lives = (fullVersion?6:3);
@@ -36,7 +37,7 @@ void s0b1dh()
 		//	level = levelToGet;
 		//	curLev = new Level(parseXmlFile(levelStrings.get(levelToGet)));
 			gameType = 1;
-			bZSpeed = -bZSpeeds[difficulty];
+			bZSpeed = -bZSpeeds[[Preferences global].difficulty];
 			lives = (fullVersion?6:3);
 			myScore = 0;
 			eSpeed = eSpeeds[0];
@@ -71,8 +72,10 @@ void s0b3dh()
 	
 	
 	
-	
-	if(sound)
+	int difficulty = [Preferences global].difficulty;
+  int inputMethod = [Preferences global].inputMethod;
+
+	if([Preferences global].shouldPlaySound)
 	{
 		[stateButtons[2][1] changeText:@"On"];
 	}
@@ -80,7 +83,7 @@ void s0b3dh()
 	{
 		[stateButtons[2][1] changeText:@"Off"];
 	}
-	if(vibrate)
+	if([Preferences global].shouldVibrate)
 	{
 		[stateButtons[2][2] changeText:@"On"];
 	}
@@ -100,7 +103,7 @@ void s0b3dh()
 	{
 		[stateButtons[2][3] changeText:@"Hard"];
 	}
-	if(fog)
+	if([Preferences global].shouldShowFog)
 	{
 		[stateButtons[2][4] changeText:@"On"];
 	}
@@ -208,8 +211,8 @@ void s2b1dh()
 	hoveredButton = NULL;
 	if(lastDownState == OPTIONS)
 	{
-		sound = sound?false:true;
-    [Preferences global].shouldPlaySound = sound;
+//		sound = sound?false:true;
+    [Preferences global].shouldPlaySound = ![Preferences global].shouldPlaySound;
 		[SoundMan playSound:mpWall3];
 	}
 }
@@ -219,14 +222,15 @@ void s2b2dh()
 	hoveredButton = NULL;
 	if(lastDownState == OPTIONS)
 	{
-		vibrate = vibrate?false:true;
-    [Preferences global].shouldVibrate = vibrate;
+//		vibrate = vibrate?false:true;
+    [Preferences global].shouldVibrate = ![Preferences global].shouldVibrate;
 		[SoundMan playSound:mpWall3];
 	}
 }
 
 void s2b3dh()
 {
+  int difficulty = [Preferences global].difficulty;
 	hoveredButton = NULL;
 	if(lastDownState == OPTIONS)
 	{
@@ -245,8 +249,8 @@ void s2b4dh()
 	hoveredButton = NULL;
 	if(lastDownState == OPTIONS)
 	{
-		fog = fog?false:true;
-    [Preferences global].shouldShowFog = fog;
+//		fog = fog?false:true;
+    [Preferences global].shouldShowFog = ![Preferences global].shouldShowFog;
 		[SoundMan playSound:mpWall3];
 	}
 }
@@ -255,6 +259,7 @@ void s2b4dh()
 void s2b5dh()
 {
 	hoveredButton = NULL;
+  int inputMethod = [Preferences global].inputMethod;
 	if(lastDownState == OPTIONS)
 	{
 		inputMethod++;

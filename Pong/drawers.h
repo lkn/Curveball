@@ -94,9 +94,9 @@ void drawState3()
 	[PongViewController drawString:soundImage x:-hFloatWidth+fontSize y:hFloatHeight-fontSize size:fontSize*2];
 	[PongViewController drawStringRight:vib y:hFloatHeight-fontSize size:fontSize*2];
 	
-	if(sound == false)
+	if([Preferences global].shouldPlaySound == false)
 		[PongViewController drawString:ex x:-hFloatWidth+fontSize*3/2 y:hFloatHeight-fontSize size:fontSize*2];
-	if(vibrate == false)
+	if([Preferences global].shouldVibrate == false)
 		[PongViewController drawString:ex x:hFloatWidth-4*fontSize y:hFloatHeight-fontSize size:fontSize*2];
 	
 	
@@ -152,9 +152,9 @@ void drawState7()
 	[PongViewController drawString:soundImage x:-hFloatWidth+fontSize y:hFloatHeight-fontSize size:fontSize*2];
 	[PongViewController drawStringRight:vib y:hFloatHeight-fontSize size:fontSize*2];
 	
-	if(sound == false)
+	if([Preferences global].shouldPlaySound == false)
 		[PongViewController drawString:ex x:-hFloatWidth+fontSize*3/2 y:hFloatHeight-fontSize size:fontSize*2];
-	if(vibrate == false)
+	if([Preferences global].shouldVibrate == false)
 		[PongViewController drawString:ex x:hFloatWidth-4*fontSize y:hFloatHeight-fontSize size:fontSize*2];
 	
 	NSString * levelString = [NSString stringWithFormat:@"Level %d",level+1];
@@ -269,7 +269,7 @@ void drawState8()
 		
 		//String hs = "High Scores for this Difficulty";
 		NSString * hs;
-		switch(difficulty)
+		switch([Preferences global].difficulty)
 		{
 			case 0:
 				hs = @"Easy";

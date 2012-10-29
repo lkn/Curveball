@@ -137,9 +137,10 @@ static BOOL tellOpponent = false;
 NSString *whatToTellOpponent = @"";
 
 
-static BOOL sound = FALSE;
-static BOOL vibrate = FALSE;
-static BOOL fog = FALSE;
+// replaced with Preferences
+//static BOOL sound = FALSE;
+//static BOOL vibrate = FALSE;
+//static BOOL fog = FALSE;
 
 
 static int smallTexFont;
@@ -202,7 +203,7 @@ static int paddleWidth = 0;
 static int hPaddleHeight = 0;
 static int hPaddleWidth = 0;
 static BOOL iLost = false;
-static int inputMethod = 0;
+//static int inputMethod = 0;  // replaced with Preferences
 static int eX = 0;
 static int eY = 0;
 static int multiplier = 1600;
@@ -215,7 +216,7 @@ static NSString * sem = @"";
 //Semaphore prefsSem;
 //public Semaphore soundSem = new Semaphore(0);
 static BOOL didSounds = false;
-static int difficulty = 0;
+//static int difficulty = 0;  // replaced with Preferences
 
 
 static int eSpeeds[] = {
@@ -394,6 +395,7 @@ static void gameReset()
 	memset(PongViewController.mxs,0,10*sizeof(int));
 	memset(PongViewController.mys,0,10*sizeof(int));
 
+  int difficulty = [Preferences global].difficulty;
 	bZSpeed = (int)(-bZSpeeds[difficulty] * (pow(1.05,level)));
 	eSpeed = (int)(eSpeeds[difficulty] * (pow(1.05,level)));
 	randEnemy = (int)(randEnemies[difficulty] * (pow(1.05,level)));
@@ -562,7 +564,7 @@ int count = 0;
 
     glClear(GL_COLOR_BUFFER_BIT);
 
-	if(fog)
+	if([Preferences global].shouldShowFog)
 		glEnable(GL_FOG);
 	else
 		glDisable(GL_FOG);
@@ -1132,7 +1134,9 @@ static GLfloat* wallVertices;
 	stateButtons[2][5] = s2b5d;
 
 
-	if(sound)
+  int difficulty = [Preferences global].difficulty;
+  int inputMethod = [Preferences global].inputMethod;
+	if([Preferences global].shouldPlaySound)
 	{
 		[stateButtons[2][1] changeText:@"On"];
 	}
@@ -1140,7 +1144,7 @@ static GLfloat* wallVertices;
 	{
 		[stateButtons[2][1] changeText:@"Off"];
 	}
-	if(vibrate)
+	if([Preferences global].shouldVibrate)
 	{
 		[stateButtons[2][2] changeText:@"On"];
 	}
@@ -1160,7 +1164,7 @@ static GLfloat* wallVertices;
 	{
 		[stateButtons[2][3] changeText:@"Hard"];
 	}
-	if(fog)
+	if([Preferences global].shouldShowFog)
 	{
 		[stateButtons[2][4] changeText:@"On"];
 	}
@@ -1454,7 +1458,7 @@ static GLfloat* wallVertices;
               numPingToPlay++;
               
               if(multiPlayerStatus == 0)
-                myScore += level + 1 + difficulty;
+                myScore += level + 1 + [Preferences global].difficulty;
               
               //		if(vibrator != null && Pong.vibrate)
               //			vibrator.vibrate(50);
@@ -1543,7 +1547,7 @@ static GLfloat* wallVertices;
                 
                 [scoresToSave retain];
                 
-                [prefs setObject:scoresToSave forKey:[NSString stringWithFormat:@"scores%d",difficulty]];
+                [prefs setObject:scoresToSave forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
                 
                 
                 [PongViewController switchToState:RESULTS];
@@ -1613,7 +1617,7 @@ static GLfloat* wallVertices;
                 //switchToState(START);
                 [PongViewController switchToState:START];
                 lastOutcome = 0;
-                myScore += (level + 1 + difficulty)*20;
+                myScore += (level + 1 + [Preferences global].difficulty)*20;
                 level++;
                 gameReset();
                 numWonToPlay++;
@@ -1859,16 +1863,16 @@ void drawWorld()
 
 	lastOutcome = [GameState global].lastOutcome;
 
-	sound = [Preferences global].shouldPlaySound;
-	vibrate = [Preferences global].shouldVibrate;
-	fog = [Preferences global].shouldShowFog;
+//	sound = [Preferences global].shouldPlaySound;
+//	vibrate = [Preferences global].shouldVibrate;
+//	fog = [Preferences global].shouldShowFog;
 
 	holdPaddleX = [Preferences global].paddlePositionX;
 	holdPaddleY = [Preferences global].paddlePositionY;
 
-	difficulty = [Preferences global].difficulty;
-
-	inputMethod = [Preferences global].inputMethod;
+//	difficulty = [Preferences global].difficulty;
+//
+//	inputMethod = [Preferences global].inputMethod;
 }
 
 @end

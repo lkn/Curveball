@@ -289,7 +289,7 @@ void onTouchEventState2(NSString * type,int clickedX,int clickedY)
 	}
 	
 	
-	if(PongViewController.sound)
+	if([Preferences global].shouldPlaySound)
 	{
 		[stateButtons[2][1] changeText:@"On"];
 	}
@@ -297,7 +297,7 @@ void onTouchEventState2(NSString * type,int clickedX,int clickedY)
 	{
 		[stateButtons[2][1] changeText:@"Off"];
 	}
-	if(PongViewController.vibrate)
+	if([Preferences global].shouldVibrate)
 	{
 		[stateButtons[2][2] changeText:@"On"];
 	}
@@ -305,19 +305,19 @@ void onTouchEventState2(NSString * type,int clickedX,int clickedY)
 	{
 		[stateButtons[2][2] changeText:@"Off"];
 	}
-	if(PongViewController.difficulty == 0)
+	if([Preferences global].difficulty == 0)
 	{
 		[stateButtons[2][3] changeText:@"Easy"];
 	}
-	else if(PongViewController.difficulty == 1)
+	else if([Preferences global].difficulty == 1)
 	{
 		[stateButtons[2][3] changeText:@"Medium"];
 	}
-	else if(PongViewController.difficulty == 2)
+	else if([Preferences global].difficulty == 2)
 	{
 		[stateButtons[2][3] changeText:@"Hard"];
 	}
-	if(PongViewController.fog)
+	if([Preferences global].shouldShowFog)
 	{
 		[stateButtons[2][4] changeText:@"On"];
 	}
@@ -325,12 +325,11 @@ void onTouchEventState2(NSString * type,int clickedX,int clickedY)
 	{
 		[stateButtons[2][4] changeText:@"Off"];
 	}
-	if(PongViewController.inputMethod == 0)
+	if([Preferences global].inputMethod == 0)
 	{
 		[stateButtons[2][5] changeText:@"Touch"];
 	}
-	else if(PongViewController.inputMethod == 1)
-	{
+	else if([Preferences global].inputMethod == 1)	{
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
 	
