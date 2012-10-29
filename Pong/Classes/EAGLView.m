@@ -6,12 +6,16 @@
 //  Copyright 2011 CalcG.org. All rights reserved.
 //
 
+#import "EAGLView.h"
+
 #import <QuartzCore/QuartzCore.h>
 
-#import "EAGLView.h"
+#import "Button.h"
 #import "PongViewController.h"
 #import "PongAppDelegate.h"
-#import "Button.h"
+#import "Preferences.h"
+#import "SoundMan.h"
+
 
 @interface EAGLView (PrivateMethods)
 - (void)createFramebuffer;
@@ -337,8 +341,8 @@ void onTouchEventState2(NSString * type,int clickedX,int clickedY)
 	{
 		PongViewController.holdPaddleX = clickedX;
 		PongViewController.holdPaddleY = clickedY;
-		[prefs setObject:[NSString stringWithFormat:@"%d",PongViewController.holdPaddleX] forKey:@"holdPaddleX"];
-		[prefs setObject:[NSString stringWithFormat:@"%d",PongViewController.holdPaddleY] forKey:@"holdPaddleY"];
+    [Preferences global].paddlePositionX = clickedX;
+    [Preferences global].paddlePositionY = clickedY;
 	}
 }
 

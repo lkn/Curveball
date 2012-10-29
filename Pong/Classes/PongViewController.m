@@ -6,47 +6,42 @@
 //  Copyright 2011 CalcG.org. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <sqlite3.h>
-
-#import <AudioToolbox/AudioServices.h>
-
 #import "PongViewController.h"
-#import "EAGLView.h"
-#import "PongAppDelegate.h"
-#import "FontTexture.h"
+
+#import <CoreGraphics/CoreGraphics.h>
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 #import "Button.h"
+#import "EAGLView.h"
+#import "FontTexture.h"
+#import "GameState.h"
+#import "PongAppDelegate.h"
+#import "Preferences.h"
+#import "SQLite3Data.h"
+
 
 // Uniform index.
 enum {
-    UNIFORM_TRANSLATE,
-    NUM_UNIFORMS
+  UNIFORM_TRANSLATE,
+  NUM_UNIFORMS
 };
 GLint uniforms[NUM_UNIFORMS];
 
 // Attribute index.
 enum {
-    ATTRIB_VERTEX,
-    ATTRIB_COLOR,
-    NUM_ATTRIBUTES
+  ATTRIB_VERTEX,
+  ATTRIB_COLOR,
+  NUM_ATTRIBUTES
 };
-
-
 
 void drawWorld();
 void setUpWalls();
-
-
-
-
 
 int depth = (int)(2.0*65536);
 int altitude = (int)(0.6*65536);
 
 enum States state = HOME;
-
 
 static BOOL isCurveball = TRUE;
 
@@ -75,8 +70,45 @@ static Button * hoveredButton;
 static int pX = 0;
 static int pY = 0;
 
-static int sinTable[] = {0,9802,19509,29028,38268,47140,55557,63439,70711,77301,83147,88192,92388,95694,98079,99520,100000};
-static int cosTable[] = {100000,99520,98079,95694,92388,88192,83147,77301,70711,63439,55557,47140,38268,29028,19509,9802,0};
+static int sinTable[] = {
+  0,
+  9802,
+  19509,
+  29028,
+  38268,
+  47140,
+  55557,
+  63439,
+  70711,
+  77301,
+  83147,
+  88192,
+  92388,
+  95694,
+  98079,
+  99520,
+100000
+};
+
+static int cosTable[] = {
+  100000,
+  99520,
+  98079,
+  95694,
+  92388,
+  88192,
+  83147,
+  77301,
+  70711,
+  63439,
+  55557,
+  47140,
+  38268,
+  29028,
+  19509,
+  9802,
+  0
+};
 
 static int fontStarts[130];// = new int[130];
 static int medFontStarts[130];// = new int[130];
@@ -141,7 +173,7 @@ TextureCoord txSmallTarget;*/
 //IntBuffer   mColorBuffer;
 //ShortBuffer mIndexBuffer;
 static int mIndexCount = 0;
-//private ArrayList<GLShape>	mShapeList = new ArrayList<GLShape>();	
+//private ArrayList<GLShape>	mShapeList = new ArrayList<GLShape>();
 //private ArrayList<GLVertex>	mVertexList = new ArrayList<GLVertex>();
 
 NSMutableDictionary *prefs;
@@ -187,8 +219,18 @@ static BOOL didSounds = false;
 static int difficulty = 0;
 
 
-static int eSpeeds[] = {(int)(.015f*65536),(int)(.025f*65536),(int)(.04f*65536)};
-static int bZSpeeds[] = {(int) (.04f*65536),(int) (.05f*65536),(int) (.06f*65536)};
+static int eSpeeds[] = {
+  (int)(.015f*65536),
+  (int)(.025f*65536),
+  (int)(.04f*65536)
+};
+
+static int bZSpeeds[] = {
+  (int)(.04f*65536),
+  (int)(.05f*65536),
+  (int)(.06f*65536)
+};
+
 static int randEnemies[] = {100,250,500};
 static long lastTouchEvent = 0;
 
@@ -293,22 +335,22 @@ static int texCoordsInt[] =  {
 	65536, 65536,
 	0, 0,
 	0, 65536,
-	// 
+	//
 	0, 0,
 	65536, 0,
 	0, 65536,
 	65536, 65536,
-	// 
+	//
 	0, 0,
 	65536, 0,
 	0, 65536,
 	65536, 65536,
-	// 
+	//
 	0, 0,
 	65536, 0,
 	0, 65536,
 	65536, 65536,
-	// 
+	//
 	0, 0,
 	65536, 0,
 	0, 65536,
@@ -354,12 +396,10 @@ static void gameReset()
 	memset(PongViewController.mxs,0,10*sizeof(int));
 	memset(PongViewController.mys,0,10*sizeof(int));
 
-	
 	bZSpeed = (int)(-bZSpeeds[difficulty] * (pow(1.05,level)));
 	eSpeed = (int)(eSpeeds[difficulty] * (pow(1.05,level)));
 	randEnemy = (int)(randEnemies[difficulty] * (pow(1.05,level)));
-	
-	
+
 	bXSpeed = 0;
 	bYSpeed = 0;
 	bX = 0;
@@ -378,26 +418,26 @@ static void gameReset()
 - (void)awakeFromNib
 {
     EAGLContext *aContext=NULL;//= [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    
+
     if (!aContext)
     {
         aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
     }
-    
+
     if (!aContext)
         NSLog(@"Failed to create ES context");
     else if (![EAGLContext setCurrentContext:aContext])
         NSLog(@"Failed to set ES context current");
-    
+
 	self.context = aContext;
 	[aContext release];
-	
+
     [(EAGLView *)self.view setContext:context];
     [(EAGLView *)self.view setFramebuffer];
-    
+
     if ([context API] == kEAGLRenderingAPIOpenGLES2)
         [self loadShaders];
-    
+
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
@@ -410,34 +450,34 @@ static void gameReset()
         glDeleteProgram(program);
         program = 0;
     }
-    
+
     // Tear down context.
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
-    
+
     [context release];
-    
+
     [super dealloc];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self startAnimation];
-    
+
     [super viewWillAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self stopAnimation];
-    
+
     [super viewWillDisappear:animated];
 }
 
 - (void)viewDidUnload
 {
 	[super viewDidUnload];
-	
+
     if (program)
     {
         glDeleteProgram(program);
@@ -447,7 +487,7 @@ static void gameReset()
     // Tear down context.
     if ([EAGLContext currentContext] == context)
         [EAGLContext setCurrentContext:nil];
-	self.context = nil;	
+	self.context = nil;
 }
 
 - (NSInteger)animationFrameInterval
@@ -464,7 +504,7 @@ static void gameReset()
     if (frameInterval >= 1)
     {
         animationFrameInterval = frameInterval;
-        
+
         if (animating)
         {
             [self stopAnimation];
@@ -481,7 +521,7 @@ static void gameReset()
         [aDisplayLink setFrameInterval:animationFrameInterval];
         [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
         self.displayLink = aDisplayLink;
-        
+
         animating = TRUE;
     }
 }
@@ -503,27 +543,27 @@ int count = 0;
 - (void)drawFrame
 {
     [(EAGLView *)self.view setFramebuffer];
-	
-	
+
+
 	if(count == 0)
 	{
-		
-		
+
+
 		//float scale = 1.0;
-		
+
 		//if([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
 		//	scale = [UIScreen mainScreen].scale;
-		
+
 		[self resize:width h:height];
 		//[self resize:1500 h:5];
 	}
 	count++;
-	
-	
+
+
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
     glClear(GL_COLOR_BUFFER_BIT);
-	
+
 	if(fog)
 		glEnable(GL_FOG);
 	else
@@ -531,8 +571,8 @@ int count = 0;
 
 
 	drawWorld();
-	
-	
+
+
 	glEnable(GL_TEXTURE_2D);
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
@@ -540,24 +580,24 @@ int count = 0;
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_BLEND);
-	
-	
-	
-	
+
+
+
+
 	static GLfloat paddleCoords[] = {
-        -0.5f, -0.33f, 0, 
-        0.5f, -0.33f, 0, 
-        -0.5f,  0.33f, 0.0f, 
-        0.5f,  0.33f, 0.0f, 
-		
+        -0.5f, -0.33f, 0,
+        0.5f, -0.33f, 0,
+        -0.5f,  0.33f, 0.0f,
+        0.5f,  0.33f, 0.0f,
+
     };
-	
-	
-	
-	
+
+
+
+
 	if(gameType == 0)
 	{
-		
+
 		paddleCoords[0] = eX-hPaddleWidth;
 		paddleCoords[1] = eY-hPaddleHeight;
 		paddleCoords[2] = -depth;
@@ -570,13 +610,13 @@ int count = 0;
 		paddleCoords[9] = eX+hPaddleWidth;
 		paddleCoords[10] = eY+hPaddleHeight;
 		paddleCoords[11] = -depth;
-		
+
 		glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 		glTexCoordPointer(2, GL_FIXED, 0, txPaddle->coordBuff);
 		glBindTexture(GL_TEXTURE_2D,tileset1);
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
-		
+
+
 		paddleCoords[0] = bX-ballRadius;
 		paddleCoords[1] = bY-ballRadius;
 		paddleCoords[2] = bZ;
@@ -589,19 +629,19 @@ int count = 0;
 		paddleCoords[9] = bX+ballRadius;
 		paddleCoords[10] = bY+ballRadius;
 		paddleCoords[11] = bZ;
-		
+
 		//glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 		glTexCoordPointer(2, GL_FIXED, 0, txBall->coordBuff);
 		//glBindTexture(GL_TEXTURE_2D,tileset1);
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
-		
-		
+
+
+
 		//glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 		glTexCoordPointer(2, GL_FIXED, 0, txTransBall->coordBuff);
 		//glBindTexture(GL_TEXTURE_2D,tileset1);
-		
-		
+
+
 		paddleCoords[0] = -hFloatWidth;
 		paddleCoords[1] = bY-ballRadius;
 		paddleCoords[2] = bZ-ballRadius;
@@ -615,7 +655,7 @@ int count = 0;
 		paddleCoords[10] = bY+ballRadius;
 		paddleCoords[11] = bZ+ballRadius;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
+
 		paddleCoords[0] = hFloatWidth;
 		paddleCoords[1] = bY-ballRadius;
 		paddleCoords[2] = bZ-ballRadius;
@@ -629,8 +669,8 @@ int count = 0;
 		paddleCoords[10] = bY+ballRadius;
 		paddleCoords[11] = bZ+ballRadius;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
-		
+
+
 		paddleCoords[0] = bX-ballRadius;
 		paddleCoords[1] = -hFloatHeight;
 		paddleCoords[2] = bZ+ballRadius;
@@ -644,7 +684,7 @@ int count = 0;
 		paddleCoords[10] = -hFloatHeight;
 		paddleCoords[11] = bZ-ballRadius;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-		
+
 		paddleCoords[0] = bX-ballRadius;
 		paddleCoords[1] = hFloatHeight;
 		paddleCoords[2] = bZ+ballRadius;
@@ -660,11 +700,11 @@ int count = 0;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
 	}
-	
 
-		
-	
-	
+
+
+
+
 	paddleCoords[0] = pX-hPaddleWidth;
 	paddleCoords[1] = pY-hPaddleHeight;
 	paddleCoords[2] = 0;
@@ -677,14 +717,14 @@ int count = 0;
 	paddleCoords[9] = pX+hPaddleWidth;
 	paddleCoords[10] = pY+hPaddleHeight;
 	paddleCoords[11] = 0;
-	
-	
+
+
 	glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 	glTexCoordPointer(2, GL_FIXED, 0, txPaddle->coordBuff);
 	glBindTexture(GL_TEXTURE_2D,tileset1);
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-	
-	
+
+
 	switch (state) {
 		case HOME:
 			drawState0();
@@ -698,10 +738,10 @@ int count = 0;
 		case PAUSED:
 			drawState3();
 			break;
-			
-			
-			
-			
+
+
+
+
 		case START:
 			drawState7();
 			break;
@@ -711,14 +751,14 @@ int count = 0;
 		default:
 			break;
 	}
-	
-	
-	
-	
+
+
+
+
 	for(int j=0;stateButtons[stateToInt(state)][j] != NULL;j++)
 			[stateButtons[stateToInt(state)][j] draw];
-	
-	
+
+
 	//drawString(@"Hello, World!", 0, 0, fontSize);
 
     [(EAGLView *)self.view presentFramebuffer];
@@ -730,7 +770,7 @@ int count = 0;
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc. that aren't in use.
 }
 
@@ -738,18 +778,18 @@ int count = 0;
 {
     GLint status;
     const GLchar *source;
-    
+
     source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
     if (!source)
     {
         NSLog(@"Failed to load vertex shader");
         return FALSE;
     }
-    
+
     *shader = glCreateShader(type);
     glShaderSource(*shader, 1, &source, NULL);
     glCompileShader(*shader);
-    
+
 #if defined(DEBUG)
     GLint logLength;
     glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
@@ -761,23 +801,23 @@ int count = 0;
         free(log);
     }
 #endif
-    
+
     glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
     if (status == 0)
     {
         glDeleteShader(*shader);
         return FALSE;
     }
-    
+
     return TRUE;
 }
 
 - (BOOL)linkProgram:(GLuint)prog
 {
     GLint status;
-    
+
     glLinkProgram(prog);
-    
+
 #if defined(DEBUG)
     GLint logLength;
     glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
@@ -789,18 +829,18 @@ int count = 0;
         free(log);
     }
 #endif
-    
+
     glGetProgramiv(prog, GL_LINK_STATUS, &status);
     if (status == 0)
         return FALSE;
-    
+
     return TRUE;
 }
 
 - (BOOL)validateProgram:(GLuint)prog
 {
     GLint logLength, status;
-    
+
     glValidateProgram(prog);
     glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
     if (logLength > 0)
@@ -810,11 +850,11 @@ int count = 0;
         NSLog(@"Program validate log:\n%s", log);
         free(log);
     }
-    
+
     glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
     if (status == 0)
         return FALSE;
-    
+
     return TRUE;
 }
 
@@ -822,10 +862,10 @@ int count = 0;
 {
     GLuint vertShader, fragShader;
     NSString *vertShaderPathname, *fragShaderPathname;
-    
+
     // Create shader program.
     program = glCreateProgram();
-    
+
     // Create and compile vertex shader.
     vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
     if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
@@ -833,7 +873,7 @@ int count = 0;
         NSLog(@"Failed to compile vertex shader");
         return FALSE;
     }
-    
+
     // Create and compile fragment shader.
     fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
     if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
@@ -841,23 +881,23 @@ int count = 0;
         NSLog(@"Failed to compile fragment shader");
         return FALSE;
     }
-    
+
     // Attach vertex shader to program.
     glAttachShader(program, vertShader);
-    
+
     // Attach fragment shader to program.
     glAttachShader(program, fragShader);
-    
+
     // Bind attribute locations.
     // This needs to be done prior to linking.
     glBindAttribLocation(program, ATTRIB_VERTEX, "position");
     glBindAttribLocation(program, ATTRIB_COLOR, "color");
-    
+
     // Link program.
     if (![self linkProgram:program])
     {
         NSLog(@"Failed to link program: %d", program);
-        
+
         if (vertShader)
         {
             glDeleteShader(vertShader);
@@ -873,29 +913,21 @@ int count = 0;
             glDeleteProgram(program);
             program = 0;
         }
-        
+
         return FALSE;
     }
-    
+
     // Get uniform locations.
     uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
-    
+
     // Release vertex and fragment shaders.
     if (vertShader)
         glDeleteShader(vertShader);
     if (fragShader)
         glDeleteShader(fragShader);
-    
+
     return TRUE;
 }
-
-
-void playSound(SystemSoundID insound)
-{
-	if(sound)
-		AudioServicesPlaySystemSound(insound);
-}
-
 
 static GLfloat* wallVertices;
 
@@ -905,81 +937,81 @@ static GLfloat* wallVertices;
 
 - (void)resize:(int)w h:(int)h
 {
-	
+
 	NSLog(@"%d %d",w,h);
 	[PongViewController loadSaved];
-	
-	
-	
+
+
+
 	//NSLog(@"Resize to: %i,%i",w,h);
 	//tileset1 = [self LoadTexture:@"tileset1"];
 	tileset1 = [self LoadTexture:@"tileset1"];
 	smallTexFont = [self LoadTexture:@"smallfont"];
 	medTexFont = [self LoadTexture:@"medfont"];
 	bigTexFont = [self LoadTexture:@"bigfont"];
-	
-	
-	
 
-	
-	
-	
 
-	
+
+
+
+
+
+
+
 	txPaddle = [[TextureCoord alloc] initTextureCoord:0 y:24 width:12 height:8 totalX:32 totalY:32];
 	txPaddle->coordBuff[1]+=150;
 	txPaddle->coordBuff[3]+=150;
 	txPaddle->coordBuff[5]-=150;
 	txPaddle->coordBuff[7]-=150;
-	
+
 	txBall = [[TextureCoord alloc] initTextureCoord:4 y:0 width:4 height:4 totalX:32 totalY:32];
 	txTransBall = [[TextureCoord alloc] initTextureCoord:0 y:0 width:4 height:4 totalX:32 totalY:32];
-	
-	
+
+
 	button[0] = [[TextureCoord alloc] initTextureCoord:25 y:24 width:1 height:8 totalX:32 totalY:32];
 	button[1] = [[TextureCoord alloc] initTextureCoord:26 y:24 width:1 height:8 totalX:32 totalY:32];
 	button[2] = [[TextureCoord alloc] initTextureCoord:27 y:24 width:1 height:8 totalX:32 totalY:32];
-	
+
 	button2[0] = [[TextureCoord alloc] initTextureCoord:21 y:24 width:1 height:8 totalX:32 totalY:32];
 	button2[1] = [[TextureCoord alloc] initTextureCoord:22 y:24 width:1 height:8 totalX:32 totalY:32];
 	button2[2] = [[TextureCoord alloc] initTextureCoord:23 y:24 width:1 height:8 totalX:32 totalY:32];
-	
+
 	button3[0] = [[TextureCoord alloc] initTextureCoord:29 y:24 width:1 height:8 totalX:32 totalY:32];
 	button3[1] = [[TextureCoord alloc] initTextureCoord:30 y:24 width:1 height:8 totalX:32 totalY:32];
 	button3[2] = [[TextureCoord alloc] initTextureCoord:31 y:24 width:1 height:8 totalX:32 totalY:32];
-	
+
 	button[0]->coordBuff[1]+=150;
 	button[0]->coordBuff[3]+=150;
 	button[1]->coordBuff[1]+=150;
 	button[1]->coordBuff[3]+=150;
 	button[2]->coordBuff[1]+=150;
 	button[2]->coordBuff[3]+=150;
-	
+
 	button2[0]->coordBuff[1]+=150;
 	button2[0]->coordBuff[3]+=150;
 	button2[1]->coordBuff[1]+=150;
 	button2[1]->coordBuff[3]+=150;
 	button2[2]->coordBuff[1]+=150;
 	button2[2]->coordBuff[3]+=150;
-	
+
 	button3[0]->coordBuff[1]+=150;
 	button3[0]->coordBuff[3]+=150;
 	button3[1]->coordBuff[1]+=150;
 	button3[1]->coordBuff[3]+=150;
 	button3[2]->coordBuff[1]+=150;
 	button3[2]->coordBuff[3]+=150;
-	
-	
-	
+
+
+
 	//for(int i=0;i<8;i++)
 	//	NSLog(@"%i",txPaddle->coordBuff[i]);
-	
-	
+
+
 	glEnable(GL_FOG);
 	glFogf(GL_FOG_MODE, GL_LINEAR);
 	glFogf(GL_FOG_START, altitude);
 	glFogf(GL_FOG_END, altitude + depth*2);
-	
+
 	glEnable(GL_DITHER);
 	//glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glBlendFunc(GL_ONE,GL_ONE_MINUS_SRC_ALPHA);
@@ -989,33 +1021,33 @@ static GLfloat* wallVertices;
 	glEnable(GL_SMOOTH);
 	glDisable( GL_DEPTH_TEST );
 	wallVertices = (GLfloat *)malloc(3*4*8*4*(sizeof(CGFloat)));
-	
-	
+
+
 	width = w;
 	height = h;
 	gwidth = w;
 	gheight = h;
-	
 
-	
+
+
 	floatHeight = (int)(.3*65536);
 	floatWidth = floatHeight*width/height;
 	hFloatHeight = floatHeight/2;
 	hFloatWidth = floatWidth/2;
-	
+
 	ballRadius = floatWidth/30;
 	paddleHeight = floatHeight/4;
 	paddleWidth = floatWidth/4;
 	hPaddleHeight = paddleHeight/2;
 	hPaddleWidth = paddleWidth/2;
 	fontSize = floatWidth/40;
-	
+
 	bZ = -ballRadius;
-	
+
 	setUpWalls();
-	
+
 	setUpFonts();
-	
+
 /*	if(gameType == 1)
 	{
 		if(state != TARGET)
@@ -1023,85 +1055,85 @@ static GLfloat* wallVertices;
 		curLev = new Level(parseXmlFile(levelStrings.get(level)));
 	}
 	*///TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-	
-	
+
+
 	double angle = atan(((float)hFloatWidth)/altitude);
 	angle = 2.0*angle*180.0/M_PI;
-	
+
 
 	glRotatef(-90,0,0,1);
 	perspective(angle,(double)((double)floatHeight)/((double)floatWidth),altitude/2,depth*2);
 	gluLookAt(0,0,altitude,0,0,0,0,1,0);
-		
-	
-	
-	
+
+
+
+
 	for(int i=0;i<20;i++)
 		for(int j=0;j<40;j++)
 			stateButtons[i][j] = NULL;
-	
-	
-	
-	
+
+
+
+
 	Button * s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
 	s0b0d->handler = s0b0dh;
 	stateButtons[0][0] = s0b0d;
-	
+
 	Button * s0b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize y:2*fontSize/2 width:hFloatWidth height:8*fontSize/2 text:@"Target Mode" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b1d->handler = s0b1dh;
 	s0b1d->enabled = false;
 	stateButtons[0][1] = s0b1d;
-	
+
 	Button * s0b2d = [[Button alloc] initButton:2*fontSize y:2*fontSize/2 width:fontSize*17 height:8*fontSize/2 text:@"Multiplayer" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b2d->handler = s0b2dh;
 	s0b2d->enabled = false;
 	stateButtons[0][2] = s0b2d;
-	
+
 	Button * s0b3d =  [[Button alloc] initButton:-hFloatWidth+fontSize*3 y:-9*fontSize/2 width:fontSize*13 height:8*fontSize/2 text:@"Options" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b3d->handler = s0b3dh;
 	stateButtons[0][3] = s0b3d;
-	
-	
+
+
 	Button * s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3 y:hFloatHeight width:fontSize*3 height:5*fontSize/2 text:@"||" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s1b0d->handler = s1b0dh;
 	stateButtons[1][0] = s1b0d;
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	//Button s2b0d = new Button(hFloatWidth-fontSize*7,-hFloatHeight+fontSize*4+fontSize/2,fontSize*6,fontSize*4,"OK",fontSize*2,-1,-1);
 	Button * s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7 y:-hFloatHeight+fontSize*9/2 width:fontSize*6 height:4*fontSize text:@"OK" textSize:fontSize*2 gameType:-1 multiPlayer:-1];
 	s2b0d->gameType = 0;
 	s2b0d->handler = s2b0dh;
 	stateButtons[2][0] = s2b0d;
-	
+
 	//Button s2b1d = new Button(-fontSize*18,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
 	Button * s2b1d =  [[Button alloc] initButton:-fontSize*18 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b1d->gameType = 0;
 	s2b1d->handler = s2b1dh;
 	stateButtons[2][1] = s2b1d;
-	
+
 	//Button s2b2d = new Button(-fontSize*8-fontSize/2,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
 	Button * s2b2d =  [[Button alloc] initButton:-fontSize*8-fontSize/2 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b2d->gameType = 0;
 	s2b2d->handler = s2b2dh;
 	stateButtons[2][2] = s2b2d;
-	
+
 	//Button s2b3d = new Button(fontSize*0,hFloatHeight-fontSize*6+fontSize,fontSize*10,fontSize*3,"Medium",fontSize*3/2,-1,-1);
 	Button * s2b3d =  [[Button alloc] initButton:0 y:hFloatHeight-fontSize*5 width:fontSize*10 height:3*fontSize text:@"Medium" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b3d->gameType = 0;
 	s2b3d->handler = s2b3dh;
 	stateButtons[2][3] = s2b3d;
-	
-	
+
+
 	//Button s2b4d = new Button(fontSize*13,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
 	Button * s2b4d =  [[Button alloc] initButton:fontSize*13 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b4d->gameType = 0;
 	s2b4d->handler = s2b4dh;
 	stateButtons[2][4] = s2b4d;
-	
+
 	//-gp.fontSize*16,gp.hFloatHeight-gp.fontSize*9
 	//Button s2b5d = new Button(-fontSize*15-fontSize/2,hFloatHeight-fontSize*11,fontSize*7,fontSize*3,"Touch",fontSize*3/2,-1,-1);
 	Button * s2b5d =  [[Button alloc] initButton:-fontSize*15-fontSize/2 y:hFloatHeight-fontSize*11 width:fontSize*7 height:3*fontSize text:@"Touch" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
@@ -1109,8 +1141,8 @@ static GLfloat* wallVertices;
 	s2b5d->handler = s2b5dh;
 	s2b5d->enabled = false;
 	stateButtons[2][5] = s2b5d;
-	
-	
+
+
 	if(sound)
 	{
 		[stateButtons[2][1] changeText:@"On"];
@@ -1155,52 +1187,52 @@ static GLfloat* wallVertices;
 	{
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 	Button * s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s3b0d->handler = homeButton;
 	stateButtons[3][0] = s3b0d;
-	
-	
-	
-	
+
+
+
+
 	Button * s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s7b0d->handler = homeButton;
 	stateButtons[7][0] = s7b0d;
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 	Button * s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*15 height:3*fontSize text:@"Submit Score" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b0d->handler = s8b0dh;
 	s8b0d->enabled = false;
 	stateButtons[8][0] = s8b0d;
-	
+
 	Button * s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*17/2 height:3*fontSize text:@"Home" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b1d->handler = homeButton;
 	stateButtons[8][1] = s8b1d;
 	//homeButton
-	
-	
-	
+
+
+
 	//(*(s0b0d->handler))();
-	
-	
+
+
 	//s0b0d = [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 text:<#(NSString *)intext#> textSize:<#(int)intextSize#> gameType:<#(int)ingameType#> multiPlayer:<#(int)inmultiPlayer#>
-	
-	
-	
-	
-	
+
+
+
+
+
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("bullseye"), CFSTR("caf"), NULL), &mpBullseye);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("lostshort"), CFSTR("caf"), NULL), &mpLostshort);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("ping"), CFSTR("caf"), NULL), &mpPing);
@@ -1213,33 +1245,33 @@ static GLfloat* wallVertices;
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("targetbounce"), CFSTR("caf"), NULL), &mpTargetbounce);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("wall2"), CFSTR("caf"), NULL), &mpWall2);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("won"), CFSTR("caf"), NULL), &mpWon);
-//AudioServicesPlaySystemSound(mpBullseye); 
-	
-	
+//AudioServicesPlaySystemSound(mpBullseye);
 
-	
+
+
+
 	//AudioServicesCreateSystemSoundID(<#CFURLRef inFileURL#>, <#SystemSoundID *outSystemSoundID#>)
-	
-	
+
+
 //	AudioServicesCreateSystemSoundID(<#CFURLRef inFileURL#>, <#SystemSoundID *outSystemSoundID#>)
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	running = TRUE;
 	//state = PLAYING;
-	
+
 	NSThread *newThread = [[NSThread alloc] initWithTarget:self selector:@selector(gameLoop:) object:nil];
-	
-	
-	
-	
-	
+
+
+
+
+
 	[newThread start];
 
-	
+
 }
 
 
@@ -1288,18 +1320,18 @@ void drawWorld()
 	{
 		case HOME:
 			gameReset();
-			
+
 			break;
 		//case TARGET:
 			//NSString * levelScores = prefs.getString("levelScores","");
 			//NSString ** scores = levelScores.split("\n");
-			
+
 			//for(int i=0;i<scores.length;i++)
 			//{
 			//	if(!scores[i].equals(""))
 			//		levelPoints[i] = Integer.parseInt(scores[i]);
 			//}
-			
+
 			//for(int i=1;i<Pong.stateButtons[9].size();i++)
 			//{
 			//	if(levelPoints[i-1] == 0 && i > Math.max(prefs.getInt("levelsBeat", 0),freeLevels) && !Pong.stateButtons[9].get(i).text.equals("Full Version"))
@@ -1307,7 +1339,7 @@ void drawWorld()
 			//	else
 			//		Pong.stateButtons[9].get(i).enabled = true;
 			//}
-			
+
 			//myScore = 0;
 			//break;
 		//case PLAYING:
@@ -1320,7 +1352,7 @@ void drawWorld()
         default:
             break;
 	}
-	
+
 	state = toState;
 }
 
@@ -1328,230 +1360,64 @@ void drawWorld()
 
 
 
-
-
-
-
-
-
-
-+ (void)readData
-{
-	prefs = [[ NSMutableDictionary alloc] init];
-	
-	
-	sqlite3 *database;
-	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-		const char *sqlStatement = "select `name`,`val` from `pong` WHERE 1==1;";
-		sqlite3_stmt *compiledStatement;
-		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
-			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
-				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-				NSString *aVal = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
-				[prefs setObject:aVal forKey:aName];
-			}
-		}
-		sqlite3_finalize(compiledStatement);
-		
-	}
-	sqlite3_close(database);
-	
-	
-}
-
-
-
-
-
-+ (NSString *)stringFromPrefs:(NSString *)key def:(NSString*)def
-{
-
-	if([prefs objectForKey:key] != nil)
-		return [prefs objectForKey:key];
-	return def;
-}
-
-+ (BOOL)boolFromPrefs:(NSString *)key def:(BOOL)def
-{
-	BOOL val = def;
-	if([prefs objectForKey:key] != nil)
-	{
-		//val = [prefs objectForKey:key];
-		if([[prefs objectForKey:key] isEqualToString:@"TRUE"])
-			val = TRUE;
-		else
-			val = FALSE;
-	}
-	return val;
-}
-
-+ (int)intFromPrefs:(NSString *)key def:(int)def
-{
-	int val = def;
-	if([prefs objectForKey:key] != nil)
-	{
-		val = [[prefs objectForKey:key] intValue];
-	}
-	return val;
-}
-
-
-+ (void)writeData
-{
-
-	sqlite3 *database;
-	
-	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-		
-		NSEnumerator *enumerator = [ prefs keyEnumerator];
-		NSString *key;
-		while (key = [ enumerator nextObject]) {
-			
-			
-			const char *sqlStatement = [[NSString stringWithFormat:@"INSERT INTO `pong` (`name`,`val`) VALUES ('%s','%s');", [key UTF8String],[[prefs objectForKey:key] UTF8String]] UTF8String];
-			//sqlite3_stmt *compiledStatement;
-			char *errMsg = "";
-			if(sqlite3_exec(database, sqlStatement, NULL, NULL, &errMsg) == SQLITE_OK)
-			{
-				
-				
-			}
-			
-			sqlStatement = [[NSString stringWithFormat:@"UPDATE `pong` SET `val` = '%s' WHERE `name` = '%s';",[[ prefs objectForKey:key] UTF8String],[key UTF8String]] UTF8String];
-			//NSLog(@"%s",sqlStatement);
-			//if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) 
-			if(sqlite3_exec(database, sqlStatement, NULL, NULL, &errMsg) == SQLITE_OK)
-			{
-				
-				
-			}
-			
-			
-			
-			//sqlite3_finalize(compiledStatement);
-		}
-		
-		
-		
-	}
-	sqlite3_close(database);
-	
-	
-}
-
-
-
-
 + (void)loadSaved
 {
-	
-	[PongViewController readData];
-	
-	enum States toState = intToState([PongViewController  intFromPrefs:@"state" def:0]);
-	
-	gameType = [PongViewController intFromPrefs:@"gameType" def:0];
-	if(toState == TARGET)
+	[SQLite3Data readData];
+
+	enum States toState = intToState([GameState global].state);
+
+	gameType = [Preferences global].gameType;
+	if (toState == TARGET)
 	{
 		toState = HOME;
 		gameType = 0;
 	}
 	[PongViewController switchToState:toState];
-	
-	level = [PongViewController intFromPrefs:@"level" def:0];
-	
-	
-	if(gameType == 1)
+
+	level = [GameState global].level;
+
+	if (gameType == 1)
 	{
+    NSLog(@"AHHHH NOT YET SUPPORTED!");
 		//int levelToGet = level;
 		//this isn't done. Fill this out.
 	}
-	
-	
-	bX = [PongViewController intFromPrefs:@"bX" def:0];
-	bY = [PongViewController intFromPrefs:@"bY" def:0];
-	bZ = [PongViewController intFromPrefs:@"bZ" def:0];
-	
-	bXSpeed = [PongViewController intFromPrefs:@"bXSpeed" def:0];
-	bYSpeed = [PongViewController intFromPrefs:@"bYSpeed" def:0];
-	bZSpeed = [PongViewController intFromPrefs:@"bZSpeed" def:0];
-	
-	
-	xAccel = [PongViewController intFromPrefs:@"xAccel" def:0];
-	yAccel = [PongViewController intFromPrefs:@"yAccel" def:0];
-	
-	lives = [PongViewController intFromPrefs:@"lives" def:0];
-	
-	
-	myScore = [PongViewController intFromPrefs:@"myScore" def:0];
-	
-	eX = [PongViewController intFromPrefs:@"eX" def:0];
-	eY = [PongViewController intFromPrefs:@"eY" def:0];
-	
-	
-	pX = [PongViewController intFromPrefs:@"pX" def:0];
-	pY = [PongViewController intFromPrefs:@"pY" def:0];
 
-	lastOutcome = [PongViewController intFromPrefs:@"lastOutcome" def:0];
-	
-	sound = [PongViewController boolFromPrefs:@"sound" def:TRUE];
-	vibrate = [PongViewController boolFromPrefs:@"vibrate" def:TRUE];
-	fog = [PongViewController boolFromPrefs:@"fog" def:TRUE];
-	
-	holdPaddleX = [PongViewController intFromPrefs:@"holdPaddleX" def:0];
-	holdPaddleY = [PongViewController intFromPrefs:@"holdPaddleY" def:0];
-	
-	difficulty = [PongViewController intFromPrefs:@"difficulty" def:0];
-	
-	inputMethod = [PongViewController intFromPrefs:@"inputMethod" def:0];
+	bX = [GameState global].bX;
+	bY = [GameState global].bY;
+	bZ = [GameState global].bZ;
+
+	bXSpeed = [GameState global].bXSpeed;
+	bYSpeed = [GameState global].bYSpeed;
+	bZSpeed = [GameState global].bZSpeed;
+
+	xAccel = [GameState global].xAcceleration;
+	yAccel = [GameState global].yAcceleration;
+
+	lives = [GameState global].numberOfLives;
+
+	myScore = [GameState global].myScore;
+
+	eX = [GameState global].eX;
+	eY = [GameState global].eY;
+
+	pX = [GameState global].pX;
+	pY = [GameState global].pY;
+
+	lastOutcome = [GameState global].lastOutcome;
+
+	sound = [Preferences global].shouldPlaySound;
+	vibrate = [Preferences global].shouldVibrate;
+	fog = [Preferences global].shouldShowFog;
+
+	holdPaddleX = [Preferences global].paddlePositionX;
+	holdPaddleY = [Preferences global].paddlePositionY;
+
+	difficulty = [Preferences global].difficulty;
+
+	inputMethod = [Preferences global].inputMethod;
 }
-
-
-
-
-
 
 #import "gettersSetters.h"
 
-
-
-
-
-
-
-
-
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

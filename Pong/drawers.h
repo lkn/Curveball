@@ -205,11 +205,8 @@ void drawState8()
 		//	drawString(curLine[0],-gp.hFloatWidth+gp.fontSize,gp.hFloatHeight-gp.fontSize*5-gp.fontSize*3*i/2,gl,gp.fontSize);
 		//	drawStringAlignRight(curLine[1],-gp.hFloatWidth+gp.fontSize*16,gp.hFloatHeight-gp.fontSize*5-gp.fontSize*3*i/2,gl,gp.fontSize);
 		//}
-		
-		
-		
-		NSString * prevScoresString = [PongViewController stringFromPrefs:[NSString stringWithFormat:@"scores%d",difficulty] def:@""];
-		NSArray *prevScores = [prevScoresString componentsSeparatedByString: @"\n"];
+
+		NSArray *prevScores = [GameState global].previousScores;
 		//int total = 1;
 		for(int i=0;i<[prevScores count];i++)
 		{

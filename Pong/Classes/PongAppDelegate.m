@@ -11,6 +11,7 @@
 #import <sqlite3.h>
 
 #import "PongViewController.h"
+#import "SQLite3Data.h"
 
 
 @implementation PongAppDelegate
@@ -81,7 +82,7 @@
 {
 	NSLog(@"WillTerminate");
 	//NSLog(@"terminating..............................");
-	[PongViewController writeData];
+	[SQLite3Data writeData];
 	NSLog(@"WillTerminate2");
 	//NSLog(@"terminated..............................");
   [self.viewController stopAnimation];
@@ -93,7 +94,7 @@
 {
 	NSLog(@"DidEnterBackground");
 	//NSLog(@"background..............................");
-	[PongViewController writeData];
+	[SQLite3Data writeData];
 	NSLog(@"DidEnterBackground2");
 	//exit(0);
 	//NSLog(@"backgrounded..............................");

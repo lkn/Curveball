@@ -6,19 +6,20 @@
 //  Copyright 2011 CalcG.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import <OpenGLES/EAGL.h>
 
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
-#import "TextureCoord.h"
+
+#import <UIKit/UIKit.h>
+
 #import "Button.h"
 #import "FontTexture.h"
 #import "PongAppDelegate.h"
-#import <AudioToolbox/AudioServices.h>
+#import "TextureCoord.h"
+
 
 @interface PongViewController : UIViewController {
 	EAGLContext *context;
@@ -30,18 +31,29 @@
 	PongAppDelegate *delegate;
 }
 
-void playSound(SystemSoundID sound);
-
 enum States {
-	HOME,PLAYING,OPTIONS,PAUSED,MULTIPLAYER,JOINIP,ERROR,START,RESULTS,TARGET,OPTIONS2,NONE
+  HOME,
+  PLAYING,
+  OPTIONS,
+  PAUSED,
+  MULTIPLAYER,
+  JOINIP,
+  ERROR,
+  START,
+  RESULTS,
+  TARGET,
+  OPTIONS2,
+  NONE
 };
 
 - (void)resize:(int)w h:(int)h;
 + (void)switchToState:(enum States)toState;
+
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;
 @property (nonatomic) NSInteger animationFrameInterval;
-static void readData();
+
 void setUpFonts();
+
 //static void drawString(NSString * str,int x,int y,int size);
 + (void)drawString:(NSString *)str x:(int)x y:(int)y size:(int)size;
 + (void)drawStringAlignRight:(NSString *)str x:(int)inx y:(int)y size:(int)size;
@@ -215,40 +227,16 @@ int textLength(NSString * text);
 enum States intToState(int st);
 int stateToInt(enum States st);
 + (void)loadSaved;
-+ (NSString *)stringFromPrefs:(NSString *)key def:(NSString*)def;
-
-+ (void)writeData;
 
 @end
 
-NSString * databaseName;
-NSString * databasePath;
+
 Button * stateButtons[20][40];
 
 
 
-NSMutableDictionary *prefs;
 TextureCoord * txPaddle;
 TextureCoord * button[3];// = new TextureCoord[3];
 TextureCoord * button2[3];// = new TextureCoord[3];
 TextureCoord * button3[3];// = new TextureCoord[3];
-
-SystemSoundID mpPing;
-SystemSoundID mpPong;
-SystemSoundID mpBullseye;
-SystemSoundID mpLost;
-SystemSoundID mpLostshort;
-SystemSoundID mpMenu;
-SystemSoundID mpTarget;
-SystemSoundID mpTargetbounce;
-SystemSoundID mpWall1;
-SystemSoundID mpWall2;
-SystemSoundID mpWall3;
-SystemSoundID mpWon;
-
-
-
-
-
-
 
