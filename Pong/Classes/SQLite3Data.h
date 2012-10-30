@@ -23,5 +23,6 @@ NSString *databasePath;
 + (int)intFromPrefs:(NSString *)key def:(int)def;
 
 + (void)setObject:(NSString *)obj forKey:(NSString *)key;
++ (void)setInt:(int)obj forKey:(NSString *)key;
 
 @end

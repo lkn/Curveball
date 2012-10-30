@@ -1,6 +1,6 @@
 void drawState0()
 {
-	if(multiPlayerStatus == 0)
+	if (multiPlayerStatus == 0)
 	{
 		if(isCurveball)
 			[PongViewController drawStringCentered:@"3D Curveball" y:hFloatHeight-fontSize/2 size:fontSize*5/2];
@@ -12,10 +12,6 @@ void drawState0()
 	//[PongViewController drawStringCentered:@"This is a discounted preview." y:-hFloatHeight+fontSize*3 size:fontSize];
 
 	[PongViewController drawStringCentered:@"Greyed out buttons will be available in future releases." y:-hFloatHeight+fontSize*3/2 size:fontSize];
-
-
-
-
 
 	/*		if(gp.multiPlayerStatus == 1 && gp.socketThread != null)
 	 {
@@ -113,28 +109,18 @@ void drawState3()
 		for(int i=1;i<lives;i++)lifeBalls = [lifeBalls stringByAppendingFormat:@"%c",' '-1];
 		[PongViewController drawString:lifeBalls x:-hFloatWidth+fontSize/2 y:-hFloatHeight+3*fontSize size:fontSize*3/2];
 	}
-
 }
 
 void drawState4()
 {
-
-
-
 }
 
 void drawState5()
 {
-
-
-
 }
 
 void drawState6()
 {
-
-
-
 }
 
 void drawState7()
@@ -146,7 +132,6 @@ void drawState7()
 	NSString * soundImage = [NSString stringWithFormat:@"%c", ' '-2];
 	NSString * ex = [NSString stringWithFormat:@"%c", ' '-4];
 	NSString * vib = [NSString stringWithFormat:@"%c ", ' '-3];
-
 
 	[PongViewController drawString:soundImage x:-hFloatWidth+fontSize y:hFloatHeight-fontSize size:fontSize*2];
 	[PongViewController drawStringRight:vib y:hFloatHeight-fontSize size:fontSize*2];
@@ -162,11 +147,6 @@ void drawState7()
 
 	if(multiPlayerStatus == 0)
 		[PongViewController drawStringCentered:levelString y:hFloatHeight size:fontSize*2];
-
-
-
-
-
 
 	if ([Preferences global].gameType == 1)
 		[PongViewController drawStringCentered:@"Drag here to rotate" y:-hFloatHeight+fontSize*3 size:fontSize*3/2];
@@ -186,7 +166,6 @@ void drawState7()
 		for(int i=1;i<lives;i++)lifeBalls = [lifeBalls stringByAppendingFormat:@"%c",' '-1];
 		[PongViewController drawString:lifeBalls x:-hFloatWidth+fontSize/2 y:-hFloatHeight+3*fontSize size:fontSize*3/2];
 	}
-
 }
 
 void drawState8()
@@ -301,8 +280,6 @@ int textLength(NSString * text)
 	return total-3*[text length] + 3;
 }
 
-
-
 + (void)drawStringCentered:(NSString *)str y:(int)y size:(int)size
 {
 	int x = -size*textLength(str)/40;
@@ -387,10 +364,5 @@ int textLength(NSString * text)
 				offset += fontSizes[curChar]-3;
 
 				//NSLog(@"drawing: %c %i %i %i %i %i %i",curChar,size,fontSizes[curChar],fontTextures[curChar].bigBuff[0],fontTextures[curChar].bigBuff[1],fontTextures[curChar].bigBuff[2],fontTextures[curChar].bigBuff[3]);
-
 			}
-
-
-
-
 }

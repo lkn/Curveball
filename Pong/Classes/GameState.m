@@ -59,16 +59,32 @@ static GameState *gState;
   return [SQLite3Data intFromPrefs:@"level" def:0];
 }
 
+- (void)setLevel:(int)level {
+  [SQLite3Data setInt:level forKey:@"level"];
+}
+
 - (int)numberOfLives {
   return [SQLite3Data intFromPrefs:@"lives" def:0];
+}
+
+- (void)setNumberOfLives:(int)numberOfLives {
+  [SQLite3Data setInt:numberOfLives forKey:@"lives"];
 }
 
 - (int)myScore {
   return [SQLite3Data intFromPrefs:@"myScore" def:0];
 }
 
+- (void)setMyScore:(int)myScore {
+  [SQLite3Data setInt:myScore forKey:@"myScore"];
+}
+
 - (int)lastOutcome {
   return [SQLite3Data intFromPrefs:@"lastOutcome" def:0];
+}
+
+- (void)setLastOutcome:(int)lastOutcome {
+  [SQLite3Data setInt:lastOutcome forKey:@"lastOutcome"];
 }
 
 - (NSArray *)previousScores {

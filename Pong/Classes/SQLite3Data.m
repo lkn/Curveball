@@ -139,4 +139,8 @@
   }
 }
 
++ (void)setInt:(int)obj forKey:(NSString *)key {
+  [self setObject:[NSString stringWithFormat:@"%d", obj] forKey:key];
+}
+
 @end
