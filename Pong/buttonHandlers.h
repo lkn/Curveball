@@ -23,9 +23,6 @@ void s0b0dh()
 	[SoundMan playSound:mpWall3];
 }
 
-
-
-
 void s0b1dh()
 {
   hoveredButton = NULL;
@@ -104,68 +101,37 @@ void s0b3dh()
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
 
+  [PongViewController switchToState:OPTIONS];
 
-
-
-			[PongViewController switchToState:OPTIONS];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
 	[SoundMan playSound:mpWall3];
-
 }
 
 void s0b4dh()
 {
-			hoveredButton = NULL;
-		//	GoMarket ss = new GoMarket();
-		//	Thread st = new Thread(ss);
-		//	st.start();
-
+  hoveredButton = NULL;
+  //	GoMarket ss = new GoMarket();
+  //	Thread st = new Thread(ss);
+  //	st.start();
 }
-
-
-
 
 void s1b0dh()
 {
 	hoveredButton = NULL;
 	[PongViewController switchToState:PAUSED];
-	//try {
-	//	playSound(mpWall3);
-	//} catch (IllegalStateException e) {
-	//	e.printStackTrace();
-	//} catch (IOException e) {
-	//}
 	[SoundMan playSound:mpWall3];
-
 }
-
-
-
 
 void homeButton()
 {
 	hoveredButton = NULL;
 	[PongViewController switchToState:HOME];
-	//try {
-	//	playSound(mpWall3);
-	//} catch (IllegalStateException e) {
-	//	e.printStackTrace();
-	//} catch (IOException e) {
-	//}
 	[SoundMan playSound:mpWall3];
 }
-
-
 
 void s2b0dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
 	//	SharedPreferences.Editor editor = getPrefs().edit();
 	//	editor.putInt("holdPaddleX", holdPaddleX);
@@ -188,7 +154,6 @@ void s2b0dh()
 		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s2b1dh()
 {
@@ -227,7 +192,6 @@ void s2b3dh()
 	}
 }
 
-
 void s2b4dh()
 {
 	hoveredButton = NULL;
@@ -238,7 +202,6 @@ void s2b4dh()
 		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s2b5dh()
 {
@@ -255,7 +218,6 @@ void s2b5dh()
 	}
 }
 
-
 void s8b0dh()
 {
 	hoveredButton = NULL;
@@ -265,5 +227,3 @@ void s8b0dh()
 
 	}
 }
-
-

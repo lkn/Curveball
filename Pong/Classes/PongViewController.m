@@ -205,7 +205,6 @@ static NSString * sem = @"";
 static BOOL didSounds = false;
 //static int difficulty = 0;  // replaced with Preferences
 
-
 static int eSpeeds[] = {
   (int)(.015f*65536),
   (int)(.025f*65536),
@@ -383,11 +382,16 @@ static void gameReset()
 
 	[GameState global].bXSpeed = 0;
 	[GameState global].bYSpeed = 0;
-  [GameState global].bZSpeed = (int)(.04f*65536);  // TODO(lkn): or 0?
+//  [GameState global].bZSpeed = (int)(.04f*65536);
 	[GameState global].bX = 0;
 	[GameState global].bY = 0;
 	[GameState global].bZ = -ballRadius;
 
+  [GameState global].xAcceleration = 0;
+  [GameState global].yAcceleration = 0;
+
+  [GameState global].pX = 0;
+  [GameState global].pY = 0;
 	[GameState global].eX = 0;
 	[GameState global].eY = 0;
 }
@@ -992,7 +996,6 @@ static GLfloat* wallVertices;
 	}
 	*///TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 
-
 	double angle = atan(((float)hFloatWidth)/altitude);
 	angle = 2.0*angle*180.0/M_PI;
 
@@ -1004,61 +1007,61 @@ static GLfloat* wallVertices;
 		for (int j=0;j<40;j++)
 			stateButtons[i][j] = NULL;
 
-	Button * s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
+	Button *s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
 	s0b0d->handler = s0b0dh;
 	stateButtons[0][0] = s0b0d;
 
-	Button * s0b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize y:2*fontSize/2 width:hFloatWidth height:8*fontSize/2 text:@"Target Mode" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize y:2*fontSize/2 width:hFloatWidth height:8*fontSize/2 text:@"Target Mode" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b1d->handler = s0b1dh;
 	s0b1d->enabled = false;
 	stateButtons[0][1] = s0b1d;
 
-	Button * s0b2d = [[Button alloc] initButton:2*fontSize y:2*fontSize/2 width:fontSize*17 height:8*fontSize/2 text:@"Multiplayer" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b2d = [[Button alloc] initButton:2*fontSize y:2*fontSize/2 width:fontSize*17 height:8*fontSize/2 text:@"Multiplayer" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b2d->handler = s0b2dh;
 	s0b2d->enabled = false;
 	stateButtons[0][2] = s0b2d;
 
-	Button * s0b3d =  [[Button alloc] initButton:-hFloatWidth+fontSize*3 y:-9*fontSize/2 width:fontSize*13 height:8*fontSize/2 text:@"Options" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b3d =  [[Button alloc] initButton:-hFloatWidth+fontSize*3 y:-9*fontSize/2 width:fontSize*13 height:8*fontSize/2 text:@"Options" textSize:fontSize*2 gameType:-1 multiPlayer:0];
 	s0b3d->handler = s0b3dh;
 	stateButtons[0][3] = s0b3d;
 
-	Button * s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3 y:hFloatHeight width:fontSize*3 height:5*fontSize/2 text:@"||" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3 y:hFloatHeight width:fontSize*3 height:5*fontSize/2 text:@"||" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s1b0d->handler = s1b0dh;
 	stateButtons[1][0] = s1b0d;
 
 	//Button s2b0d = new Button(hFloatWidth-fontSize*7,-hFloatHeight+fontSize*4+fontSize/2,fontSize*6,fontSize*4,"OK",fontSize*2,-1,-1);
-	Button * s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7 y:-hFloatHeight+fontSize*9/2 width:fontSize*6 height:4*fontSize text:@"OK" textSize:fontSize*2 gameType:-1 multiPlayer:-1];
+	Button *s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7 y:-hFloatHeight+fontSize*9/2 width:fontSize*6 height:4*fontSize text:@"OK" textSize:fontSize*2 gameType:-1 multiPlayer:-1];
 	s2b0d->gameType = 0;
 	s2b0d->handler = s2b0dh;
 	stateButtons[2][0] = s2b0d;
 
 	//Button s2b1d = new Button(-fontSize*18,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button * s2b1d =  [[Button alloc] initButton:-fontSize*18 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b1d =  [[Button alloc] initButton:-fontSize*18 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b1d->gameType = 0;
 	s2b1d->handler = s2b1dh;
 	stateButtons[2][1] = s2b1d;
 
 	//Button s2b2d = new Button(-fontSize*8-fontSize/2,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button * s2b2d =  [[Button alloc] initButton:-fontSize*8-fontSize/2 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b2d =  [[Button alloc] initButton:-fontSize*8-fontSize/2 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b2d->gameType = 0;
 	s2b2d->handler = s2b2dh;
 	stateButtons[2][2] = s2b2d;
 
 	//Button s2b3d = new Button(fontSize*0,hFloatHeight-fontSize*6+fontSize,fontSize*10,fontSize*3,"Medium",fontSize*3/2,-1,-1);
-	Button * s2b3d =  [[Button alloc] initButton:0 y:hFloatHeight-fontSize*5 width:fontSize*10 height:3*fontSize text:@"Medium" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b3d =  [[Button alloc] initButton:0 y:hFloatHeight-fontSize*5 width:fontSize*10 height:3*fontSize text:@"Medium" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b3d->gameType = 0;
 	s2b3d->handler = s2b3dh;
 	stateButtons[2][3] = s2b3d;
 
 	//Button s2b4d = new Button(fontSize*13,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button * s2b4d =  [[Button alloc] initButton:fontSize*13 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b4d =  [[Button alloc] initButton:fontSize*13 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b4d->gameType = 0;
 	s2b4d->handler = s2b4dh;
 	stateButtons[2][4] = s2b4d;
 
 	//-gp.fontSize*16,gp.hFloatHeight-gp.fontSize*9
 	//Button s2b5d = new Button(-fontSize*15-fontSize/2,hFloatHeight-fontSize*11,fontSize*7,fontSize*3,"Touch",fontSize*3/2,-1,-1);
-	Button * s2b5d =  [[Button alloc] initButton:-fontSize*15-fontSize/2 y:hFloatHeight-fontSize*11 width:fontSize*7 height:3*fontSize text:@"Touch" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b5d =  [[Button alloc] initButton:-fontSize*15-fontSize/2 y:hFloatHeight-fontSize*11 width:fontSize*7 height:3*fontSize text:@"Touch" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b5d->gameType = 0;
 	s2b5d->handler = s2b5dh;
 	s2b5d->enabled = false;
@@ -1111,20 +1114,20 @@ static GLfloat* wallVertices;
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
 
-	Button * s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s3b0d->handler = homeButton;
 	stateButtons[3][0] = s3b0d;
 
-	Button * s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s7b0d->handler = homeButton;
 	stateButtons[7][0] = s7b0d;
 
-	Button * s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*15 height:3*fontSize text:@"Submit Score" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
+	Button *s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*15 height:3*fontSize text:@"Submit Score" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b0d->handler = s8b0dh;
 	s8b0d->enabled = false;
 	stateButtons[8][0] = s8b0d;
 
-	Button * s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*17/2 height:3*fontSize text:@"Home" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
+	Button *s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*17/2 height:3*fontSize text:@"Home" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b1d->handler = homeButton;
 	stateButtons[8][1] = s8b1d;
 
@@ -1258,8 +1261,6 @@ static GLfloat* wallVertices;
       {
         if (state == PLAYING)
         {
-          //System.arraycopy(mxs,0,mxs,1,4);
-          //System.arraycopy(mys,0,mys,1,4);
           memmove(mxs+1, mxs, 4*sizeof(int));
           memmove(mys+1, mys, 4*sizeof(int));
           mxs[0] = [GameState global].pX;
@@ -1287,7 +1288,6 @@ static GLfloat* wallVertices;
             [GameState global].bX += [GameState global].bXSpeed;
             [GameState global].bY += [GameState global].bYSpeed;
             [GameState global].bZ += [GameState global].bZSpeed;
-            //System.out.println(bZSpeed);
           }
           if ([GameState global].bX > hFloatWidth-ballRadius)
           {
@@ -1315,7 +1315,7 @@ static GLfloat* wallVertices;
           }
           if ([GameState global].bZ > 0-ballRadius)
           {
-            tellOpponent=true;
+            tellOpponent = true;
             if ([GameState global].bX >= [GameState global].pX-hPaddleWidth-ballRadius &&
                 [GameState global].bX <= [GameState global].pX+hPaddleWidth+ballRadius &&
                 [GameState global].bY >= [GameState global].pY-hPaddleHeight-ballRadius &&
@@ -1337,7 +1337,8 @@ static GLfloat* wallVertices;
               numPingToPlay++;
 
               if (multiPlayerStatus == 0)
-                 [GameState global].myScore += [GameState global].level + 1 + [Preferences global].difficulty;
+                [GameState global].myScore +=
+                    [GameState global].level + 1 + [Preferences global].difficulty;
 
               //		if(vibrator != null && Pong.vibrate)
               //			vibrator.vibrate(50);
@@ -1413,7 +1414,6 @@ static GLfloat* wallVertices;
                     continue;
                   scoreLines[i+1] = thisLine;
                   total++;
-
                 }
                 qsort(scoreLines, total, sizeof(NSString *), compareScoreLines);
 
@@ -1423,19 +1423,12 @@ static GLfloat* wallVertices;
                   scoresToSave = [scoresToSave stringByAppendingFormat:@"%@\n", scoreLines[i]];
                 }
 
-                [prefs setObject:scoresToSave forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
+                [prefs setObject:scoresToSave
+                          forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
 
                 [PongViewController switchToState:RESULTS];
-
-                //	Pong.highScores = "Loading";
-                //	Pong.finishTime = System.currentTimeMillis();
-
-                //	GetScores gs = new GetScores(gp);
-                //	Thread gt = new Thread(gs);
-                //	gt.start();
               }
             }
-            //			whatToTellOpponent=",b "+bX+" "+bY+" "+bZ+" "+bXSpeed+" "+bYSpeed+" "+bZSpeed+" "+xAccel+" "+yAccel+(iLost?",l":"");
           }
           if ([GameState global].bZ < -depth+ballRadius)
           {
@@ -1487,7 +1480,8 @@ static GLfloat* wallVertices;
                 //switchToState(START);
                 [PongViewController switchToState:START];
                 lastOutcome = 0;
-                [GameState global].myScore += ([GameState global].level + 1 + [Preferences global].difficulty)*20;
+                [GameState global].myScore +=
+                    ([GameState global].level + 1 + [Preferences global].difficulty)*20;
                 [GameState global].level = [GameState global].level +1;
                 gameReset();
                 numWonToPlay++;
@@ -1505,7 +1499,6 @@ static GLfloat* wallVertices;
               }
             }
           }
-
 
           if (multiPlayerStatus == 0)
           {
@@ -1649,7 +1642,6 @@ void drawWorld()
 	{
 		case HOME:
 			gameReset();
-
 			break;
 		//case TARGET:
 			//NSString * levelScores = prefs.getString("levelScores","");
@@ -1678,8 +1670,8 @@ void drawWorld()
 			//	Pong.instance.tgt.start();
 			//}
 			//break;
-        default:
-            break;
+      default:
+        break;
 	}
 
 	state = toState;
@@ -1697,49 +1689,6 @@ void drawWorld()
 		[Preferences global].gameType = 0;
 	}
 	[PongViewController switchToState:toState];
-
-//	level = [GameState global].level;
-//
-//	if (gameType == 1)
-//	{
-//    NSLog(@"AHHHH NOT YET SUPPORTED!");
-//		//int levelToGet = level;
-//		//this isn't done. Fill this out.
-//	}
-//
-//	bX = [GameState global].bX;
-//	bY = [GameState global].bY;
-//	bZ = [GameState global].bZ;
-//
-//	bXSpeed = [GameState global].bXSpeed;
-//	bYSpeed = [GameState global].bYSpeed;
-//	bZSpeed = [GameState global].bZSpeed;
-//
-//	xAccel = [GameState global].xAcceleration;
-//	yAccel = [GameState global].yAcceleration;
-//
-//	lives = [GameState global].numberOfLives;
-//
-//	myScore = [GameState global].myScore;
-//
-//	eX = [GameState global].eX;
-//	eY = [GameState global].eY;
-//
-//	pX = [GameState global].pX;
-//	pY = [GameState global].pY;
-//
-//	lastOutcome = [GameState global].lastOutcome;
-
-//	sound = [Preferences global].shouldPlaySound;
-//	vibrate = [Preferences global].shouldVibrate;
-//	fog = [Preferences global].shouldShowFog;
-
-//	holdPaddleX = [Preferences global].paddlePositionX;
-//	holdPaddleY = [Preferences global].paddlePositionY;
-
-//	difficulty = [Preferences global].difficulty;
-//
-//	inputMethod = [Preferences global].inputMethod;
 }
 
 @end

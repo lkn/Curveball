@@ -129,8 +129,6 @@ int screenY;
   }
 }
 
-
-
 - (void)deleteFramebuffer
 {
   if (context)
@@ -158,7 +156,7 @@ int screenY;
       [EAGLContext setCurrentContext:context];
 
       if (!defaultFramebuffer)
-          [self createFramebuffer];
+        [self createFramebuffer];
 
       glBindFramebuffer(GL_FRAMEBUFFER, defaultFramebuffer);
 
@@ -196,7 +194,7 @@ int screenY;
 @synthesize touchTrackingText;
 @synthesize touchInstructionsText;
 
-void onTouchEventState0(NSString * type, int clickedX, int clickedY)
+void onTouchEventState0(NSString *type, int clickedX, int clickedY)
 {
 	for (int i = 0;stateButtons[0][i]!=NULL;i++)
 	{
@@ -210,16 +208,15 @@ void onTouchEventState0(NSString * type, int clickedX, int clickedY)
 	}
 }
 
-void onTouchEventState1(NSString * type,int clickedX,int clickedY)
+void onTouchEventState1(NSString *type, int clickedX, int clickedY)
 {
 	//BOOL didPause = FALSE;
 	for (int i = 0; stateButtons[1][i] != NULL; i++)
 	{
 		Button * but = stateButtons[1][i];
-		if(([but collides:clickedX iny:clickedY]) &&
-       ([type isEqualToString:@"down"] ||
-        [type isEqualToString:@"up"]) &&
-       but->handler != NULL)
+		if (([but collides:clickedX iny:clickedY]) &&
+        ([type isEqualToString:@"down"] || [type isEqualToString:@"up"]) &&
+        but->handler != NULL)
 		{
 			//didPause = TRUE;
 			(*(but->handler))();
@@ -231,8 +228,8 @@ void onTouchEventState1(NSString * type,int clickedX,int clickedY)
 	 return;*/
 	if ([type isEqualToString:@"down"])
 	{
-		memset(PongViewController.mxs,0,10*sizeof(int));
-		memset(PongViewController.mys,0,10*sizeof(int));
+		memset(PongViewController.mxs, 0, 10*sizeof(int));
+		memset(PongViewController.mys, 0, 10*sizeof(int));
 	}
 
 	[GameState global].pX = clickedX - [Preferences global].paddlePositionX;
@@ -493,11 +490,11 @@ void onTouchEventState7(NSString *type, int clickedX, int clickedY)
 	}
 }
 
-void onTouchEventState8(NSString * type,int clickedX,int clickedY)
+void onTouchEventState8(NSString *type, int clickedX, int clickedY)
 {
 	for (int i = 0; stateButtons[8][i] != NULL; i++)
 	{
-		Button * but = stateButtons[8][i];
+		Button *but = stateButtons[8][i];
 		if (([but collides:clickedX iny:clickedY]) &&
         [type isEqualToString:@"up"] &&
         but->handler != NULL)
