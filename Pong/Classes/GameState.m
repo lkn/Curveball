@@ -84,15 +84,16 @@ static GameState *gState;
 }
 
 - (void)setBX:(int)bX {
-  [prefs setObject:[NSString stringWithFormat:@"%d", bX] forKey:@"bX"];
-}
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", bX]
+                  forKey:@"bX"];}
 
 - (int)bY {
   return [SQLite3Data intFromPrefs:@"bY" def:0];
 }
 
 - (void)setBY:(int)bY {
-  [prefs setObject:[NSString stringWithFormat:@"%d", bY] forKey:@"bY"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", bY]
+                  forKey:@"bY"];
 }
 
 - (int)bZ {
@@ -100,7 +101,8 @@ static GameState *gState;
 }
 
 - (void)setBZ:(int)bZ {
-  [prefs setObject:[NSString stringWithFormat:@"%d", bZ] forKey:@"bZ"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", bZ]
+                  forKey:@"bZ"];
 }
 
 - (int)bXSpeed {
@@ -108,8 +110,8 @@ static GameState *gState;
 }
 
 - (void)setBXSpeed:(int)bXSpeed {
-  [prefs setObject:[NSString stringWithFormat:@"%d", bXSpeed]
-            forKey:@"bXSpeed"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", bXSpeed]
+                  forKey:@"bXSpeed"];
 }
 
 - (int)bYSpeed {
@@ -117,8 +119,8 @@ static GameState *gState;
 }
 
 - (void)setBYSpeed:(int)bYSpeed {
-  [prefs setObject:[NSString stringWithFormat:@"%d", bYSpeed]
-            forKey:@"bYSpeed"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", bYSpeed]
+                  forKey:@"bYSpeed"];
 }
 
 - (int)xAcceleration {
@@ -126,8 +128,8 @@ static GameState *gState;
 }
 
 - (void)setXAcceleration:(int)xAcceleration {
-  [prefs setObject:[NSString stringWithFormat:@"%d", xAcceleration]
-            forKey:@"xAccel"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", xAcceleration]
+                  forKey:@"xAccel"];
 }
 
 - (int)yAcceleration {
@@ -135,8 +137,8 @@ static GameState *gState;
 }
 
 -(void)setYAcceleration:(int)yAcceleration {
-  [prefs setObject:[NSString stringWithFormat:@"%d", yAcceleration]
-            forKey:@"yAccel"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", yAcceleration]
+                  forKey:@"yAccel"];
 }
 
 - (int)eX {
@@ -144,7 +146,8 @@ static GameState *gState;
 }
 
 - (void)setEX:(int)eX {
-  [prefs setObject:[NSString stringWithFormat:@"%d", eX] forKey:@"eX"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", eX]
+                  forKey:@"eX"];
 }
 
 - (int)eY {
@@ -152,7 +155,8 @@ static GameState *gState;
 }
 
 - (void)setEY:(int)eY {
-  [prefs setObject:[NSString stringWithFormat:@"%d", eY] forKey:@"eY"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", eY]
+                  forKey:@"eY"];
 }
 
 - (int)pX {
@@ -160,7 +164,8 @@ static GameState *gState;
 }
 
 - (void)setPX:(int)pX {
-  [prefs setObject:[NSString stringWithFormat:@"%d", pX] forKey:@"pX"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", pX]
+                  forKey:@"pX"];
 }
 
 - (int)pY {
@@ -168,7 +173,8 @@ static GameState *gState;
 }
 
 - (void)setPY:(int)pY {
-  [prefs setObject:[NSString stringWithFormat:@"%d", pY] forKey:@"pY"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", pY]
+                  forKey:@"pY"];
 }
 
 @end

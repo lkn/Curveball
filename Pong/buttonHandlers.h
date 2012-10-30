@@ -14,12 +14,6 @@ void s0b0dh()
 	randEnemy = randEnemies[difficulty];
 	[Preferences global].gameType = 0;
 	[PongViewController switchToState:START];
-	/*try {
-		playSound(mpWall3);
-		 catch (IllegalStateException e) {
-		e.printStackTrace();
-	} catch (IOException e) {
-	}*/
 	[SoundMan playSound:mpWall3];
 }
 
@@ -27,11 +21,7 @@ void s0b1dh()
 {
   hoveredButton = NULL;
   [PongViewController switchToState:TARGET];
-//	int levelToGet = Pong.prefs.getInt("levelsBeat", 0);
-//	if(levelToGet >= levelStrings.size())
-//		levelToGet = levelStrings.size() - 1;
-//	level = levelToGet;
-//	curLev = new Level(parseXmlFile(levelStrings.get(levelToGet)));
+
   [Preferences global].gameType = 1;
   [GameState global].bZSpeed = -bZSpeeds[[Preferences global].difficulty];
   [GameState global].numberOfLives = (fullVersion?6:3);
@@ -109,9 +99,6 @@ void s0b3dh()
 void s0b4dh()
 {
   hoveredButton = NULL;
-  //	GoMarket ss = new GoMarket();
-  //	Thread st = new Thread(ss);
-  //	st.start();
 }
 
 void s1b0dh()
@@ -158,9 +145,8 @@ void s2b0dh()
 void s2b1dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-//		sound = sound?false:true;
     [Preferences global].shouldPlaySound = ![Preferences global].shouldPlaySound;
 		[SoundMan playSound:mpWall3];
 	}
@@ -169,9 +155,8 @@ void s2b1dh()
 void s2b2dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-//		vibrate = vibrate?false:true;
     [Preferences global].shouldVibrate = ![Preferences global].shouldVibrate;
 		[SoundMan playSound:mpWall3];
 	}
@@ -195,9 +180,8 @@ void s2b3dh()
 void s2b4dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-//		fog = fog?false:true;
     [Preferences global].shouldShowFog = ![Preferences global].shouldShowFog;
 		[SoundMan playSound:mpWall3];
 	}
@@ -207,10 +191,10 @@ void s2b5dh()
 {
 	hoveredButton = NULL;
   int inputMethod = [Preferences global].inputMethod;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
 		inputMethod++;
-		if(inputMethod > 1)
+		if (inputMethod > 1)
 			inputMethod = 0;
     [Preferences global].inputMethod = inputMethod;
 
@@ -221,9 +205,8 @@ void s2b5dh()
 void s8b0dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == RESULTS)
+	if (lastDownState == RESULTS)
 	{
 		//submit score
-
 	}
 }

@@ -39,8 +39,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setGameType:(int)gameType {
-  [prefs setObject:[NSString stringWithFormat:@"%d", gameType]
-            forKey:@"gameType"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", gameType]
+                  forKey:@"gameType"];
 }
 
 - (BOOL)shouldPlaySound {
@@ -48,7 +48,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setShouldPlaySound:(BOOL)shouldPlaySound {
-  [prefs setObject:shouldPlaySound ? @"TRUE" : @"FALSE" forKey:@"sound"];
+  [SQLite3Data setObject:shouldPlaySound ? @"TRUE" : @"FALSE"
+                  forKey:@"sound"];
 }
 
 - (BOOL)shouldVibrate {
@@ -56,7 +57,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setShouldVibrate:(BOOL)shouldVibrate {
-  [prefs setObject:shouldVibrate ? @"TRUE" : @"FALSE" forKey:@"vibrate"];
+  [SQLite3Data setObject:shouldVibrate ? @"TRUE" : @"FALSE"
+                  forKey:@"vibrate"];
 }
 
 - (BOOL)shouldShowFog {
@@ -64,7 +66,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setShouldShowFog:(BOOL)shouldShowFog {
-  [prefs setObject:shouldShowFog ? @"TRUE" : @"FALSE" forKey:@"fog"];
+  [SQLite3Data setObject:shouldShowFog ? @"TRUE" : @"FALSE"
+                  forKey:@"fog"];
 }
 
 - (int)paddlePositionX {
@@ -72,8 +75,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setPaddlePositionX:(int)paddlePositionX {
-  [prefs setObject:[NSString stringWithFormat:@"%d", paddlePositionX]
-            forKey:@"holdPaddleX"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", paddlePositionX]
+                  forKey:@"holdPaddleX"];
 }
 
 - (int)paddlePositionY {
@@ -81,8 +84,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setPaddlePositionY:(int)paddlePositionY {
-  [prefs setObject:[NSString stringWithFormat:@"%d", paddlePositionY]
-            forKey:@"holdPaddleY"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", paddlePositionY]
+                  forKey:@"holdPaddleY"];
 }
 
 - (int)difficulty {
@@ -90,8 +93,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setDifficulty:(int)difficulty {
-  [prefs setObject:[NSString stringWithFormat:@"%d", difficulty]
-            forKey:@"difficulty"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", difficulty]
+                  forKey:@"difficulty"];
 }
 
 - (int)inputMethod {
@@ -99,8 +102,8 @@ static Preferences *gPreferences;
 }
 
 - (void)setInputMethod:(int)inputMethod {
-  [prefs setObject:[NSString stringWithFormat:@"%d", inputMethod]
-            forKey:@"inputMethod"];
+  [SQLite3Data setObject:[NSString stringWithFormat:@"%d", inputMethod]
+                  forKey:@"inputMethod"];
 }
 
 @end

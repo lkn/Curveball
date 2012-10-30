@@ -133,4 +133,10 @@
 	return val;
 }
 
++ (void)setObject:(NSString *)obj forKey:(NSString *)key {
+  @synchronized (self) {
+    [prefs setObject:obj forKey:key];
+  }
+}
+
 @end
