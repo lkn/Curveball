@@ -369,8 +369,6 @@ void perspective(double fovy, double aspect, float zNear, float zFar);
 //@synthesize width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
 @synthesize animating, context, displayLink, delegate;
 
-
-
 static void gameReset()
 {
 	memset(PongViewController.mxs, 0, 10*sizeof(int));
@@ -393,8 +391,6 @@ static void gameReset()
 	[GameState global].eX = 0;
 	[GameState global].eY = 0;
 }
-
-
 
 - (void)awakeFromNib
 {
@@ -428,8 +424,8 @@ static void gameReset()
 {
   if (program)
   {
-      glDeleteProgram(program);
-      program = 0;
+    glDeleteProgram(program);
+    program = 0;
   }
 
   // Tear down context.
@@ -480,39 +476,42 @@ static void gameReset()
 	 Frame interval defines how many display frames must pass between each time the display link fires.
 	 The display link will only fire 30 times a second when the frame internal is two on a display that refreshes 60 times a second. The default frame interval setting of one will fire 60 times a second when the display refreshes at 60 times a second. A frame interval setting of less than one results in undefined behavior.
 	 */
-    if (frameInterval >= 1)
-    {
-        animationFrameInterval = frameInterval;
+  if (frameInterval >= 1)
+  {
+    animationFrameInterval = frameInterval;
 
-        if (animating)
-        {
-            [self stopAnimation];
-            [self startAnimation];
-        }
+    if (animating)
+    {
+      [self stopAnimation];
+      [self startAnimation];
     }
+  }
 }
 
 - (void)startAnimation
 {
   if (!animating)
   {
-      CADisplayLink *aDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawFrame)];
-      [aDisplayLink setFrameInterval:animationFrameInterval];
-      [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-      self.displayLink = aDisplayLink;
+    CADisplayLink *aDisplayLink =
+        [CADisplayLink displayLinkWithTarget:self
+                                    selector:@selector(drawFrame)];
+    [aDisplayLink setFrameInterval:animationFrameInterval];
+    [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop]
+                       forMode:NSDefaultRunLoopMode];
+    self.displayLink = aDisplayLink;
 
-      animating = TRUE;
+    animating = TRUE;
   }
 }
 
 - (void)stopAnimation
 {
-    if (animating)
-    {
-        [self.displayLink invalidate];
-        self.displayLink = nil;
-        animating = FALSE;
-    }
+  if (animating)
+  {
+    [self.displayLink invalidate];
+    self.displayLink = nil;
+    animating = FALSE;
+  }
 }
 
 
@@ -523,10 +522,8 @@ int count = 0;
 {
   [(EAGLView *)self.view setFramebuffer];
 
-	if(count == 0)
+	if (count == 0)
 	{
-
-
 		//float scale = 1.0;
 
 		//if([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
@@ -537,16 +534,14 @@ int count = 0;
 	}
 	count++;
 
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glClear(GL_COLOR_BUFFER_BIT);
 
-    glClear(GL_COLOR_BUFFER_BIT);
-
-	if([Preferences global].shouldShowFog)
+	if ([Preferences global].shouldShowFog)
 		glEnable(GL_FOG);
 	else
 		glDisable(GL_FOG);
-
 
 	drawWorld();
 
@@ -559,12 +554,11 @@ int count = 0;
 	glEnable(GL_BLEND);
 
 	static GLfloat paddleCoords[] = {
-        -0.5f, -0.33f, 0,
-        0.5f, -0.33f, 0,
-        -0.5f,  0.33f, 0.0f,
-        0.5f,  0.33f, 0.0f,
-
-    };
+    -0.5f, -0.33f, 0,
+    0.5f, -0.33f, 0,
+    -0.5f,  0.33f, 0.0f,
+    0.5f,  0.33f, 0.0f,
+  };
 
   int eX = [GameState global].eX;
   int eY = [GameState global].eY;
@@ -591,7 +585,6 @@ int count = 0;
 		glBindTexture(GL_TEXTURE_2D,tileset1);
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
-
 		paddleCoords[0] = bX-ballRadius;
 		paddleCoords[1] = bY-ballRadius;
 		paddleCoords[2] = bZ;
@@ -610,12 +603,9 @@ int count = 0;
 		//glBindTexture(GL_TEXTURE_2D,tileset1);
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
-
-
 		//glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 		glTexCoordPointer(2, GL_FIXED, 0, txTransBall->coordBuff);
 		//glBindTexture(GL_TEXTURE_2D,tileset1);
-
 
 		paddleCoords[0] = -hFloatWidth;
 		paddleCoords[1] = bY-ballRadius;
@@ -645,7 +635,6 @@ int count = 0;
 		paddleCoords[11] = bZ+ballRadius;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 
-
 		paddleCoords[0] = bX-ballRadius;
 		paddleCoords[1] = -hFloatHeight;
 		paddleCoords[2] = bZ+ballRadius;
@@ -673,7 +662,6 @@ int count = 0;
 		paddleCoords[10] = hFloatHeight;
 		paddleCoords[11] = bZ-ballRadius;
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
 	}
 
   int pX = [GameState global].pX;
@@ -719,178 +707,178 @@ int count = 0;
 			break;
 	}
 
-	for(int j=0;stateButtons[stateToInt(state)][j] != NULL;j++)
-			[stateButtons[stateToInt(state)][j] draw];
-
+	for (int j=0; stateButtons[stateToInt(state)][j] != NULL; j++) {
+    [stateButtons[stateToInt(state)][j] draw];
+  }
 
 	//drawString(@"Hello, World!", 0, 0, fontSize);
 
-    [(EAGLView *)self.view presentFramebuffer];
+  [(EAGLView *)self.view presentFramebuffer];
 	count++;
-	//NSLog(@"hello %d",count);
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-
-    // Release any cached data, images, etc. that aren't in use.
+  [super didReceiveMemoryWarning];
 }
 
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
 {
-    GLint status;
-    const GLchar *source;
+  GLint status;
+  const GLchar *source;
 
-    source = (GLchar *)[[NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil] UTF8String];
-    if (!source)
-    {
-        NSLog(@"Failed to load vertex shader");
-        return FALSE;
-    }
+  source = (GLchar *)[[NSString stringWithContentsOfFile:file
+                                                encoding:NSUTF8StringEncoding
+                                                   error:nil] UTF8String];
+  if (!source)
+  {
+    NSLog(@"Failed to load vertex shader");
+    return FALSE;
+  }
 
-    *shader = glCreateShader(type);
-    glShaderSource(*shader, 1, &source, NULL);
-    glCompileShader(*shader);
+  *shader = glCreateShader(type);
+  glShaderSource(*shader, 1, &source, NULL);
+  glCompileShader(*shader);
 
 #if defined(DEBUG)
-    GLint logLength;
-    glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetShaderInfoLog(*shader, logLength, &logLength, log);
-        NSLog(@"Shader compile log:\n%s", log);
-        free(log);
-    }
+  GLint logLength;
+  glGetShaderiv(*shader, GL_INFO_LOG_LENGTH, &logLength);
+  if (logLength > 0)
+  {
+    GLchar *log = (GLchar *)malloc(logLength);
+    glGetShaderInfoLog(*shader, logLength, &logLength, log);
+    NSLog(@"Shader compile log:\n%s", log);
+    free(log);
+  }
 #endif
 
-    glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
-    if (status == 0)
-    {
-        glDeleteShader(*shader);
-        return FALSE;
-    }
+  glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
+  if (status == 0)
+  {
+    glDeleteShader(*shader);
+    return FALSE;
+  }
 
-    return TRUE;
+  return TRUE;
 }
 
 - (BOOL)linkProgram:(GLuint)prog
 {
-    GLint status;
+  GLint status;
 
-    glLinkProgram(prog);
+  glLinkProgram(prog);
 
 #if defined(DEBUG)
-    GLint logLength;
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program link log:\n%s", log);
-        free(log);
-    }
+  GLint logLength;
+  glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
+  if (logLength > 0)
+  {
+    GLchar *log = (GLchar *)malloc(logLength);
+    glGetProgramInfoLog(prog, logLength, &logLength, log);
+    NSLog(@"Program link log:\n%s", log);
+    free(log);
+  }
 #endif
 
-    glGetProgramiv(prog, GL_LINK_STATUS, &status);
-    if (status == 0)
-        return FALSE;
+  glGetProgramiv(prog, GL_LINK_STATUS, &status);
+  if (status == 0) {
+    return FALSE;
+  }
 
-    return TRUE;
+  return TRUE;
 }
 
 - (BOOL)validateProgram:(GLuint)prog
 {
-    GLint logLength, status;
+  GLint logLength, status;
 
-    glValidateProgram(prog);
-    glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
-    if (logLength > 0)
-    {
-        GLchar *log = (GLchar *)malloc(logLength);
-        glGetProgramInfoLog(prog, logLength, &logLength, log);
-        NSLog(@"Program validate log:\n%s", log);
-        free(log);
-    }
+  glValidateProgram(prog);
+  glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &logLength);
+  if (logLength > 0)
+  {
+    GLchar *log = (GLchar *)malloc(logLength);
+    glGetProgramInfoLog(prog, logLength, &logLength, log);
+    NSLog(@"Program validate log:\n%s", log);
+    free(log);
+  }
 
-    glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
-    if (status == 0)
-        return FALSE;
+  glGetProgramiv(prog, GL_VALIDATE_STATUS, &status);
+  if (status == 0) {
+    return FALSE;
+  }
 
-    return TRUE;
+  return TRUE;
 }
 
 - (BOOL)loadShaders
 {
-    GLuint vertShader, fragShader;
-    NSString *vertShaderPathname, *fragShaderPathname;
+  GLuint vertShader, fragShader;
+  NSString *vertShaderPathname, *fragShaderPathname;
 
-    // Create shader program.
-    program = glCreateProgram();
+  // Create shader program.
+  program = glCreateProgram();
 
-    // Create and compile vertex shader.
-    vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
-    if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
-    {
-        NSLog(@"Failed to compile vertex shader");
-        return FALSE;
-    }
+  // Create and compile vertex shader.
+  vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+  if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
+  {
+    NSLog(@"Failed to compile vertex shader");
+    return FALSE;
+  }
 
-    // Create and compile fragment shader.
-    fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
-    if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
-    {
-        NSLog(@"Failed to compile fragment shader");
-        return FALSE;
-    }
+  // Create and compile fragment shader.
+  fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
+  if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
+  {
+    NSLog(@"Failed to compile fragment shader");
+    return FALSE;
+  }
 
-    // Attach vertex shader to program.
-    glAttachShader(program, vertShader);
+  // Attach vertex shader to program.
+  glAttachShader(program, vertShader);
 
-    // Attach fragment shader to program.
-    glAttachShader(program, fragShader);
+  // Attach fragment shader to program.
+  glAttachShader(program, fragShader);
 
-    // Bind attribute locations.
-    // This needs to be done prior to linking.
-    glBindAttribLocation(program, ATTRIB_VERTEX, "position");
-    glBindAttribLocation(program, ATTRIB_COLOR, "color");
+  // Bind attribute locations.
+  // This needs to be done prior to linking.
+  glBindAttribLocation(program, ATTRIB_VERTEX, "position");
+  glBindAttribLocation(program, ATTRIB_COLOR, "color");
 
-    // Link program.
-    if (![self linkProgram:program])
-    {
-        NSLog(@"Failed to link program: %d", program);
+  // Link program.
+  if (![self linkProgram:program])
+  {
+    NSLog(@"Failed to link program: %d", program);
 
-        if (vertShader)
-        {
-            glDeleteShader(vertShader);
-            vertShader = 0;
-        }
-        if (fragShader)
-        {
-            glDeleteShader(fragShader);
-            fragShader = 0;
-        }
-        if (program)
-        {
-            glDeleteProgram(program);
-            program = 0;
-        }
-
-        return FALSE;
-    }
-
-    // Get uniform locations.
-    uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
-
-    // Release vertex and fragment shaders.
     if (vertShader)
-        glDeleteShader(vertShader);
+    {
+      glDeleteShader(vertShader);
+      vertShader = 0;
+    }
     if (fragShader)
-        glDeleteShader(fragShader);
+    {
+      glDeleteShader(fragShader);
+      fragShader = 0;
+    }
+    if (program)
+    {
+      glDeleteProgram(program);
+      program = 0;
+    }
 
-    return TRUE;
+    return FALSE;
+  }
+
+  // Get uniform locations.
+  uniforms[UNIFORM_TRANSLATE] = glGetUniformLocation(program, "translate");
+
+  // Release vertex and fragment shaders.
+  if (vertShader)
+    glDeleteShader(vertShader);
+  if (fragShader)
+    glDeleteShader(fragShader);
+
+  return TRUE;
 }
 
 static GLfloat* wallVertices;
@@ -1012,8 +1000,8 @@ static GLfloat* wallVertices;
 	perspective(angle,(double)((double)floatHeight)/((double)floatWidth),altitude/2,depth*2);
 	gluLookAt(0,0,altitude,0,0,0,0,1,0);
 
-	for(int i=0;i<20;i++)
-		for(int j=0;j<40;j++)
+	for (int i=0;i<20;i++)
+		for (int j=0;j<40;j++)
 			stateButtons[i][j] = NULL;
 
 	Button * s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
@@ -1139,12 +1127,7 @@ static GLfloat* wallVertices;
 	Button * s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*17/2 height:3*fontSize text:@"Home" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b1d->handler = homeButton;
 	stateButtons[8][1] = s8b1d;
-	//homeButton
 
-	//(*(s0b0d->handler))();
-
-
-	//s0b0d = [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 text:<#(NSString *)intext#> textSize:<#(int)intextSize#> gameType:<#(int)ingameType#> multiPlayer:<#(int)inmultiPlayer#>
 
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("bullseye"), CFSTR("caf"), NULL), &mpBullseye);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("lostshort"), CFSTR("caf"), NULL), &mpLostshort);
@@ -1163,7 +1146,9 @@ static GLfloat* wallVertices;
 	running = TRUE;
 	//state = PLAYING;
 
-	NSThread *newThread = [[NSThread alloc] initWithTarget:self selector:@selector(gameLoop:) object:nil];
+	NSThread *newThread = [[NSThread alloc] initWithTarget:self
+                                                selector:@selector(gameLoop:)
+                                                  object:nil];
   [newThread start];
 }
 
@@ -1266,17 +1251,8 @@ static GLfloat* wallVertices;
 		{
 			//NSLog(@"loop %d %d",stateToInt(state),spinCounter);
 			spinCounter++;
-			if(spinCounter == 16)
+			if (spinCounter == 16)
 				spinCounter = 0;
-
-      //System.out.println(this);
-      //int[] mxs = mxs;
-      //int[] mys = mys;
-
-      //		Vibrator vibrator = vibrator;
-
-      //IntBuffer cubeBuffInt = cubeBuffInt;
-
 
       if ([Preferences global].gameType == 0)
       {
@@ -1296,7 +1272,8 @@ static GLfloat* wallVertices;
             int bXSpeed = [GameState global].bXSpeed;
             int bYSpeed = [GameState global].bYSpeed;
             int bZSpeed = [GameState global].bZSpeed;
-            int vecLength = (int) sqrt(bXSpeed*bXSpeed+bYSpeed*bYSpeed+bZSpeed*bZSpeed);
+            int vecLength =
+                (int)sqrt(bXSpeed*bXSpeed+bYSpeed*bYSpeed+bZSpeed*bZSpeed);
 
             if (vecLength != 0)
             {
@@ -1445,8 +1422,6 @@ static GLfloat* wallVertices;
                 {
                   scoresToSave = [scoresToSave stringByAppendingFormat:@"%@\n", scoreLines[i]];
                 }
-
-                [scoresToSave retain];
 
                 [prefs setObject:scoresToSave forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
 

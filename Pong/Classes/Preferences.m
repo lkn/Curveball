@@ -38,6 +38,11 @@ static Preferences *gPreferences;
   return [SQLite3Data intFromPrefs:@"gameType" def:0];
 }
 
+- (void)setGameType:(int)gameType {
+  [prefs setObject:[NSString stringWithFormat:@"%d", gameType]
+            forKey:@"gameType"];
+}
+
 - (BOOL)shouldPlaySound {
   return [SQLite3Data boolFromPrefs:@"sound" def:TRUE];
 }
