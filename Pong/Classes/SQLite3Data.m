@@ -15,7 +15,7 @@
 
 + (void)readData
 {
-	prefs = [[ NSMutableDictionary alloc] init];
+	prefs = [[NSMutableDictionary alloc] init];
 
 	sqlite3 *database;
 	if (sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)

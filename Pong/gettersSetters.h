@@ -461,16 +461,6 @@ void setUpFonts()
 	
 }
 
-
-+(void)setPX:(int) inX
-{
-  pX = inX;
-}
-+(void)setPY:(int) inY
-{
-	pY = inY;
-}
-
 //static int width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
 +(int)floatWidth
 {
@@ -556,15 +546,6 @@ void setUpFonts()
 	return hFloatHeight;
 }
 
-
-+(int)holdPaddleX
-{
-	return holdPaddleX;
-}
-+(int)holdPaddleY
-{
-	return holdPaddleY;
-}
 +(int)fontSize
 {
 	return fontSize;
@@ -600,18 +581,8 @@ void setUpFonts()
 {
 	return realHeight;
 }
-+(int)gameType
-{
-	return gameType;
-}
-+(int)xAccel
-{
-	return xAccel;
-}
-+(int)yAccel
-{
-	return yAccel;
-}
+
+
 +(int)previewX
 {
 	return previewX;
@@ -625,25 +596,6 @@ void setUpFonts()
 	return running;
 }
 
-+(int)level
-{
-	return level;
-}
-
-+(int)lives
-{
-	return lives;
-}
-
-+(int)pX
-{
-	return pX;
-}
-
-+(int)pY
-{
-	return pY;
-}
 
 +(BOOL)inPreview
 {
@@ -701,44 +653,9 @@ void setUpFonts()
 	return ballRadius;
 }
 
-+(int)bX
-{
-	return bX;
-}
-
-+(int)bY
-{
-	return bY;
-}
-
-+(int)bZ
-{
-	return bZ;
-}
-
-+(int)myScore
-{
-	return myScore;
-}
-
 +(int)enScore
 {
 	return enScore;
-}
-
-+(int)bXSpeed
-{
-	return bXSpeed;
-}
-
-+(int)bYSpeed
-{
-	return bYSpeed;
-}
-
-+(int)bZSpeed
-{
-	return bZSpeed;
 }
 
 +(int)lastOutcome
@@ -771,16 +688,6 @@ void setUpFonts()
 +(BOOL)iLost
 {
 	return iLost;
-}
-
-+(int)eX
-{
-	return eX;
-}
-
-+(int)eY
-{
-	return eY;
 }
 
 +(int)multiplier
@@ -909,15 +816,6 @@ void setUpFonts()
 	running = inp;
 }
 
-+(void)setLevel:(int) inp
-{
-	level = inp;
-}
-
-+(void)setLives:(int) inp
-{
-	lives = inp;
-}
 
 +(void)setFreeLevels:(int) inp
 {
@@ -934,20 +832,6 @@ void setUpFonts()
 	realHeight = inp;
 }
 
-+(void)setGameType:(int) inp
-{
-	gameType = inp;
-}
-
-+(void)setXAccel:(int) inp
-{
-	xAccel = inp;
-}
-
-+(void)setYAccel:(int) inp
-{
-	yAccel = inp;
-}
 
 +(void)setPreviewX:(int) inp
 {
@@ -1012,16 +896,6 @@ void setUpFonts()
 	mIndexCount = inp;
 }
 
-+(void)setHoldPaddleX:(int) inp
-{
-	holdPaddleX = inp;
-}
-
-+(void)setHoldPaddleY:(int) inp
-{
-	holdPaddleY = inp;
-}
-
 +(void)setFontSize:(int) inp
 {
 	fontSize = inp;
@@ -1037,44 +911,9 @@ void setUpFonts()
 	ballRadius = inp;
 }
 
-+(void)setBX:(int) inp
-{
-	bX = inp;
-}
-
-+(void)setBY:(int) inp
-{
-	bY = inp;
-}
-
-+(void)setBZ:(int) inp
-{
-	bZ = inp;
-}
-
-+(void)setMyScore:(int) inp
-{
-	myScore = inp;
-}
-
 +(void)setEnScore:(int) inp
 {
 	enScore = inp;
-}
-
-+(void)setBXSpeed:(int) inp
-{
-	bXSpeed = inp;
-}
-
-+(void)setBYSpeed:(int) inp
-{
-	bYSpeed = inp;
-}
-
-+(void)setBZSpeed:(int) inp
-{
-	bZSpeed = inp;
 }
 
 +(void)setLastOutcome:(int) inp
@@ -1105,16 +944,6 @@ void setUpFonts()
 +(void)setILost:(BOOL) inp
 {
 	iLost = inp;
-}
-
-+(void)setEX:(int) inp
-{
-	eX = inp;
-}
-
-+(void)setEY:(int) inp
-{
-	eY = inp;
 }
 
 +(void)setMultiplier:(int) inp

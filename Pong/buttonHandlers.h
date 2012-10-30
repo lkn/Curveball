@@ -2,18 +2,17 @@
 
 void s0b0dh()
 {
-
 	//NSLog(@"got hit!!!!");
 	hoveredButton = NULL;
   int difficulty = [Preferences global].difficulty;
-	bZSpeed = -bZSpeeds[difficulty];
-	
-	lives = (fullVersion?6:3);
-	level = 0;
-	myScore = 0;
+	[GameState global].bZSpeed = -bZSpeeds[difficulty];
+
+	[GameState global].numberOfLives = (fullVersion?6:3);
+	[GameState global].level = 0;
+	[GameState global].myScore = 0;
 	eSpeed = eSpeeds[difficulty];
 	randEnemy = randEnemies[difficulty];
-	gameType = 0;
+	[Preferences global].gameType = 0;
 	[PongViewController switchToState:START];
 	/*try {
 		playSound(mpWall3);
@@ -29,49 +28,34 @@ void s0b0dh()
 
 void s0b1dh()
 {
-			hoveredButton = NULL;
-			[PongViewController switchToState:TARGET];
-		//	int levelToGet = Pong.prefs.getInt("levelsBeat", 0);
-		//	if(levelToGet >= levelStrings.size())
-		//		levelToGet = levelStrings.size() - 1;
-		//	level = levelToGet;
-		//	curLev = new Level(parseXmlFile(levelStrings.get(levelToGet)));
-			gameType = 1;
-			bZSpeed = -bZSpeeds[[Preferences global].difficulty];
-			lives = (fullVersion?6:3);
-			myScore = 0;
-			eSpeed = eSpeeds[0];
-			randEnemy = randEnemies[0];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
-	[SoundMan playSound:mpWall3];
+  hoveredButton = NULL;
+  [PongViewController switchToState:TARGET];
+//	int levelToGet = Pong.prefs.getInt("levelsBeat", 0);
+//	if(levelToGet >= levelStrings.size())
+//		levelToGet = levelStrings.size() - 1;
+//	level = levelToGet;
+//	curLev = new Level(parseXmlFile(levelStrings.get(levelToGet)));
+  [Preferences global].gameType = 1;
+  [GameState global].bZSpeed = -bZSpeeds[[Preferences global].difficulty];
+  [GameState global].numberOfLives = (fullVersion?6:3);
+  [GameState global].myScore = 0;
+  eSpeed = eSpeeds[0];
+  randEnemy = randEnemies[0];
 
+	[SoundMan playSound:mpWall3];
 }
 
 void s0b2dh()
 {
-			hoveredButton = NULL;
-			[PongViewController switchToState:MULTIPLAYER];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
+  hoveredButton = NULL;
+  [PongViewController switchToState:MULTIPLAYER];
 	[SoundMan playSound:mpWall3];
-
 }
 
 void s0b3dh()
 {
-			hoveredButton = NULL;
-	
-	
-	
+  hoveredButton = NULL;
+
 	int difficulty = [Preferences global].difficulty;
   int inputMethod = [Preferences global].inputMethod;
 
@@ -119,10 +103,10 @@ void s0b3dh()
 	{
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
-	
-	
-	
-	
+
+
+
+
 			[PongViewController switchToState:OPTIONS];
 			//try {
 			//	playSound(mpWall3);
@@ -157,7 +141,7 @@ void s1b0dh()
 	//} catch (IOException e) {
 	//}
 	[SoundMan playSound:mpWall3];
-	
+
 }
 
 
@@ -200,7 +184,7 @@ void s2b0dh()
 		 inputMethod = prefs.getInt("inputMethod", 0);*/
 	//	savePrefs(editor);
 		[PongViewController switchToState:HOME];
-		gameType = 0;
+		[Preferences global].gameType = 0;
 		[SoundMan playSound:mpWall3];
 	}
 }
@@ -278,7 +262,7 @@ void s8b0dh()
 	if(lastDownState == RESULTS)
 	{
 		//submit score
-		
+
 	}
 }
 

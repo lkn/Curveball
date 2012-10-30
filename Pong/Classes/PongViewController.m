@@ -53,23 +53,18 @@ static BOOL fullVersion = TRUE;
 static BOOL running;
 static id * buttonInfo;
 //int width;
-static int level;
-static int lives;
+
 //int height;
 //int gwidth;
 //int gheight;
 static int freeLevels = 0;
 static int realWidth;
 static int realHeight;
-static int gameType;
-static int xAccel;
-static int yAccel;
+
 static int previewX = 0;
 static int previewY = 0;
 static Button * hoveredButton;
 
-static int pX = 0;
-static int pY = 0;
 
 static int sinTable[] = {
   0,
@@ -88,7 +83,7 @@ static int sinTable[] = {
   95694,
   98079,
   99520,
-100000
+  100000
 };
 
 static int cosTable[] = {
@@ -178,8 +173,6 @@ static int mIndexCount = 0;
 //private ArrayList<GLShape>	mShapeList = new ArrayList<GLShape>();
 //private ArrayList<GLVertex>	mVertexList = new ArrayList<GLVertex>();
 
-static int holdPaddleX = 0;
-static int holdPaddleY = 0;
 static int fontSize;
 //int floatHeight;//=(int)(4.8f);
 //int floatWidth;//=(int)(8f);
@@ -188,14 +181,9 @@ static int fontSize;
 
 static int multiPlayerStatus = 0;//0 = none, 1 = host, 2 = client
 static int ballRadius = 0;
-static int bX = 0;
-static int bY = 0;
-static int bZ = 0;
-static int myScore = 0;
+
 static int enScore = 0;
-static int bXSpeed = 0;//(int) (.01f*65536);
-static int bYSpeed = 0;//(int) (.005f*65536);
-static int bZSpeed = (int) (.04f*65536);
+
 //SharedPreferences prefs;
 static int lastOutcome = -1;
 static int paddleHeight = 0;
@@ -204,8 +192,7 @@ static int hPaddleHeight = 0;
 static int hPaddleWidth = 0;
 static BOOL iLost = false;
 //static int inputMethod = 0;  // replaced with Preferences
-static int eX = 0;
-static int eY = 0;
+
 static int multiplier = 1600;
 static int divisor = 800;
 static int tileset1 = 0;
@@ -231,18 +218,13 @@ static int bZSpeeds[] = {
   (int)(.06f*65536)
 };
 
-static int randEnemies[] = {100,250,500};
+static int randEnemies[] = {100, 250, 500};
 static long lastTouchEvent = 0;
 
 enum States lastDownState = NONE;
 
-
-
 //NSMutableString *enteredIP = "";
 static BOOL ipValid = false;//set in graphics renderer
-
-
-
 
 int fps;
 
@@ -364,7 +346,6 @@ static int texCoordsInt[] =  {
 //IntBuffer fontBuffInt;
 FontTexture * fontTextures[128];// = new FontTexture[128];
 
-
 static int width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
 
 void gluLookAt(GLfloat eyex, GLfloat eyey, GLfloat eyez,
@@ -392,107 +373,105 @@ void perspective(double fovy, double aspect, float zNear, float zFar);
 
 static void gameReset()
 {
-	memset(PongViewController.mxs,0,10*sizeof(int));
-	memset(PongViewController.mys,0,10*sizeof(int));
+	memset(PongViewController.mxs, 0, 10*sizeof(int));
+	memset(PongViewController.mys, 0, 10*sizeof(int));
 
   int difficulty = [Preferences global].difficulty;
-	bZSpeed = (int)(-bZSpeeds[difficulty] * (pow(1.05,level)));
-	eSpeed = (int)(eSpeeds[difficulty] * (pow(1.05,level)));
-	randEnemy = (int)(randEnemies[difficulty] * (pow(1.05,level)));
+  int level = [GameState global].level;
+	[GameState global].bZSpeed =
+      (int)(-bZSpeeds[difficulty] * (pow(1.05, level)));
+	eSpeed = (int)(eSpeeds[difficulty] * (pow(1.05, level)));
+	randEnemy = (int)(randEnemies[difficulty] * (pow(1.05, level)));
 
-	bXSpeed = 0;
-	bYSpeed = 0;
-	bX = 0;
-	bY = 0;
-	bZ = -ballRadius;
-	xAccel = 0;
-	yAccel = 0;
-	pX = 0;
-	pY = 0;
-	eX = 0;
-	eY = 0;
+	[GameState global].bXSpeed = 0;
+	[GameState global].bYSpeed = 0;
+  [GameState global].bZSpeed = (int)(.04f*65536);  // TODO(lkn): or 0?
+	[GameState global].bX = 0;
+	[GameState global].bY = 0;
+	[GameState global].bZ = -ballRadius;
+
+	[GameState global].eX = 0;
+	[GameState global].eY = 0;
 }
 
 
 
 - (void)awakeFromNib
 {
-    EAGLContext *aContext=NULL;//= [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+  EAGLContext *aContext = NULL;//= [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
-    if (!aContext)
-    {
-        aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-    }
+  if (!aContext)
+  {
+    aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+  }
 
-    if (!aContext)
-        NSLog(@"Failed to create ES context");
-    else if (![EAGLContext setCurrentContext:aContext])
-        NSLog(@"Failed to set ES context current");
+  if (!aContext)
+    NSLog(@"Failed to create ES context");
+  else if (![EAGLContext setCurrentContext:aContext])
+    NSLog(@"Failed to set ES context current");
 
-	self.context = aContext;
-	[aContext release];
+  self.context = aContext;
+  [aContext release];
 
-    [(EAGLView *)self.view setContext:context];
-    [(EAGLView *)self.view setFramebuffer];
+  [(EAGLView *)self.view setContext:context];
+  [(EAGLView *)self.view setFramebuffer];
 
-    if ([context API] == kEAGLRenderingAPIOpenGLES2)
-        [self loadShaders];
+  if ([context API] == kEAGLRenderingAPIOpenGLES2)
+    [self loadShaders];
 
-    animating = FALSE;
-    animationFrameInterval = 1;
-    self.displayLink = nil;
+  animating = FALSE;
+  animationFrameInterval = 1;
+  self.displayLink = nil;
 }
 
 - (void)dealloc
 {
-    if (program)
-    {
-        glDeleteProgram(program);
-        program = 0;
-    }
+  if (program)
+  {
+      glDeleteProgram(program);
+      program = 0;
+  }
 
-    // Tear down context.
-    if ([EAGLContext currentContext] == context)
-        [EAGLContext setCurrentContext:nil];
+  // Tear down context.
+  if ([EAGLContext currentContext] == context)
+    [EAGLContext setCurrentContext:nil];
 
-    [context release];
+  [context release];
 
-    [super dealloc];
+  [super dealloc];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self startAnimation];
-
-    [super viewWillAppear:animated];
+  [super viewWillAppear:animated];
+  [self startAnimation];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self stopAnimation];
-
-    [super viewWillDisappear:animated];
+  [super viewWillDisappear:animated];
+  [self stopAnimation];
 }
 
 - (void)viewDidUnload
 {
 	[super viewDidUnload];
 
-    if (program)
-    {
-        glDeleteProgram(program);
-        program = 0;
-    }
+  if (program)
+  {
+    glDeleteProgram(program);
+    program = 0;
+  }
 
     // Tear down context.
-    if ([EAGLContext currentContext] == context)
-        [EAGLContext setCurrentContext:nil];
+  if ([EAGLContext currentContext] == context)
+    [EAGLContext setCurrentContext:nil];
 	self.context = nil;
 }
 
 - (NSInteger)animationFrameInterval
 {
-    return animationFrameInterval;
+  return animationFrameInterval;
 }
 
 - (void)setAnimationFrameInterval:(NSInteger)frameInterval
@@ -515,15 +494,15 @@ static void gameReset()
 
 - (void)startAnimation
 {
-    if (!animating)
-    {
-        CADisplayLink *aDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawFrame)];
-        [aDisplayLink setFrameInterval:animationFrameInterval];
-        [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-        self.displayLink = aDisplayLink;
+  if (!animating)
+  {
+      CADisplayLink *aDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(drawFrame)];
+      [aDisplayLink setFrameInterval:animationFrameInterval];
+      [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+      self.displayLink = aDisplayLink;
 
-        animating = TRUE;
-    }
+      animating = TRUE;
+  }
 }
 
 - (void)stopAnimation
@@ -542,8 +521,7 @@ static void gameReset()
 int count = 0;
 - (void)drawFrame
 {
-    [(EAGLView *)self.view setFramebuffer];
-
+  [(EAGLView *)self.view setFramebuffer];
 
 	if(count == 0)
 	{
@@ -572,7 +550,6 @@ int count = 0;
 
 	drawWorld();
 
-
 	glEnable(GL_TEXTURE_2D);
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_CULL_FACE);
@@ -580,9 +557,6 @@ int count = 0;
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_BLEND);
-
-
-
 
 	static GLfloat paddleCoords[] = {
         -0.5f, -0.33f, 0,
@@ -592,12 +566,13 @@ int count = 0;
 
     };
 
-
-
-
-	if(gameType == 0)
+  int eX = [GameState global].eX;
+  int eY = [GameState global].eY;
+  int bX = [GameState global].bX;
+  int bY = [GameState global].bY;
+  int bZ = [GameState global].bZ;
+	if ([Preferences global].gameType == 0)
 	{
-
 		paddleCoords[0] = eX-hPaddleWidth;
 		paddleCoords[1] = eY-hPaddleHeight;
 		paddleCoords[2] = -depth;
@@ -701,10 +676,8 @@ int count = 0;
 
 	}
 
-
-
-
-
+  int pX = [GameState global].pX;
+  int pY = [GameState global].pY;
 	paddleCoords[0] = pX-hPaddleWidth;
 	paddleCoords[1] = pY-hPaddleHeight;
 	paddleCoords[2] = 0;
@@ -718,12 +691,10 @@ int count = 0;
 	paddleCoords[10] = pY+hPaddleHeight;
 	paddleCoords[11] = 0;
 
-
 	glVertexPointer(3, GL_FLOAT, 0, paddleCoords);
 	glTexCoordPointer(2, GL_FIXED, 0, txPaddle->coordBuff);
 	glBindTexture(GL_TEXTURE_2D,tileset1);
 	glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-
 
 	switch (state) {
 		case HOME:
@@ -738,10 +709,6 @@ int count = 0;
 		case PAUSED:
 			drawState3();
 			break;
-
-
-
-
 		case START:
 			drawState7();
 			break;
@@ -751,9 +718,6 @@ int count = 0;
 		default:
 			break;
 	}
-
-
-
 
 	for(int j=0;stateButtons[stateToInt(state)][j] != NULL;j++)
 			[stateButtons[stateToInt(state)][j] draw];
@@ -938,7 +902,6 @@ static GLfloat* wallVertices;
 
 - (void)resize:(int)w h:(int)h
 {
-
 	NSLog(@"%d %d",w,h);
 	[PongViewController loadSaved];
 
@@ -957,7 +920,6 @@ static GLfloat* wallVertices;
 
 	txBall = [[TextureCoord alloc] initTextureCoord:4 y:0 width:4 height:4 totalX:32 totalY:32];
 	txTransBall = [[TextureCoord alloc] initTextureCoord:0 y:0 width:4 height:4 totalX:32 totalY:32];
-
 
 	button[0] = [[TextureCoord alloc] initTextureCoord:25 y:24 width:1 height:8 totalX:32 totalY:32];
 	button[1] = [[TextureCoord alloc] initTextureCoord:26 y:24 width:1 height:8 totalX:32 totalY:32];
@@ -992,8 +954,6 @@ static GLfloat* wallVertices;
 	button3[2]->coordBuff[1]+=150;
 	button3[2]->coordBuff[3]+=150;
 
-
-
 	//for(int i=0;i<8;i++)
 	//	NSLog(@"%i",txPaddle->coordBuff[i]);
 
@@ -1013,13 +973,10 @@ static GLfloat* wallVertices;
 	glDisable( GL_DEPTH_TEST );
 	wallVertices = (GLfloat *)malloc(3*4*8*4*(sizeof(CGFloat)));
 
-
 	width = w;
 	height = h;
 	gwidth = w;
 	gheight = h;
-
-
 
 	floatHeight = (int)(.3*65536);
 	floatWidth = floatHeight*width/height;
@@ -1033,7 +990,7 @@ static GLfloat* wallVertices;
 	hPaddleWidth = paddleWidth/2;
 	fontSize = floatWidth/40;
 
-	bZ = -ballRadius;
+	[GameState global].bZ = -ballRadius;
 
 	setUpWalls();
 
@@ -1051,20 +1008,13 @@ static GLfloat* wallVertices;
 	double angle = atan(((float)hFloatWidth)/altitude);
 	angle = 2.0*angle*180.0/M_PI;
 
-
 	glRotatef(-90,0,0,1);
 	perspective(angle,(double)((double)floatHeight)/((double)floatWidth),altitude/2,depth*2);
 	gluLookAt(0,0,altitude,0,0,0,0,1,0);
 
-
-
-
 	for(int i=0;i<20;i++)
 		for(int j=0;j<40;j++)
 			stateButtons[i][j] = NULL;
-
-
-
 
 	Button * s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
 	s0b0d->handler = s0b0dh;
@@ -1084,15 +1034,9 @@ static GLfloat* wallVertices;
 	s0b3d->handler = s0b3dh;
 	stateButtons[0][3] = s0b3d;
 
-
 	Button * s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3 y:hFloatHeight width:fontSize*3 height:5*fontSize/2 text:@"||" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s1b0d->handler = s1b0dh;
 	stateButtons[1][0] = s1b0d;
-
-
-
-
-
 
 	//Button s2b0d = new Button(hFloatWidth-fontSize*7,-hFloatHeight+fontSize*4+fontSize/2,fontSize*6,fontSize*4,"OK",fontSize*2,-1,-1);
 	Button * s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7 y:-hFloatHeight+fontSize*9/2 width:fontSize*6 height:4*fontSize text:@"OK" textSize:fontSize*2 gameType:-1 multiPlayer:-1];
@@ -1118,7 +1062,6 @@ static GLfloat* wallVertices;
 	s2b3d->handler = s2b3dh;
 	stateButtons[2][3] = s2b3d;
 
-
 	//Button s2b4d = new Button(fontSize*13,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
 	Button * s2b4d =  [[Button alloc] initButton:fontSize*13 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
 	s2b4d->gameType = 0;
@@ -1132,7 +1075,6 @@ static GLfloat* wallVertices;
 	s2b5d->handler = s2b5dh;
 	s2b5d->enabled = false;
 	stateButtons[2][5] = s2b5d;
-
 
   int difficulty = [Preferences global].difficulty;
   int inputMethod = [Preferences global].inputMethod;
@@ -1181,29 +1123,13 @@ static GLfloat* wallVertices;
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
 
-
-
-
-
-
-
 	Button * s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s3b0d->handler = homeButton;
 	stateButtons[3][0] = s3b0d;
 
-
-
-
 	Button * s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
 	s7b0d->handler = homeButton;
 	stateButtons[7][0] = s7b0d;
-
-
-
-
-
-
-
 
 	Button * s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*15 height:3*fontSize text:@"Submit Score" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
 	s8b0d->handler = s8b0dh;
@@ -1215,16 +1141,10 @@ static GLfloat* wallVertices;
 	stateButtons[8][1] = s8b1d;
 	//homeButton
 
-
-
 	//(*(s0b0d->handler))();
 
 
 	//s0b0d = [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 text:<#(NSString *)intext#> textSize:<#(int)intextSize#> gameType:<#(int)ingameType#> multiPlayer:<#(int)inmultiPlayer#>
-
-
-
-
 
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("bullseye"), CFSTR("caf"), NULL), &mpBullseye);
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("lostshort"), CFSTR("caf"), NULL), &mpLostshort);
@@ -1240,46 +1160,26 @@ static GLfloat* wallVertices;
 	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("won"), CFSTR("caf"), NULL), &mpWon);
 //AudioServicesPlaySystemSound(mpBullseye);
 
-
-
-
-	//AudioServicesCreateSystemSoundID(<#CFURLRef inFileURL#>, <#SystemSoundID *outSystemSoundID#>)
-
-
-//	AudioServicesCreateSystemSoundID(<#CFURLRef inFileURL#>, <#SystemSoundID *outSystemSoundID#>)
-
-
-
-
-
-
 	running = TRUE;
 	//state = PLAYING;
 
 	NSThread *newThread = [[NSThread alloc] initWithTarget:self selector:@selector(gameLoop:) object:nil];
-
-
-
-
-
-	[newThread start];
-
-
+  [newThread start];
 }
 
 - (void)gameLoop:(id)input
 {
-	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-  
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
 	NSDate *date = [NSDate date];
-  
+
 	long long delta;
 	long long time = [date timeIntervalSince1970] * 1000.0;
 	//NSLog(@"asdf %lld",time);
 	int spinCounter = 0;
-  
+
 	srand(time);
-  
+
 	while (running)
 	{
 		//NSLog(@"%i",count++);
@@ -1313,7 +1213,7 @@ static GLfloat* wallVertices;
 				fps = 5;
 				break;
 			case START:
-				if(gameType == 1)
+				if ([Preferences global].gameType == 1)
 					fps = 20;
         else
           fps = 5;
@@ -1337,18 +1237,18 @@ static GLfloat* wallVertices;
 				[NSThread sleepForTimeInterval:((double)((time+delta)-ttime))/1000.0];
 				//usleep(1000);
 				//long long ltime = [date timeIntervalSince1970] * 1000.0;
-        
+
 				//NSLog(@"%lld <<<",ltime-ftime);
 				//Thread.sleep((time+delta)-ttime);
 			}
 			//catch(InterruptedException ex)
 			{
-        
+
 			}
 		}
 		time += delta;
 		//NSLog(@"%i %i %lld %lld %lld",count++,fps,delta,time,ttime);
-    
+
 		int numPingToPlay = 0;
 		int numPongToPlay = 0;
 		int numWall1ToPlay = 0;
@@ -1361,125 +1261,127 @@ static GLfloat* wallVertices;
 		int numLostToPlay = 0;
 		int numWonToPlay = 0;
 		int numBullseyeToPlay = 0;
-    
-		@synchronized(sem)
+
+		@synchronized (sem)
 		{
-      
 			//NSLog(@"loop %d %d",stateToInt(state),spinCounter);
 			spinCounter++;
 			if(spinCounter == 16)
 				spinCounter = 0;
-      
+
       //System.out.println(this);
       //int[] mxs = mxs;
       //int[] mys = mys;
-      
+
       //		Vibrator vibrator = vibrator;
-      
+
       //IntBuffer cubeBuffInt = cubeBuffInt;
-      
-      
-      if(gameType == 0)
+
+
+      if ([Preferences global].gameType == 0)
       {
-        if(state == PLAYING)
+        if (state == PLAYING)
         {
-          
           //System.arraycopy(mxs,0,mxs,1,4);
           //System.arraycopy(mys,0,mys,1,4);
-          memmove(mxs+1,mxs,4*sizeof(int));
-          memmove(mys+1,mys,4*sizeof(int));
-          mxs[0] = pX;
-          mys[0] = pY;
-          
-          if(isCurveball)
+          memmove(mxs+1, mxs, 4*sizeof(int));
+          memmove(mys+1, mys, 4*sizeof(int));
+          mxs[0] = [GameState global].pX;
+          mys[0] = [GameState global].pY;
+
+          if (isCurveball)
           {
-            bXSpeed += xAccel;
-            bYSpeed += yAccel;
-            
+            [GameState global].bXSpeed += [GameState global].xAcceleration;
+            [GameState global].bYSpeed += [GameState global].yAcceleration;
+            int bXSpeed = [GameState global].bXSpeed;
+            int bYSpeed = [GameState global].bYSpeed;
+            int bZSpeed = [GameState global].bZSpeed;
             int vecLength = (int) sqrt(bXSpeed*bXSpeed+bYSpeed*bYSpeed+bZSpeed*bZSpeed);
-            
-            if(vecLength != 0)
+
+            if (vecLength != 0)
             {
-              bX += abs(bZSpeed)*bXSpeed/vecLength;
-              bY += abs(bZSpeed)*bYSpeed/vecLength;
-              bZ += abs(bZSpeed)*bZSpeed/vecLength;
+              [GameState global].bX += abs(bZSpeed)*bXSpeed/vecLength;
+              [GameState global].bY += abs(bZSpeed)*bYSpeed/vecLength;
+              [GameState global].bZ += abs(bZSpeed)*bZSpeed/vecLength;
             }
           }
           else
           {
-            bX += bXSpeed;
-            bY += bYSpeed;
-            bZ += bZSpeed;
+            [GameState global].bX += [GameState global].bXSpeed;
+            [GameState global].bY += [GameState global].bYSpeed;
+            [GameState global].bZ += [GameState global].bZSpeed;
             //System.out.println(bZSpeed);
           }
-          if(bX > hFloatWidth-ballRadius)
+          if ([GameState global].bX > hFloatWidth-ballRadius)
           {
-            bX=(hFloatWidth-ballRadius);
-            bXSpeed *= -1;
+            [GameState global].bX = (hFloatWidth-ballRadius);
+            [GameState global].bXSpeed *= -1;
             numWall3ToPlay++;
           }
-          if(bX<-hFloatWidth+ballRadius)
+          if ([GameState global].bX < -hFloatWidth+ballRadius)
           {
-            bX=(-hFloatWidth+ballRadius);
-            bXSpeed *= -1;
+            [GameState global].bX = (-hFloatWidth+ballRadius);
+            [GameState global].bXSpeed *= -1;
             numWall3ToPlay++;
           }
-          if(bY>hFloatHeight-ballRadius)
+          if ([GameState global].bY > hFloatHeight-ballRadius)
           {
-            bY=(hFloatHeight-ballRadius);
-            bYSpeed *= -1;
+            [GameState global].bY = (hFloatHeight-ballRadius);
+            [GameState global].bYSpeed *= -1;
             numWall2ToPlay++;
           }
-          if(bY<-hFloatHeight+ballRadius)
+          if ([GameState global].bY < -hFloatHeight+ballRadius)
           {
-            bY=(-hFloatHeight+ballRadius);
-            bYSpeed *= -1;
+            [GameState global].bY = (-hFloatHeight+ballRadius);
+            [GameState global].bYSpeed *= -1;
             numWall2ToPlay++;
           }
-          if(bZ > 0-ballRadius)
+          if ([GameState global].bZ > 0-ballRadius)
           {
             tellOpponent=true;
-            if(bX >= pX-hPaddleWidth-ballRadius && bX <= pX+hPaddleWidth+ballRadius &&
-               bY >= pY-hPaddleHeight-ballRadius && bY <= pY+hPaddleHeight+ballRadius)
+            if ([GameState global].bX >= [GameState global].pX-hPaddleWidth-ballRadius &&
+                [GameState global].bX <= [GameState global].pX+hPaddleWidth+ballRadius &&
+                [GameState global].bY >= [GameState global].pY-hPaddleHeight-ballRadius &&
+                [GameState global].bY <= [GameState global].pY+hPaddleHeight+ballRadius)
             {
-              bZ = 0-ballRadius;
-              bZSpeed = (int)(bZSpeed * -1.05);
-              if(bZSpeed > 30000)
-                bZSpeed = 30000;
-              if(bZSpeed < -30000)
-                bZSpeed = -30000;
-              
-              if(isCurveball)
+              [GameState global].bZ = 0-ballRadius;
+              [GameState global].bZSpeed = (int)([GameState global].bZSpeed * -1.05);
+              if ([GameState global].bZSpeed > 30000)
+                [GameState global].bZSpeed = 30000;
+              if ([GameState global].bZSpeed < -30000)
+                [GameState global].bZSpeed = -30000;
+
+              if (isCurveball)
               {
-                bXSpeed /= 2;
-                bYSpeed /= 2;
+                [GameState global].bXSpeed /= 2;
+                [GameState global].bYSpeed /= 2;
               }
-              
+
               numPingToPlay++;
-              
-              if(multiPlayerStatus == 0)
-                myScore += level + 1 + [Preferences global].difficulty;
-              
+
+              if (multiPlayerStatus == 0)
+                 [GameState global].myScore += [GameState global].level + 1 + [Preferences global].difficulty;
+
               //		if(vibrator != null && Pong.vibrate)
               //			vibrator.vibrate(50);
-              
-              if(mxs[4] != 0 || mys[4] != 0)
+
+              if (mxs[4] != 0 || mys[4] != 0)
               {
-                if(isCurveball)
+                if (isCurveball)
                 {
-                  xAccel = -(mxs[0]-mxs[4])*multiplier/divisor/100;
-                  yAccel = -(mys[0]-mys[4])*multiplier/divisor/100;
+                  [GameState global].xAcceleration = -(mxs[0]-mxs[4])*multiplier/divisor/100;
+                  [GameState global].yAcceleration = -(mys[0]-mys[4])*multiplier/divisor/100;
                 }
                 else
                 {
-                  bXSpeed += (mxs[0]-mxs[4])*multiplier/divisor/10;
-                  bYSpeed += (mys[0]-mys[4])*multiplier/divisor/10;
+                  [GameState global].bXSpeed += (mxs[0]-mxs[4])*multiplier/divisor/10;
+                  [GameState global].bYSpeed += (mys[0]-mys[4])*multiplier/divisor/10;
                 }
               }
-              else if(isCurveball)
+              else if (isCurveball)
               {
-                xAccel = 0;
-                yAccel = 0;
+                [GameState global].xAcceleration = 0;
+                [GameState global].yAcceleration = 0;
               }
             }
             else
@@ -1487,11 +1389,11 @@ static GLfloat* wallVertices;
               //switchToState(START);
               [PongViewController switchToState:START];
               lastOutcome = 1;
-              lives--;
+              [GameState global].numberOfLives = [GameState global].numberOfLives -1;
               //enScore++;
               gameReset();
               numLostToPlay++;
-              
+
               /*if(!fullVersion && multiPlayerStatus == 0)
                {
                Message mes = new Message();
@@ -1500,106 +1402,99 @@ static GLfloat* wallVertices;
                mes.setData(dat);
                Pong.staticAdHandler.sendMessage(mes);
                }*/
-              
-              
-              if(multiPlayerStatus != 0)
+
+
+              if (multiPlayerStatus != 0)
               {
                 enScore++;
                 iLost = true;
                 //switchToState(PLAYING);
                 [PongViewController switchToState:PLAYING];
-                bZ = -depth+ballRadius;
-                bZSpeed = 0;
+                [GameState global].bZ = -depth+ballRadius;
+                [GameState global].bZSpeed = 0;
               }
-              else if(lives <= 0)
+              else if ([GameState global].numberOfLives <= 0)
               {
                 NSDateFormatter *date_formatter=[[NSDateFormatter alloc]init];
                 [date_formatter setDateFormat:@"dd-MMM-yyyy"];
-                NSString* date = [date_formatter stringFromDate:[NSDate date]];
-                
-                
-                NSString * scoreLine = [NSString stringWithFormat:@"%s %d",[date UTF8String],myScore];
+                NSString *date = [date_formatter stringFromDate:[NSDate date]];
+
+                NSString *scoreLine =
+                    [NSString stringWithFormat:@"%s %d", [date UTF8String],
+                     [GameState global].myScore];
                 [scoreLine retain];
                 [date_formatter release];
-                
-                
-                NSString * scoreLines[15];
+
+                NSString *scoreLines[15];
                 scoreLines[0] = scoreLine;
                 NSArray *prevScores = [GameState global].previousScores;
                 int total = 1;
-                for(int i=0;i<[prevScores count];i++)
+                for (int i=0; i < [prevScores count]; i++)
                 {
                   NSString * thisLine = [prevScores objectAtIndex:i];
-                  if(thisLine == NULL || [thisLine isEqualToString:@""])
+                  if (thisLine == NULL || [thisLine isEqualToString:@""])
                     continue;
                   scoreLines[i+1] = thisLine;
                   total++;
-                  
+
                 }
-                qsort(scoreLines, total, sizeof(NSString*), compareScoreLines);
-                
-                
-                NSString * scoresToSave = @"";
-                for(int i=0;i<7 && i < total;i++)
+                qsort(scoreLines, total, sizeof(NSString *), compareScoreLines);
+
+                NSString *scoresToSave = @"";
+                for (int i=0; i<7 && i < total; i++)
                 {
-                  scoresToSave = [scoresToSave stringByAppendingFormat:@"%@\n",scoreLines[i]];
+                  scoresToSave = [scoresToSave stringByAppendingFormat:@"%@\n", scoreLines[i]];
                 }
-                
+
                 [scoresToSave retain];
-                
+
                 [prefs setObject:scoresToSave forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
-                
-                
+
                 [PongViewController switchToState:RESULTS];
-                
+
                 //	Pong.highScores = "Loading";
                 //	Pong.finishTime = System.currentTimeMillis();
-                
+
                 //	GetScores gs = new GetScores(gp);
                 //	Thread gt = new Thread(gs);
                 //	gt.start();
-                
-                
               }
             }
             //			whatToTellOpponent=",b "+bX+" "+bY+" "+bZ+" "+bXSpeed+" "+bYSpeed+" "+bZSpeed+" "+xAccel+" "+yAccel+(iLost?",l":"");
           }
-          if(bZ<-depth+ballRadius)
+          if ([GameState global].bZ < -depth+ballRadius)
           {
-            
-            if(multiPlayerStatus == 0)
+            if (multiPlayerStatus == 0)
             {
-              if(bX >= eX-hPaddleWidth-ballRadius && bX <= eX+hPaddleWidth+ballRadius &&
-                 bY >= eY-hPaddleHeight-ballRadius && bY <= eY+hPaddleHeight+ballRadius)
+              if ([GameState global].bX >= [GameState global].eX-hPaddleWidth-ballRadius &&
+                  [GameState global].bX <= [GameState global].eX+hPaddleWidth+ballRadius &&
+                  [GameState global].bY >= [GameState global].eY-hPaddleHeight-ballRadius &&
+                  [GameState global].bY <= [GameState global].eY+hPaddleHeight+ballRadius)
               {
-                bZ = -depth + ballRadius;
-                bZSpeed = (int)(bZSpeed * -1.05);
-                if(bZSpeed > 30000)
-                  bZSpeed = 30000;
-                if(bZSpeed < -30000)
-                  bZSpeed = -30000;
-                
-                if(isCurveball)
+                [GameState global].bZ = -depth + ballRadius;
+                [GameState global].bZSpeed = (int)([GameState global].bZSpeed * -1.05);
+                if ([GameState global].bZSpeed > 30000)
+                  [GameState global].bZSpeed = 30000;
+                if ([GameState global].bZSpeed < -30000)
+                  [GameState global].bZSpeed = -30000;
+
+                if (isCurveball)
                 {
-                  bXSpeed /= 2;
-                  bYSpeed /= 2;
+                  [GameState global].bXSpeed /= 2;
+                  [GameState global].bYSpeed /= 2;
                   //xAccel = randomizer.nextInt()%(randEnemy/2);
                   //yAccel = randomizer.nextInt()%(randEnemy/2);
-                  
-                  
-                  xAccel = rand() % randEnemy - randEnemy/2;
-                  yAccel = rand() % randEnemy - randEnemy/2;
-                  
-                  
+
+                  [GameState global].xAcceleration = rand() % randEnemy - randEnemy/2;
+                  [GameState global].yAcceleration = rand() % randEnemy - randEnemy/2;
                 }
                 else
                 {
                   //bXSpeed += randomizer.nextInt()%randEnemy;//-randEnemy*2;
                   //bYSpeed += randomizer.nextInt()%randEnemy;//-randEnemy*2;
-                  
-                  
-                  bXSpeed += rand() % randEnemy*2 - randEnemy;
-                  bYSpeed += rand() % randEnemy*2 - randEnemy;
+
+                  [GameState global].bXSpeed += rand() % randEnemy*2 - randEnemy;
+                  [GameState global].bYSpeed += rand() % randEnemy*2 - randEnemy;
                 }
                 numPongToPlay++;
               }
@@ -1613,124 +1508,133 @@ static GLfloat* wallVertices;
                  mes.setData(dat);
                  Pong.staticAdHandler.sendMessage(mes);
                  }*/
-                
+
                 //switchToState(START);
                 [PongViewController switchToState:START];
                 lastOutcome = 0;
-                myScore += (level + 1 + [Preferences global].difficulty)*20;
-                level++;
+                [GameState global].myScore += ([GameState global].level + 1 + [Preferences global].difficulty)*20;
+                [GameState global].level = [GameState global].level +1;
                 gameReset();
                 numWonToPlay++;
               }
             }
             else
             {
-              if(bZSpeed < 0)
+              if ([GameState global].bZSpeed < 0)
               {
-                bXSpeed = 0;
-                bYSpeed = 0;
-                bZSpeed = 0;
-                bZ = -depth+ballRadius;
+                [GameState global].bXSpeed = 0;
+                [GameState global].bYSpeed = 0;
+                [GameState global].bZSpeed = 0;
+                [GameState global].bZ = -depth+ballRadius;
                 waitingForOp = true;
               }
             }
           }
-          
-          
-          if(multiPlayerStatus == 0)
+
+
+          if (multiPlayerStatus == 0)
           {
-            if(eX<bX)
+            if([GameState global].eX<[GameState global].bX)
             {
-              if(bX-eX<=eSpeed/(isCurveball?2:1))
-                eX=bX;
+              if ([GameState global].bX-[GameState global].eX<=eSpeed/(isCurveball?2:1))
+                [GameState global].eX=[GameState global].bX;
               else
-                eX+=eSpeed/(isCurveball?2:1);
+                [GameState global].eX+=eSpeed/(isCurveball?2:1);
             }
             else
             {
-              if(eX-bX<=eSpeed/(isCurveball?2:1))
-                eX=bX;
+              if ([GameState global].eX-[GameState global].bX<=eSpeed/(isCurveball?2:1))
+                [GameState global].eX=[GameState global].bX;
               else
-                eX-=eSpeed/(isCurveball?2:1);
+                [GameState global].eX-=eSpeed/(isCurveball?2:1);
             }
-            if(eY<bY)
+            if ([GameState global].eY<[GameState global].bY)
             {
-              if(bY-eY<=eSpeed/(isCurveball?2:1))
-                eY=bY;
+              if ([GameState global].bY-[GameState global].eY<=eSpeed/(isCurveball?2:1))
+                [GameState global].eY=[GameState global].bY;
               else
-                eY+=eSpeed/(isCurveball?2:1);
+                [GameState global].eY += eSpeed/(isCurveball?2:1);
             }
             else
             {
-              if(eY-bY<=eSpeed/(isCurveball?2:1))
-                eY=bY;
+              if ([GameState global].eY-[GameState global].bY<=eSpeed/(isCurveball?2:1))
+                [GameState global].eY=[GameState global].bY;
               else
-                eY-=eSpeed/(isCurveball?2:1);
+                [GameState global].eY-=eSpeed/(isCurveball?2:1);
             }
-            
-            if(eX<-hFloatWidth+hPaddleWidth)
-              eX=(-hFloatWidth+hPaddleWidth);
-            if(eY<-hFloatHeight+hPaddleHeight)
-              eY=(-hFloatHeight+hPaddleHeight);
-            if(eX>hFloatWidth-hPaddleWidth)
-              eX=(hFloatWidth-hPaddleWidth);
-            if(eY>hFloatHeight-hPaddleHeight)
-              eY=(hFloatHeight-hPaddleHeight);
+
+            if ([GameState global].eX < -hFloatWidth+hPaddleWidth)
+              [GameState global].eX = (-hFloatWidth+hPaddleWidth);
+            if ([GameState global].eY < -hFloatHeight+hPaddleHeight)
+              [GameState global].eY = (-hFloatHeight+hPaddleHeight);
+            if ([GameState global].eX > hFloatWidth-hPaddleWidth)
+              [GameState global].eX = (hFloatWidth-hPaddleWidth);
+            if ([GameState global].eY > hFloatHeight-hPaddleHeight)
+              [GameState global].eY = (hFloatHeight-hPaddleHeight);
           }
         }
       }
 		}
-    
+
 		if(numPingToPlay != 0)
 		{
+      NSLog(@"numPingToPlay");
 			[SoundMan playSound:mpPing];
 		}
 		if(numPongToPlay != 0)
 		{
+      NSLog(@"numPongToPlay");
 			[SoundMan playSound:mpPong];
 		}
 		if(numWall1ToPlay != 0)
 		{
+     NSLog(@"numWall1ToPlay");
 			[SoundMan playSound:mpWall1];
 		}
 		if(numWall2ToPlay != 0)
 		{
+      NSLog(@"numWall2ToPlay");
 			[SoundMan playSound:mpWall2];
 		}
 		if(numWall3ToPlay != 0)
 		{
+      NSLog(@"numWall3ToPlay");
 			[SoundMan playSound:mpWall3];
 		}
 		if(numTargetToPlay != 0)
 		{
+      NSLog(@"numTargetToPlay");
       [SoundMan playSound:mpTarget];
 		}
 		if(numTargetbounceToPlay != 0)
 		{
+      NSLog(@"numTargetbounceToPlay");
 			[SoundMan playSound:mpTargetbounce];
 		}
 		if(numLostToPlay != 0)
 		{
+      NSLog(@"numLostToPlay");
 			[SoundMan playSound:mpLost];
 		}
 		if(numWonToPlay != 0)
 		{
+      NSLog(@"numWonToPlay");
 			[SoundMan playSound:mpWon];
 		}
 		if(numLostshortToPlay != 0)
 		{
+       NSLog(@"numLostshortToPlay");
 			[SoundMan playSound:mpLostshort];
 		}
 		if(numBullseyeToPlay != 0)
 		{
+     NSLog(@"numBullseyeToPlay");
 			[SoundMan playSound:mpBullseye];
 		}
 	}
-  
+
 	[pool release];
 }
-
-
 
 static const GLubyte darkColor[] = {
 	0, 0x73,   0xc1, 255,
@@ -1763,13 +1667,6 @@ void drawWorld()
 		glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 	}
 }
-
-
-
-
-
-
-
 
 + (void)switchToState:(enum States)toState
 {
@@ -1813,62 +1710,57 @@ void drawWorld()
 	state = toState;
 }
 
-
-
-
-
 + (void)loadSaved
 {
 	[SQLite3Data readData];
 
 	enum States toState = intToState([GameState global].state);
 
-	gameType = [Preferences global].gameType;
 	if (toState == TARGET)
 	{
 		toState = HOME;
-		gameType = 0;
+		[Preferences global].gameType = 0;
 	}
 	[PongViewController switchToState:toState];
 
-	level = [GameState global].level;
-
-	if (gameType == 1)
-	{
-    NSLog(@"AHHHH NOT YET SUPPORTED!");
-		//int levelToGet = level;
-		//this isn't done. Fill this out.
-	}
-
-	bX = [GameState global].bX;
-	bY = [GameState global].bY;
-	bZ = [GameState global].bZ;
-
-	bXSpeed = [GameState global].bXSpeed;
-	bYSpeed = [GameState global].bYSpeed;
-	bZSpeed = [GameState global].bZSpeed;
-
-	xAccel = [GameState global].xAcceleration;
-	yAccel = [GameState global].yAcceleration;
-
-	lives = [GameState global].numberOfLives;
-
-	myScore = [GameState global].myScore;
-
-	eX = [GameState global].eX;
-	eY = [GameState global].eY;
-
-	pX = [GameState global].pX;
-	pY = [GameState global].pY;
-
-	lastOutcome = [GameState global].lastOutcome;
+//	level = [GameState global].level;
+//
+//	if (gameType == 1)
+//	{
+//    NSLog(@"AHHHH NOT YET SUPPORTED!");
+//		//int levelToGet = level;
+//		//this isn't done. Fill this out.
+//	}
+//
+//	bX = [GameState global].bX;
+//	bY = [GameState global].bY;
+//	bZ = [GameState global].bZ;
+//
+//	bXSpeed = [GameState global].bXSpeed;
+//	bYSpeed = [GameState global].bYSpeed;
+//	bZSpeed = [GameState global].bZSpeed;
+//
+//	xAccel = [GameState global].xAcceleration;
+//	yAccel = [GameState global].yAcceleration;
+//
+//	lives = [GameState global].numberOfLives;
+//
+//	myScore = [GameState global].myScore;
+//
+//	eX = [GameState global].eX;
+//	eY = [GameState global].eY;
+//
+//	pX = [GameState global].pX;
+//	pY = [GameState global].pY;
+//
+//	lastOutcome = [GameState global].lastOutcome;
 
 //	sound = [Preferences global].shouldPlaySound;
 //	vibrate = [Preferences global].shouldVibrate;
 //	fog = [Preferences global].shouldShowFog;
 
-	holdPaddleX = [Preferences global].paddlePositionX;
-	holdPaddleY = [Preferences global].paddlePositionY;
+//	holdPaddleX = [Preferences global].paddlePositionX;
+//	holdPaddleY = [Preferences global].paddlePositionY;
 
 //	difficulty = [Preferences global].difficulty;
 //

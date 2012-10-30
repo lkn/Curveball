@@ -7,13 +7,13 @@
 //
 
 #import "Button.h"
+
+#import "Preferences.h"
 #import "PongViewController.h"
 //#import "PongViewController.m"
 #import "TextureCoord.h"
 
 @implementation Button
-
-
 
 - (id)initButton:(int)inx y:(int)iny width:(int)inwidth height:(int)inheight text:(NSString*)intext textSize:(int)intextSize gameType:(int)ingameType multiPlayer:(int)inmultiPlayer
 {
@@ -34,7 +34,6 @@
 	
 	return self;	
 }
-
 
 - (void)makeBuffers
 {
@@ -86,13 +85,11 @@
 	rb[11] = 0;
 }
 
-
 -(void)changeText:(NSString *)newText
 {
 	text = newText;
 	textOffset = (width - textLength(text)*textSize/20)/2;
 }
-
 
 -(BOOL)collides:(int)inx iny:(int)iny
 {
@@ -101,7 +98,7 @@
 	//NSLog(@"collides");
 	if(!enabled)
 		return FALSE;
-	if((gameType == -1 || gameType == PongViewController.gameType) && (multiPlayer == -1 || multiPlayer == PongViewController.multiPlayerStatus))
+	if((gameType == -1 || gameType == [Preferences global].gameType) && (multiPlayer == -1 || multiPlayer == PongViewController.multiPlayerStatus))
 	{
 		if(inx >= x && iny <= y && inx <= x + width && iny >= y - height)
 		{
@@ -117,11 +114,9 @@
 	
 }
 
-
-
 - (void)draw {
 	if ((gameType == -1 ||
-       gameType == PongViewController.gameType) &&
+       gameType == [Preferences global].gameType) &&
       (multiPlayer == -1 ||
        multiPlayer == PongViewController.multiPlayerStatus)) {
 		TextureCoord ** button = PongViewController.button;
@@ -150,7 +145,5 @@
 		glBindTexture(GL_TEXTURE_2D, PongViewController.tileset1);
 	}
 }
-
-
 
 @end
