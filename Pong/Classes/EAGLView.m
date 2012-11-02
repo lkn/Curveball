@@ -463,7 +463,8 @@ void onTouchEventState7(NSString *type, int clickedX, int clickedY)
 	if ([type isEqualToString:@"down"] &&
       clickedX >= -PongViewController.hPaddleWidth &&
       clickedX <= PongViewController.hPaddleWidth &&
-      clickedY >= -PongViewController.hPaddleHeight && clickedY <= PongViewController.hPaddleHeight)
+      clickedY >= -PongViewController.hPaddleHeight &&
+      clickedY <= PongViewController.hPaddleHeight)
 	{
 		if (PongViewController.multiPlayerStatus == 0)
 		{

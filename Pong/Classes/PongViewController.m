@@ -131,13 +131,6 @@ static int mys[10];// = new int[10];
 static BOOL tellOpponent = false;
 NSString *whatToTellOpponent = @"";
 
-
-// replaced with Preferences
-//static BOOL sound = FALSE;
-//static BOOL vibrate = FALSE;
-//static BOOL fog = FALSE;
-
-
 static int smallTexFont;
 static int medTexFont;
 static int bigTexFont;
@@ -184,14 +177,12 @@ static int ballRadius = 0;
 
 static int enScore = 0;
 
-//SharedPreferences prefs;
 static int lastOutcome = -1;
 static int paddleHeight = 0;
 static int paddleWidth = 0;
 static int hPaddleHeight = 0;
 static int hPaddleWidth = 0;
 static BOOL iLost = false;
-//static int inputMethod = 0;  // replaced with Preferences
 
 static int multiplier = 1600;
 static int divisor = 800;
@@ -199,11 +190,8 @@ static int tileset1 = 0;
 static int eSpeed = (int)(.02f*65536);
 static int randEnemy = 100;
 static NSString * sem = @"";
-//Semaphore sem;
-//Semaphore prefsSem;
-//public Semaphore soundSem = new Semaphore(0);
+
 static BOOL didSounds = false;
-//static int difficulty = 0;  // replaced with Preferences
 
 static int eSpeeds[] = {
   (int)(.015f*65536),
@@ -715,8 +703,6 @@ int count = 0;
     [stateButtons[stateToInt(state)][j] draw];
   }
 
-	//drawString(@"Hello, World!", 0, 0, fontSize);
-
   [(EAGLView *)self.view presentFramebuffer];
 	count++;
 }
@@ -724,6 +710,7 @@ int count = 0;
 - (void)didReceiveMemoryWarning
 {
   [super didReceiveMemoryWarning];
+  NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file
@@ -823,7 +810,8 @@ int count = 0;
   program = glCreateProgram();
 
   // Create and compile vertex shader.
-  vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"vsh"];
+  vertShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader"
+                                                       ofType:@"vsh"];
   if (![self compileShader:&vertShader type:GL_VERTEX_SHADER file:vertShaderPathname])
   {
     NSLog(@"Failed to compile vertex shader");
@@ -831,7 +819,8 @@ int count = 0;
   }
 
   // Create and compile fragment shader.
-  fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader" ofType:@"fsh"];
+  fragShaderPathname = [[NSBundle mainBundle] pathForResource:@"Shader"
+                                                       ofType:@"fsh"];
   if (![self compileShader:&fragShader type:GL_FRAGMENT_SHADER file:fragShaderPathname])
   {
     NSLog(@"Failed to compile fragment shader");
@@ -893,23 +882,31 @@ static GLfloat* wallVertices;
 
 - (void)resize:(int)w h:(int)h
 {
-	NSLog(@"%d %d",w,h);
+	NSLog(@"%d %d", w, h);
 	[PongViewController loadSaved];
 
-	//NSLog(@"Resize to: %i,%i",w,h);
-	//tileset1 = [self LoadTexture:@"tileset1"];
 	tileset1 = [self LoadTexture:@"tileset1"];
 	smallTexFont = [self LoadTexture:@"smallfont"];
 	medTexFont = [self LoadTexture:@"medfont"];
 	bigTexFont = [self LoadTexture:@"bigfont"];
 
-	txPaddle = [[TextureCoord alloc] initTextureCoord:0 y:24 width:12 height:8 totalX:32 totalY:32];
+	txPaddle = [[TextureCoord alloc] initTextureCoord:0
+                                                  y:24
+                                              width:12
+                                             height:8
+                                             totalX:32
+                                             totalY:32];
 	txPaddle->coordBuff[1]+=150;
 	txPaddle->coordBuff[3]+=150;
 	txPaddle->coordBuff[5]-=150;
 	txPaddle->coordBuff[7]-=150;
 
-	txBall = [[TextureCoord alloc] initTextureCoord:4 y:0 width:4 height:4 totalX:32 totalY:32];
+	txBall = [[TextureCoord alloc] initTextureCoord:4
+                                                y:0
+                                            width:4
+                                           height:4
+                                           totalX:32
+                                           totalY:32];
 	txTransBall = [[TextureCoord alloc] initTextureCoord:0 y:0 width:4 height:4 totalX:32 totalY:32];
 
 	button[0] = [[TextureCoord alloc] initTextureCoord:25 y:24 width:1 height:8 totalX:32 totalY:32];
@@ -1288,6 +1285,7 @@ static GLfloat* wallVertices;
             [GameState global].bY += [GameState global].bYSpeed;
             [GameState global].bZ += [GameState global].bZSpeed;
           }
+
           if ([GameState global].bX > hFloatWidth-ballRadius)
           {
             [GameState global].bX = (hFloatWidth-ballRadius);
@@ -1300,6 +1298,7 @@ static GLfloat* wallVertices;
             [GameState global].bXSpeed *= -1;
             numWall3ToPlay++;
           }
+
           if ([GameState global].bY > hFloatHeight-ballRadius)
           {
             [GameState global].bY = (hFloatHeight-ballRadius);
@@ -1312,6 +1311,7 @@ static GLfloat* wallVertices;
             [GameState global].bYSpeed *= -1;
             numWall2ToPlay++;
           }
+
           if ([GameState global].bZ > 0-ballRadius)
           {
             tellOpponent = true;
@@ -1417,17 +1417,12 @@ static GLfloat* wallVertices;
                 {
                   [GameState global].bXSpeed /= 2;
                   [GameState global].bYSpeed /= 2;
-                  //xAccel = randomizer.nextInt()%(randEnemy/2);
-                  //yAccel = randomizer.nextInt()%(randEnemy/2);
 
                   [GameState global].xAcceleration = rand() % randEnemy - randEnemy/2;
                   [GameState global].yAcceleration = rand() % randEnemy - randEnemy/2;
                 }
                 else
                 {
-                  //bXSpeed += randomizer.nextInt()%randEnemy;//-randEnemy*2;
-                  //bYSpeed += randomizer.nextInt()%randEnemy;//-randEnemy*2;
-
                   [GameState global].bXSpeed += rand() % randEnemy*2 - randEnemy;
                   [GameState global].bYSpeed += rand() % randEnemy*2 - randEnemy;
                 }
