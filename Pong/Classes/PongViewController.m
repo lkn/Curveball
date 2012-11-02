@@ -889,7 +889,6 @@ static GLfloat* wallVertices;
 
 #import "buttonHandlers.h"
 
-#import "gameLoop.h"
 #import "gettersSetters.h"
 
 - (void)resize:(int)w h:(int)h
@@ -1394,41 +1393,6 @@ static GLfloat* wallVertices;
               else if ([GameState global].numberOfLives <= 0)
               {
                 [[GameState global] recordMyScore];
-//                NSDateFormatter *date_formatter=[[NSDateFormatter alloc]init];
-//                [date_formatter setDateFormat:@"dd-MMM-yyyy"];
-//                NSString *date = [date_formatter stringFromDate:[NSDate date]];
-//
-//                NSString *scoreLine =
-//                    [NSString stringWithFormat:@"%s %d", [date UTF8String],
-//                     [GameState global].myScore];
-//                [scoreLine retain];
-//                [date_formatter release];
-//
-//                NSString *scoreLines[15];
-//                scoreLines[0] = scoreLine;
-//                NSArray *prevScores = [GameState global].previousScores;
-//                int total = 1;
-//                for (int i=0; i < [prevScores count]; i++)
-//                {
-//                  NSString * thisLine = [prevScores objectAtIndex:i];
-//                  if (thisLine == NULL || [thisLine isEqualToString:@""])
-//                    continue;
-//                  scoreLines[i+1] = thisLine;
-//                  total++;
-//                }
-//                NSLog(@"SCORELINES: %@", scoreLine);
-//                qsort(scoreLines, total, sizeof(NSString *), compareScoreLines);
-//
-//                NSString *scoresToSave = @"";
-//                for (int i=0; i<7 && i < total; i++)
-//                {
-//                  scoresToSave = [scoresToSave stringByAppendingFormat:@"%@\n", scoreLines[i]];
-//                }
-//                NSLog(@"SCORESTOSAVE: %@", scoresToSave);
-//
-//                [prefs setObject:scoresToSave
-//                          forKey:[NSString stringWithFormat:@"scores%d", [Preferences global].difficulty]];
-
                 [PongViewController switchToState:RESULTS];
               }
             }

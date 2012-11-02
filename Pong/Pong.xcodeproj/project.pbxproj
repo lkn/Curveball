@@ -113,7 +113,6 @@
 		97C004481343F90A00E3A9AD /* tileset1PVR.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = tileset1PVR.pvr; path = ../tileset1PVR.pvr; sourceTree = SOURCE_ROOT; };
 		97C0047A1344063800E3A9AD /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~ipad.png"; path = "../Default~ipad.png"; sourceTree = SOURCE_ROOT; };
 		97C004C61344171800E3A9AD /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon~ipad.png"; path = "../Icon~ipad.png"; sourceTree = SOURCE_ROOT; };
-		97DDF2F712FF4DDB00EB2751 /* gameLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLoop.h; sourceTree = "<group>"; };
 		97F20E9113050EBB006F438A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		97F20EA413051084006F438A /* bullseye.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bullseye.caf; path = ../bullseye.caf; sourceTree = SOURCE_ROOT; };
 		97F20EA813051164006F438A /* lostshort.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = lostshort.caf; path = ../lostshort.caf; sourceTree = SOURCE_ROOT; };
@@ -217,7 +216,6 @@
 				974D128612F7C04C00002BDB /* gettersSetters.h */,
 				32CA4F630368D1EE00C91783 /* Pong_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				97DDF2F712FF4DDB00EB2751 /* gameLoop.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
