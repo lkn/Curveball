@@ -35,4 +35,8 @@
 @property (nonatomic) int pX;
 @property (nonatomic) int pY;
 
+// Grabs myScore and adds it to the scoreboard. The new score will then be
+// included in previousScores.
+- (void)recordMyScore;
+
 @end

@@ -14,6 +14,24 @@
 
 static GameState *gState;
 
+static const NSUInteger kMaxNumScoresToRecord = 7;
+
+int compareScoreLines (const void * a, const void * b)
+{
+  NSLog(@"%s", __PRETTY_FUNCTION__);
+	NSString ** aString = (NSString**)a;
+	NSString ** bString = (NSString**)b;
+	//NSLog(@"hi");
+	//NSLog(@"%@ %@",*aString,*bString);
+	NSArray *scoreAArray = [*aString componentsSeparatedByString: @" "];
+	NSArray *scoreBArray = [*bString componentsSeparatedByString: @" "];
+  
+	int av = [[scoreAArray objectAtIndex:1] intValue];
+	int bv = [[scoreBArray objectAtIndex:1] intValue];
+	//NSLog(@"%d %d",av,bv);
+	return bv-av;
+}
+
 @implementation GameState
 
 @synthesize state = state_;
@@ -191,6 +209,43 @@ static GameState *gState;
 - (void)setPY:(int)pY {
   [SQLite3Data setObject:[NSString stringWithFormat:@"%d", pY]
                   forKey:@"pY"];
+}
+
+- (void)recordMyScore {
+  NSDateFormatter *date_formatter= [[[NSDateFormatter alloc] init] autorelease];
+  [date_formatter setDateFormat:@"dd-MMM-yyyy"];
+  NSString *date = [date_formatter stringFromDate:[NSDate date]];
+
+  NSString *scoreLine =
+      [NSString stringWithFormat:@"%s %d", [date UTF8String],
+       [GameState global].myScore];
+
+  NSString *scoreLines[15];
+  scoreLines[0] = scoreLine;
+  NSArray *prevScores = [GameState global].previousScores;
+  int total = 1;
+  for (int i=0; i < [prevScores count]; i++)
+  {
+    NSString *thisLine = [prevScores objectAtIndex:i];
+    if (thisLine == NULL || [thisLine isEqualToString:@""])
+      continue;
+    scoreLines[i+1] = thisLine;
+    total++;
+  }
+
+  // Order the scores from highest to lowest.
+  qsort(scoreLines, total, sizeof(NSString *), compareScoreLines);
+
+  NSString *scoresToSave = @"";
+  for (int i=0; i < kMaxNumScoresToRecord && i < total; i++)
+  {
+    scoresToSave =
+        [scoresToSave stringByAppendingFormat:@"%@\n", scoreLines[i]];
+  }
+
+  [prefs setObject:scoresToSave
+            forKey:[NSString stringWithFormat:@"scores%d",
+                    [Preferences global].difficulty]];
 }
 
 @end

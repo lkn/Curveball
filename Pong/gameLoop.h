@@ -1,7 +1,7 @@
 
 int compareScoreLines (const void * a, const void * b)
 {
-	//NSLog(@"compare");
+  NSLog(@"%s", __PRETTY_FUNCTION__);
 	NSString ** aString = (NSString**)a;
 	NSString ** bString = (NSString**)b;
 	//NSLog(@"hi");
