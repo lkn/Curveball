@@ -907,19 +907,69 @@ static GLfloat* wallVertices;
                                            height:4
                                            totalX:32
                                            totalY:32];
-	txTransBall = [[TextureCoord alloc] initTextureCoord:0 y:0 width:4 height:4 totalX:32 totalY:32];
+	txTransBall = [[TextureCoord alloc] initTextureCoord:0
+                                                     y:0
+                                                 width:4
+                                                height:4
+                                                totalX:32
+                                                totalY:32];
 
-	button[0] = [[TextureCoord alloc] initTextureCoord:25 y:24 width:1 height:8 totalX:32 totalY:32];
-	button[1] = [[TextureCoord alloc] initTextureCoord:26 y:24 width:1 height:8 totalX:32 totalY:32];
-	button[2] = [[TextureCoord alloc] initTextureCoord:27 y:24 width:1 height:8 totalX:32 totalY:32];
+	button[0] = [[TextureCoord alloc] initTextureCoord:25
+                                                   y:24
+                                               width:1
+                                              height:8
+                                              totalX:32
+                                              totalY:32];
+	button[1] = [[TextureCoord alloc] initTextureCoord:26
+                                                   y:24
+                                               width:1
+                                              height:8
+                                              totalX:32
+                                              totalY:32];
+	button[2] = [[TextureCoord alloc] initTextureCoord:27
+                                                   y:24
+                                               width:1
+                                              height:8
+                                              totalX:32
+                                              totalY:32];
 
-	button2[0] = [[TextureCoord alloc] initTextureCoord:21 y:24 width:1 height:8 totalX:32 totalY:32];
-	button2[1] = [[TextureCoord alloc] initTextureCoord:22 y:24 width:1 height:8 totalX:32 totalY:32];
-	button2[2] = [[TextureCoord alloc] initTextureCoord:23 y:24 width:1 height:8 totalX:32 totalY:32];
+	button2[0] = [[TextureCoord alloc] initTextureCoord:21
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
+	button2[1] = [[TextureCoord alloc] initTextureCoord:22
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
+	button2[2] = [[TextureCoord alloc] initTextureCoord:23
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
 
-	button3[0] = [[TextureCoord alloc] initTextureCoord:29 y:24 width:1 height:8 totalX:32 totalY:32];
-	button3[1] = [[TextureCoord alloc] initTextureCoord:30 y:24 width:1 height:8 totalX:32 totalY:32];
-	button3[2] = [[TextureCoord alloc] initTextureCoord:31 y:24 width:1 height:8 totalX:32 totalY:32];
+	button3[0] = [[TextureCoord alloc] initTextureCoord:29
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
+	button3[1] = [[TextureCoord alloc] initTextureCoord:30
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
+	button3[2] = [[TextureCoord alloc] initTextureCoord:31
+                                                    y:24
+                                                width:1
+                                               height:8
+                                               totalX:32
+                                               totalY:32];
 
 	button[0]->coordBuff[1]+=150;
 	button[0]->coordBuff[3]+=150;
@@ -1003,61 +1053,131 @@ static GLfloat* wallVertices;
 		for (int j=0;j<40;j++)
 			stateButtons[i][j] = NULL;
 
-	Button *s0b0d =  [[Button alloc] initButton:-fontSize*5 y:27*fontSize/4 width:hFloatWidth/2 height:9*fontSize/2 text:@"Play!" textSize:fontSize*9/4 gameType:-1 multiPlayer:0];
+	Button *s0b0d =  [[Button alloc] initButton:-fontSize*5
+                                            y:27*fontSize/4
+                                        width:hFloatWidth/2
+                                       height:9*fontSize/2
+                                         text:@"Play!"
+                                     textSize:fontSize*9/4
+                                     gameType:-1
+                                  multiPlayer:0];
 	s0b0d->handler = s0b0dh;
 	stateButtons[0][0] = s0b0d;
 
-	Button *s0b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize y:2*fontSize/2 width:hFloatWidth height:8*fontSize/2 text:@"Target Mode" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize
+                                            y:2*fontSize/2
+                                        width:hFloatWidth
+                                       height:8*fontSize/2
+                                         text:@"Target Mode"
+                                     textSize:fontSize*2
+                                     gameType:-1
+                                  multiPlayer:0];
 	s0b1d->handler = s0b1dh;
 	s0b1d->enabled = false;
 	stateButtons[0][1] = s0b1d;
 
-	Button *s0b2d = [[Button alloc] initButton:2*fontSize y:2*fontSize/2 width:fontSize*17 height:8*fontSize/2 text:@"Multiplayer" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b2d = [[Button alloc] initButton:2*fontSize
+                                           y:2*fontSize/2
+                                       width:fontSize*17
+                                      height:8*fontSize/2
+                                        text:@"Multiplayer"
+                                    textSize:fontSize*2
+                                    gameType:-1
+                                 multiPlayer:0];
 	s0b2d->handler = s0b2dh;
 	s0b2d->enabled = false;
 	stateButtons[0][2] = s0b2d;
 
-	Button *s0b3d =  [[Button alloc] initButton:-hFloatWidth+fontSize*3 y:-9*fontSize/2 width:fontSize*13 height:8*fontSize/2 text:@"Options" textSize:fontSize*2 gameType:-1 multiPlayer:0];
+	Button *s0b3d =  [[Button alloc] initButton:-hFloatWidth+fontSize*3
+                                            y:-9*fontSize/2
+                                        width:fontSize*13
+                                       height:8*fontSize/2
+                                         text:@"Options"
+                                     textSize:fontSize*2
+                                     gameType:-1
+                                  multiPlayer:0];
 	s0b3d->handler = s0b3dh;
 	stateButtons[0][3] = s0b3d;
 
-	Button *s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3 y:hFloatHeight width:fontSize*3 height:5*fontSize/2 text:@"||" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s1b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*3
+                                            y:hFloatHeight
+                                        width:fontSize*3
+                                       height:5*fontSize/2
+                                         text:@"||"
+                                     textSize:fontSize*5/4
+                                     gameType:-1
+                                  multiPlayer:0];
 	s1b0d->handler = s1b0dh;
 	stateButtons[1][0] = s1b0d;
 
-	//Button s2b0d = new Button(hFloatWidth-fontSize*7,-hFloatHeight+fontSize*4+fontSize/2,fontSize*6,fontSize*4,"OK",fontSize*2,-1,-1);
-	Button *s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7 y:-hFloatHeight+fontSize*9/2 width:fontSize*6 height:4*fontSize text:@"OK" textSize:fontSize*2 gameType:-1 multiPlayer:-1];
+	Button *s2b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*7
+                                            y:-hFloatHeight+fontSize*9/2
+                                        width:fontSize*6
+                                       height:4*fontSize
+                                         text:@"OK"
+                                     textSize:fontSize*2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b0d->gameType = 0;
 	s2b0d->handler = s2b0dh;
 	stateButtons[2][0] = s2b0d;
 
-	//Button s2b1d = new Button(-fontSize*18,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button *s2b1d =  [[Button alloc] initButton:-fontSize*18 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b1d =  [[Button alloc] initButton:-fontSize*18
+                                            y:hFloatHeight-fontSize*5
+                                        width:fontSize*5
+                                       height:3*fontSize
+                                         text:@"Off"
+                                     textSize:fontSize*3/2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b1d->gameType = 0;
 	s2b1d->handler = s2b1dh;
 	stateButtons[2][1] = s2b1d;
 
-	//Button s2b2d = new Button(-fontSize*8-fontSize/2,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button *s2b2d =  [[Button alloc] initButton:-fontSize*8-fontSize/2 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b2d =  [[Button alloc] initButton:-fontSize*8-fontSize/2
+                                            y:hFloatHeight-fontSize*5
+                                        width:fontSize*5
+                                       height:3*fontSize
+                                         text:@"Off"
+                                     textSize:fontSize*3/2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b2d->gameType = 0;
 	s2b2d->handler = s2b2dh;
 	stateButtons[2][2] = s2b2d;
 
-	//Button s2b3d = new Button(fontSize*0,hFloatHeight-fontSize*6+fontSize,fontSize*10,fontSize*3,"Medium",fontSize*3/2,-1,-1);
-	Button *s2b3d =  [[Button alloc] initButton:0 y:hFloatHeight-fontSize*5 width:fontSize*10 height:3*fontSize text:@"Medium" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b3d =  [[Button alloc] initButton:0
+                                            y:hFloatHeight-fontSize*5
+                                        width:fontSize*10
+                                       height:3*fontSize
+                                         text:@"Medium"
+                                     textSize:fontSize*3/2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b3d->gameType = 0;
 	s2b3d->handler = s2b3dh;
 	stateButtons[2][3] = s2b3d;
 
-	//Button s2b4d = new Button(fontSize*13,hFloatHeight-fontSize*6+fontSize,fontSize*5,fontSize*3,"Off",fontSize*3/2,-1,-1);
-	Button *s2b4d =  [[Button alloc] initButton:fontSize*13 y:hFloatHeight-fontSize*5 width:fontSize*5 height:3*fontSize text:@"Off" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b4d =  [[Button alloc] initButton:fontSize*13
+                                            y:hFloatHeight-fontSize*5
+                                        width:fontSize*5
+                                       height:3*fontSize
+                                         text:@"Off"
+                                     textSize:fontSize*3/2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b4d->gameType = 0;
 	s2b4d->handler = s2b4dh;
 	stateButtons[2][4] = s2b4d;
 
-	//-gp.fontSize*16,gp.hFloatHeight-gp.fontSize*9
-	//Button s2b5d = new Button(-fontSize*15-fontSize/2,hFloatHeight-fontSize*11,fontSize*7,fontSize*3,"Touch",fontSize*3/2,-1,-1);
-	Button *s2b5d =  [[Button alloc] initButton:-fontSize*15-fontSize/2 y:hFloatHeight-fontSize*11 width:fontSize*7 height:3*fontSize text:@"Touch" textSize:fontSize*3/2 gameType:-1 multiPlayer:-1];
+	Button *s2b5d =  [[Button alloc] initButton:-fontSize*15-fontSize/2
+                                            y:hFloatHeight-fontSize*11
+                                        width:fontSize*7
+                                       height:3*fontSize
+                                         text:@"Touch"
+                                     textSize:fontSize*3/2
+                                     gameType:-1
+                                  multiPlayer:-1];
 	s2b5d->gameType = 0;
 	s2b5d->handler = s2b5dh;
 	s2b5d->enabled = false;
@@ -1065,65 +1185,80 @@ static GLfloat* wallVertices;
 
   int difficulty = [Preferences global].difficulty;
   int inputMethod = [Preferences global].inputMethod;
-	if([Preferences global].shouldPlaySound)
-	{
+	if ([Preferences global].shouldPlaySound)	{
 		[stateButtons[2][1] changeText:@"On"];
-	}
-	else
-	{
+	}	else {
 		[stateButtons[2][1] changeText:@"Off"];
 	}
-	if([Preferences global].shouldVibrate)
-	{
+
+	if ([Preferences global].shouldVibrate)	{
 		[stateButtons[2][2] changeText:@"On"];
-	}
-	else
-	{
+	}	else {
 		[stateButtons[2][2] changeText:@"Off"];
 	}
-	if(difficulty == 0)
-	{
+
+	if (difficulty == 0) {
 		[stateButtons[2][3] changeText:@"Easy"];
-	}
-	else if(difficulty == 1)
-	{
+	}	else if (difficulty == 1) {
 		[stateButtons[2][3] changeText:@"Medium"];
-	}
-	else if(difficulty == 2)
-	{
+	}	else if (difficulty == 2) {
 		[stateButtons[2][3] changeText:@"Hard"];
 	}
-	if([Preferences global].shouldShowFog)
-	{
+
+	if ([Preferences global].shouldShowFog)	{
 		[stateButtons[2][4] changeText:@"On"];
-	}
-	else
-	{
+	}	else {
 		[stateButtons[2][4] changeText:@"Off"];
 	}
-	if(inputMethod == 0)
-	{
+
+	if (inputMethod == 0)	{
 		[stateButtons[2][5] changeText:@"Touch"];
-	}
-	else if(inputMethod == 1)
-	{
+	}	else if(inputMethod == 1)	{
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
 
-	Button *s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s3b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6
+                                            y:-hFloatHeight+fontSize*5/2
+                                        width:fontSize*6
+                                       height:5*fontSize/2
+                                         text:@"Quit"
+                                     textSize:fontSize*5/4
+                                     gameType:-1
+                                  multiPlayer:0];
 	s3b0d->handler = homeButton;
 	stateButtons[3][0] = s3b0d;
 
-	Button *s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6 y:-hFloatHeight+fontSize*5/2 width:fontSize*6 height:5*fontSize/2 text:@"Quit" textSize:fontSize*5/4 gameType:-1 multiPlayer:0];
+	Button *s7b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*6
+                                            y:-hFloatHeight+fontSize*5/2
+                                        width:fontSize*6
+                                       height:5*fontSize/2
+                                         text:@"Quit"
+                                     textSize:fontSize*5/4
+                                     gameType:-1
+                                  multiPlayer:0];
 	s7b0d->handler = homeButton;
 	stateButtons[7][0] = s7b0d;
 
-	Button *s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*15 height:3*fontSize text:@"Submit Score" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
+	Button *s8b0d =  [[Button alloc] initButton:hFloatWidth-fontSize*17
+                                            y:hFloatHeight-fontSize*5-fontSize*21/2
+                                        width:fontSize*15
+                                       height:3*fontSize
+                                         text:@"Submit Score"
+                                     textSize:fontSize*3/2
+                                     gameType:0
+                                  multiPlayer:0];
 	s8b0d->handler = s8b0dh;
 	s8b0d->enabled = false;
 	stateButtons[8][0] = s8b0d;
 
-	Button *s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2 y:hFloatHeight-fontSize*5-fontSize*21/2 width:fontSize*17/2 height:3*fontSize text:@"Home" textSize:fontSize*3/2 gameType:0 multiPlayer:0];
+	Button *s8b1d =  [[Button alloc] initButton:-hFloatWidth+fontSize*2
+                                            y:hFloatHeight-fontSize*5-fontSize*21/2
+                                        width:fontSize*17/2
+                                       height:3*fontSize
+                                         text:@"Home"
+                                     textSize:fontSize*3/2
+                                     gameType:0
+                                  multiPlayer:0];
 	s8b1d->handler = homeButton;
 	stateButtons[8][1] = s8b1d;
 
