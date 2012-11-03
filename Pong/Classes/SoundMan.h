@@ -9,7 +9,7 @@
 #import <AudioToolbox/AudioServices.h>
 #import <Foundation/Foundation.h>
 
-
+// TODO: These should really go into functions but im lazy.
 SystemSoundID mpPing;
 SystemSoundID mpPong;
 SystemSoundID mpBullseye;
@@ -25,6 +25,7 @@ SystemSoundID mpWon;
 
 @interface SoundMan : NSObject
 
++ (void)initSounds;
 + (void)playSound:(SystemSoundID)sound;
 
 @end

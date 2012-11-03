@@ -348,12 +348,9 @@ void perspective(double fovy, double aspect, float zNear, float zFar);
 - (BOOL)compileShader:(GLuint *)shader type:(GLenum)type file:(NSString *)file;
 - (BOOL)linkProgram:(GLuint)prog;
 - (BOOL)validateProgram:(GLuint)prog;
-
-//@property static int width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
 @end
 
 @implementation PongViewController
-//@synthesize width,height,gwidth,gheight,floatWidth,floatHeight,hFloatWidth,hFloatHeight;
 @synthesize animating, context, displayLink, delegate;
 
 static void gameReset()
@@ -410,6 +407,8 @@ static void gameReset()
   animating = FALSE;
   animationFrameInterval = 1;
   self.displayLink = nil;
+
+  [SoundMan initSounds];
 }
 
 - (void)dealloc
@@ -880,8 +879,7 @@ static GLfloat* wallVertices;
 
 #import "gettersSetters.h"
 
-- (void)resize:(int)w h:(int)h
-{
+- (void)resize:(int)w h:(int)h {
 	NSLog(@"%d %d", w, h);
 	[PongViewController loadSaved];
 
@@ -1262,20 +1260,6 @@ static GLfloat* wallVertices;
 	s8b1d->handler = homeButton;
 	stateButtons[8][1] = s8b1d;
 
-
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("bullseye"), CFSTR("caf"), NULL), &mpBullseye);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("lostshort"), CFSTR("caf"), NULL), &mpLostshort);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("ping"), CFSTR("caf"), NULL), &mpPing);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("target"), CFSTR("caf"), NULL), &mpTarget);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("wall1"), CFSTR("caf"), NULL), &mpWall1);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("wall3"), CFSTR("caf"), NULL), &mpWall3);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("lost"), CFSTR("caf"), NULL), &mpLost);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("menu"), CFSTR("caf"), NULL), &mpMenu);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("pong"), CFSTR("caf"), NULL), &mpPong);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("targetbounce"), CFSTR("caf"), NULL), &mpTargetbounce);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("wall2"), CFSTR("caf"), NULL), &mpWall2);
-	AudioServicesCreateSystemSoundID(CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("won"), CFSTR("caf"), NULL), &mpWon);
-//AudioServicesPlaySystemSound(mpBullseye);
 
 	running = TRUE;
 	//state = PLAYING;
