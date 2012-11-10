@@ -107,7 +107,6 @@
 		97C004481343F90A00E3A9AD /* tileset1PVR.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; name = tileset1PVR.pvr; path = ../tileset1PVR.pvr; sourceTree = SOURCE_ROOT; };
 		97C0047A1344063800E3A9AD /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default~ipad.png"; path = "../Default~ipad.png"; sourceTree = SOURCE_ROOT; };
 		97C004C61344171800E3A9AD /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon~ipad.png"; path = "../Icon~ipad.png"; sourceTree = SOURCE_ROOT; };
-		97DDF2F712FF4DDB00EB2751 /* gameLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameLoop.h; sourceTree = "<group>"; };
 		97EF9BBE163B63D700B022D2 /* 57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 57.png; sourceTree = "<group>"; };
 		97EF9BC0163B63E000B022D2 /* 114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 114.png; sourceTree = "<group>"; };
 		97EF9BC2163B63E800B022D2 /* 72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 72.png; sourceTree = "<group>"; };
@@ -396,7 +395,7 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Pong;
 			};
 			name = Debug;
@@ -410,7 +409,7 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Pong;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -446,7 +445,7 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Pong;
 				VALIDATE_PRODUCT = YES;
 			};
