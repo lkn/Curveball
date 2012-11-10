@@ -1,76 +1,52 @@
+//#import "SoundMan.h"
+
 void s0b0dh()
 {
-
 	//NSLog(@"got hit!!!!");
 	hoveredButton = NULL;
-	bZSpeed = -bZSpeeds[difficulty];
-	
-	lives = (fullVersion?6:3);
-	level = 0;
-	myScore = 0;
+  int difficulty = [Preferences global].difficulty;
+	[GameState global].bZSpeed = -bZSpeeds[difficulty];
+
+	[GameState global].numberOfLives = (fullVersion?6:3);
+	[GameState global].level = 0;
+	[GameState global].myScore = 0;
 	eSpeed = eSpeeds[difficulty];
 	randEnemy = randEnemies[difficulty];
-	gameType = 0;
+	[Preferences global].gameType = 0;
 	[PongViewController switchToState:START];
-	/*try {
-		playSound(mpWall3);
-		 catch (IllegalStateException e) {
-		e.printStackTrace();
-	} catch (IOException e) {
-	}*/
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 }
-
-
-
 
 void s0b1dh()
 {
-			hoveredButton = NULL;
-			[PongViewController switchToState:TARGET];
-		//	int levelToGet = Pong.prefs.getInt("levelsBeat", 0);
-		//	if(levelToGet >= levelStrings.size())
-		//		levelToGet = levelStrings.size() - 1;
-		//	level = levelToGet;
-		//	curLev = new Level(parseXmlFile(levelStrings.get(levelToGet)));
-			gameType = 1;
-			bZSpeed = -bZSpeeds[difficulty];
-			lives = (fullVersion?6:3);
-			myScore = 0;
-			eSpeed = eSpeeds[0];
-			randEnemy = randEnemies[0];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
-	playSound(mpWall3);
+  hoveredButton = NULL;
+  [PongViewController switchToState:TARGET];
 
+  [Preferences global].gameType = 1;
+  [GameState global].bZSpeed = -bZSpeeds[[Preferences global].difficulty];
+  [GameState global].numberOfLives = (fullVersion?6:3);
+  [GameState global].myScore = 0;
+  eSpeed = eSpeeds[0];
+  randEnemy = randEnemies[0];
+
+	[SoundMan playSound:mpWall3];
 }
 
 void s0b2dh()
 {
-			hoveredButton = NULL;
-			[PongViewController switchToState:MULTIPLAYER];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
-	playSound(mpWall3);
-
+  hoveredButton = NULL;
+  [PongViewController switchToState:MULTIPLAYER];
+	[SoundMan playSound:mpWall3];
 }
 
 void s0b3dh()
 {
-			hoveredButton = NULL;
-	
-	
-	
-	
-	if(sound)
+  hoveredButton = NULL;
+
+	int difficulty = [Preferences global].difficulty;
+  int inputMethod = [Preferences global].inputMethod;
+
+	if([Preferences global].shouldPlaySound)
 	{
 		[stateButtons[2][1] changeText:@"On"];
 	}
@@ -78,7 +54,7 @@ void s0b3dh()
 	{
 		[stateButtons[2][1] changeText:@"Off"];
 	}
-	if(vibrate)
+	if([Preferences global].shouldVibrate)
 	{
 		[stateButtons[2][2] changeText:@"On"];
 	}
@@ -98,7 +74,7 @@ void s0b3dh()
 	{
 		[stateButtons[2][3] changeText:@"Hard"];
 	}
-	if(fog)
+	if([Preferences global].shouldShowFog)
 	{
 		[stateButtons[2][4] changeText:@"On"];
 	}
@@ -114,69 +90,35 @@ void s0b3dh()
 	{
 		[stateButtons[2][5] changeText:@"Tilt"];
 	}
-	
-	
-	
-	
-			[PongViewController switchToState:OPTIONS];
-			//try {
-			//	playSound(mpWall3);
-			//} catch (IllegalStateException e) {
-			//	e.printStackTrace();
-			//} catch (IOException e) {
-			//}
-	playSound(mpWall3);
 
+  [PongViewController switchToState:OPTIONS];
+
+	[SoundMan playSound:mpWall3];
 }
 
 void s0b4dh()
 {
-			hoveredButton = NULL;
-		//	GoMarket ss = new GoMarket();
-		//	Thread st = new Thread(ss);
-		//	st.start();
-
+  hoveredButton = NULL;
 }
-
-
-
 
 void s1b0dh()
 {
 	hoveredButton = NULL;
 	[PongViewController switchToState:PAUSED];
-	//try {
-	//	playSound(mpWall3);
-	//} catch (IllegalStateException e) {
-	//	e.printStackTrace();
-	//} catch (IOException e) {
-	//}
-	playSound(mpWall3);
-	
+	[SoundMan playSound:mpWall3];
 }
-
-
-
 
 void homeButton()
 {
 	hoveredButton = NULL;
 	[PongViewController switchToState:HOME];
-	//try {
-	//	playSound(mpWall3);
-	//} catch (IllegalStateException e) {
-	//	e.printStackTrace();
-	//} catch (IOException e) {
-	//}
-	playSound(mpWall3);
+	[SoundMan playSound:mpWall3];
 }
-
-
 
 void s2b0dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
 	//	SharedPreferences.Editor editor = getPrefs().edit();
 	//	editor.putInt("holdPaddleX", holdPaddleX);
@@ -195,83 +137,76 @@ void s2b0dh()
 		 inputMethod = prefs.getInt("inputMethod", 0);*/
 	//	savePrefs(editor);
 		[PongViewController switchToState:HOME];
-		gameType = 0;
-		playSound(mpWall3);
+		[Preferences global].gameType = 0;
+		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s2b1dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-		sound = sound?false:true;
-		[prefs setObject:sound?@"TRUE":@"FALSE" forKey:@"sound"];
-		playSound(mpWall3);
+    [Preferences global].shouldPlaySound = ![Preferences global].shouldPlaySound;
+		[SoundMan playSound:mpWall3];
 	}
 }
 
 void s2b2dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-		vibrate = vibrate?false:true;
-		[prefs setObject:vibrate?@"TRUE":@"FALSE" forKey:@"vibrate"];
-		playSound(mpWall3);
+    [Preferences global].shouldVibrate = ![Preferences global].shouldVibrate;
+		[SoundMan playSound:mpWall3];
 	}
 }
 
 void s2b3dh()
 {
+  int difficulty = [Preferences global].difficulty;
 	hoveredButton = NULL;
 	if(lastDownState == OPTIONS)
 	{
 		difficulty++;
 		if(difficulty == 3)
 			difficulty = 0;
-		[prefs setObject:[NSString stringWithFormat:@"%d",difficulty] forKey:@"difficulty"];
+    [Preferences global].difficulty = difficulty;
 		gameReset();
-		playSound(mpWall3);
+		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s2b4dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+	if (lastDownState == OPTIONS)
 	{
-		fog = fog?false:true;
-		[prefs setObject:fog?@"TRUE":@"FALSE" forKey:@"fog"];
-		playSound(mpWall3);
+    [Preferences global].shouldShowFog = ![Preferences global].shouldShowFog;
+		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s2b5dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == OPTIONS)
+  int inputMethod = [Preferences global].inputMethod;
+	if (lastDownState == OPTIONS)
 	{
 		inputMethod++;
-		if(inputMethod > 1)
+		if (inputMethod > 1)
 			inputMethod = 0;
-		[prefs setObject:[NSString stringWithFormat:@"%d",inputMethod] forKey:@"inputMethod"];
-		playSound(mpWall3);
+    [Preferences global].inputMethod = inputMethod;
+
+		[SoundMan playSound:mpWall3];
 	}
 }
-
 
 void s8b0dh()
 {
 	hoveredButton = NULL;
-	if(lastDownState == RESULTS)
+	if (lastDownState == RESULTS)
 	{
 		//submit score
-		
 	}
 }
-
-

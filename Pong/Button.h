@@ -28,4 +28,5 @@
 -(void)draw;
 -(void)changeText:(NSString *)newText;
 -(BOOL)collides:(int)inx iny:(int)iny;
+
 @end
