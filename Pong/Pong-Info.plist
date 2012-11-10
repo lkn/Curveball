@@ -10,10 +10,24 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>Icon.png</string>
-		<string>Icon4.png</string>
-		<string>Icon~ipad.png</string>
+		<string>57.png</string>
+		<string>114.png</string>
+		<string>72.png</string>
+		<string>144.png</string>
 	</array>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>57.png</string>
+				<string>114.png</string>
+				<string>72.png</string>
+				<string>144.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>Pong.Chavez</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -22,6 +36,8 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -40,5 +56,7 @@
 	<string>Default~ipad.png</string>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array/>
 </dict>
 </plist>

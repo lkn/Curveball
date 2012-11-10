@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,15 +14,11 @@
 		2514C27B10084DCA00A42282 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27910084DCA00A42282 /* Shader.fsh */; };
 		2514C27C10084DCA00A42282 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2514C27A10084DCA00A42282 /* Shader.vsh */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28EC4C5911D54ECE0027AA9F /* PongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EC4C5711D54ECE0027AA9F /* PongViewController.m */; };
 		28EC4C5A11D54ECE0027AA9F /* PongViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28EC4C5811D54ECE0027AA9F /* PongViewController.xib */; };
 		28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD14FD0DC6FC130079059D /* EAGLView.m */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
-		7EFF0866163E0B7C0041B3E4 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF0865163E0B7C0041B3E4 /* Preferences.m */; };
-		7EFF086C163E106D0041B3E4 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF086B163E106D0041B3E4 /* GameState.m */; };
-		7EFF086F163E18080041B3E4 /* SQLite3Data.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF086E163E18080041B3E4 /* SQLite3Data.m */; };
-		7EFF0870163E398F0041B3E4 /* PongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EC4C5711D54ECE0027AA9F /* PongViewController.m */; };
-		7EFF0871163E40100041B3E4 /* SoundMan.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFF085E163E09B50041B3E4 /* SoundMan.m */; };
 		974D132912F7EABA00002BDB /* smallfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132612F7EABA00002BDB /* smallfont.png */; };
 		974D132A12F7EABA00002BDB /* medfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132712F7EABA00002BDB /* medfont.png */; };
 		974D132B12F7EABA00002BDB /* bigfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 974D132812F7EABA00002BDB /* bigfont.png */; };
@@ -77,14 +73,6 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Pong_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pong_Prefix.pch; sourceTree = "<group>"; };
-		7EFF085D163E09B50041B3E4 /* SoundMan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundMan.h; sourceTree = "<group>"; };
-		7EFF085E163E09B50041B3E4 /* SoundMan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundMan.m; sourceTree = "<group>"; };
-		7EFF0864163E0B7C0041B3E4 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
-		7EFF0865163E0B7C0041B3E4 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
-		7EFF086A163E106D0041B3E4 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
-		7EFF086B163E106D0041B3E4 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
-		7EFF086D163E18080041B3E4 /* SQLite3Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLite3Data.h; sourceTree = "<group>"; };
-		7EFF086E163E18080041B3E4 /* SQLite3Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLite3Data.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Pong-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pong-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		974D128612F7C04C00002BDB /* gettersSetters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gettersSetters.h; sourceTree = "<group>"; };
 		974D132612F7EABA00002BDB /* smallfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = smallfont.png; path = ../smallfont.png; sourceTree = SOURCE_ROOT; };
@@ -164,14 +152,6 @@
 				28EC4C5711D54ECE0027AA9F /* PongViewController.m */,
 				9789091F12F52884003041F6 /* TextureCoord.h */,
 				9789092012F52884003041F6 /* TextureCoord.m */,
-				7EFF085D163E09B50041B3E4 /* SoundMan.h */,
-				7EFF085E163E09B50041B3E4 /* SoundMan.m */,
-				7EFF0864163E0B7C0041B3E4 /* Preferences.h */,
-				7EFF0865163E0B7C0041B3E4 /* Preferences.m */,
-				7EFF086A163E106D0041B3E4 /* GameState.h */,
-				7EFF086B163E106D0041B3E4 /* GameState.m */,
-				7EFF086D163E18080041B3E4 /* SQLite3Data.h */,
-				7EFF086E163E18080041B3E4 /* SQLite3Data.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -223,6 +203,7 @@
 				974D128612F7C04C00002BDB /* gettersSetters.h */,
 				32CA4F630368D1EE00C91783 /* Pong_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				97DDF2F712FF4DDB00EB2751 /* gameLoop.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -298,11 +279,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0450;
-			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pong" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -371,14 +349,10 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* PongAppDelegate.m in Sources */,
 				28FD14FE0DC6FC130079059D /* EAGLView.m in Sources */,
+				28EC4C5911D54ECE0027AA9F /* PongViewController.m in Sources */,
 				9789092112F52884003041F6 /* TextureCoord.m in Sources */,
 				974D135112F7EF6500002BDB /* FontTexture.m in Sources */,
 				97BBE0F312F9032000D071F3 /* Button.m in Sources */,
-				7EFF0866163E0B7C0041B3E4 /* Preferences.m in Sources */,
-				7EFF086C163E106D0041B3E4 /* GameState.m in Sources */,
-				7EFF086F163E18080041B3E4 /* SQLite3Data.m in Sources */,
-				7EFF0870163E398F0041B3E4 /* PongViewController.m in Sources */,
-				7EFF0871163E40100041B3E4 /* SoundMan.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +370,6 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
 				PRODUCT_NAME = Pong;
 			};
 			name = Debug;
@@ -410,7 +383,6 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
 				PRODUCT_NAME = Pong;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -426,12 +398,14 @@
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
 				);
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3657AFC3-9E6C-4562-9A2D-18FC1CF79BC4";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,7 +420,6 @@
 				GCC_PREFIX_HEADER = Pong_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "Pong-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = " ";
 				PRODUCT_NAME = Pong;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -462,11 +435,12 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
 				);
+				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -482,12 +456,13 @@
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-framework",
 					CoreGraphics,
 				);
+				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
